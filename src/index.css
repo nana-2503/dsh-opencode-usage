@@ -5,6 +5,9 @@
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
 @source "./**/*.{ts,tsx}";
+/* The committed browser artifact is a build output: scanning it would feed the
+   previous build's class names back in and make builds order-dependent. */
+@source not "../client.js";
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {

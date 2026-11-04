@@ -39,9 +39,8 @@
 .ou-root {
   --ou-background: var(--dsw-alias-bg-overlay);
   --ou-foreground: var(--dsw-alias-label-primary);
-  /* A hair off the raised layer: the reference surface reads as #fafafb on a
-     white page, not pure white. 3% of the label colour is enough. */
-  --ou-card: color-mix(in oklab, var(--dsw-alias-bg-layer-1) 97%, var(--dsw-alias-label-primary));
+  /* Same raised surface the composer card sits on: opaque, not a tint. */
+  --ou-card: var(--dsw-alias-bg-layer-1);
   --ou-card-foreground: var(--dsw-alias-label-primary);
   --ou-popover: var(--dsw-alias-bg-overlay);
   --ou-primary: var(--dsw-alias-brand-primary);

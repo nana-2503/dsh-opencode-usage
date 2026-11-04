@@ -10,7 +10,7 @@ bottom-right corner of the Web UI and stores the Console API key on the Host.
 ┌──────────────────────────────────┐
 │ ● OpenCode Go              ⟳  ⌄ │
 │                                  │
-│ 滚动窗口  15:11 重置     已用 3% │
+│ 5 小时窗口  15:11 重置     已用 3% │
 │ ▮▮▮▯▯▯▯▯▯▯▯▯▯▯▯▯▯▯▯▯▯▯▯▯▯▯▯▯▯   │
 │ 本周      11/9 08:00 重置 已用 3%│
 │ ...                              │

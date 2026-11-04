@@ -127,7 +127,7 @@ export function MeterRow({ label, meter, t }: { label: string; meter: Meter; t: 
           />
         )}
         className={cn(
-          "gap-0 [&_[data-slot=progress-indicator]]:shrink-0 [&_[data-slot=progress-track]]:h-2 [&_[data-slot=progress-track]]:bg-transparent",
+          "gap-0 [&_[data-slot=progress-indicator]]:shrink-0 [&_[data-slot=progress-track]]:h-2 [&_[data-slot=progress-track]]:rounded-[2px] [&_[data-slot=progress-track]]:bg-transparent",
           used === 0 || used >= 100 ? "[&_[data-slot=progress-track]]:gap-0" : "[&_[data-slot=progress-track]]:gap-[3px]",
         )}
         style={{ "--ou-tone": color } as CSSProperties}

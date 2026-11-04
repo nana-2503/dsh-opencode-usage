@@ -42,7 +42,7 @@ export function UsageDock({ t, openSettings }: DockProps) {
 
   return (
     <div className="ou-root ou-dock">
-      <div className="flex flex-col rounded-lg bg-card px-3 py-1.5 text-xs ring-1 ring-border shadow-sm">
+      <div className="flex flex-col rounded-lg bg-card px-3 py-1.5 text-xs ring-1 ring-border shadow-[var(--ou-shadow)]">
         <div className="flex items-center gap-3">
           <span className="flex shrink-0 items-center gap-1.5">
             <span className="size-2 rounded-full" style={{ background: color }} aria-hidden />

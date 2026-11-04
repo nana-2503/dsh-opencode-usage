@@ -191,7 +191,7 @@ export function UsageOverlay({ t, openSettings }: OverlayProps) {
         className="absolute"
       >
         {open ? (
-          <Card size="sm" className="pointer-events-auto w-[19.5rem] max-w-[calc(100vw-1.5rem)] gap-3 shadow-xl">
+          <Card size="sm" className="pointer-events-auto w-[19.5rem] max-w-[calc(100vw-1.5rem)] gap-3 shadow-[var(--ou-shadow)]">
             <div
               onPointerDown={startDrag}
               onPointerMove={moveDrag}

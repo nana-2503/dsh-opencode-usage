@@ -39,7 +39,9 @@
 .ou-root {
   --ou-background: var(--dsw-alias-bg-overlay);
   --ou-foreground: var(--dsw-alias-label-primary);
-  --ou-card: var(--dsw-alias-bg-layer-1);
+  /* A hair off the raised layer: the reference surface reads as #fafafb on a
+     white page, not pure white. 3% of the label colour is enough. */
+  --ou-card: color-mix(in oklab, var(--dsw-alias-bg-layer-1) 97%, var(--dsw-alias-label-primary));
   --ou-card-foreground: var(--dsw-alias-label-primary);
   --ou-popover: var(--dsw-alias-bg-overlay);
   --ou-primary: var(--dsw-alias-brand-primary);
@@ -64,6 +66,7 @@
   --ou-bar-blue: var(--dsw-alias-state-business-primary);
   --ou-bar-yellow: var(--dsw-alias-state-warn-primary);
   --ou-bar-red: var(--dsw-alias-state-error-primary);
+  --ou-shadow: 0 10px 30px -12px rgb(0 0 0 / 0.14), 0 1px 2px rgb(0 0 0 / 0.05);
   --ou-track: var(--dsw-alias-border-l2);
   --ou-track-edge: var(--dsw-alias-border-l3);
   --ou-hairline: color-mix(in oklab, var(--dsw-alias-label-primary) 14%, transparent);

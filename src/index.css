@@ -136,14 +136,6 @@
 
 /* The composer dock slot is a full-width flex child; this pulls the strip in to
    the composer card's width using the host's own layout variables. */
-/* Another dock entry before this one (the message queue) cancels the stack gap
-   with a negative bottom margin, which would pull this strip over it. */
-.ou-dock:not(:first-child) {
-  /* One notch more than the stack gap: 6px alone read as touching, 15px as
-     detached, so the queue entry gets 10px of air. */
-  margin-top: 4px;
-}
-
 .ou-dock {
   box-sizing: border-box;
   width: calc(100% - 2 * var(--dsh-composer-side-clearance, 16px) - 2 * var(--dsh-composer-dock-inset, 8px));

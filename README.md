@@ -29,7 +29,9 @@ bottom-right corner of the Web UI and stores the Console API key on the Host.
 - **可拖动**：胶囊和卡片都能拖动，位置按浏览器记住；展开时会自动往左上长，不会跑出屏幕。
   拖离默认位置后，卡片右上角会出现「复位位置」按钮。
 - **插件设置页**：左侧「插件」→ 已安装 → 本插件。粘贴 API Key（可选组织 ID），
-  「保存并测试」立即查一次；支持刷新、移除密钥、开关悬浮窗。
+  「保存并测试」立即查一次；支持刷新、移除密钥。
+- **显示位置**：可切「悬浮窗 / 输入框上方 / 隐藏」。选「输入框上方」时，额度以一条
+  紧凑横条挂在输入框上方，右下角悬浮窗自动不显示。
 - **四档配色**（按剩余额度）：≥70% 深绿 → ≥50% 蓝 → ≥20% 黄 → <20% 红；
   上游返回 `rate-limited` 时直接标红。
 - **倒计时**：重置时间显示成「43 分钟后重置」这种相对时间（悬停可看绝对时刻），
@@ -103,7 +105,7 @@ x-opencode-org-id: <org id>     # 可选，多组织密钥才需要
 | `build.mjs` | Tailwind 编译 → 内联 CSS → esbuild 打包 |
 
 组件来自 shadcn registry 的 **base-nova** 预设，跑在 **Base UI** 原语上
-（`button`、`card`、`input`、`label`、`badge`、`progress`、`separator`、`switch`）。
+（`button`、`card`、`input`、`label`、`badge`、`progress`、`separator`）。
 `progress.tsx` 在原组件上加了 `trailing` / `indicatorClassName` 两个插槽，用来画
 「填充块 + 断档 + 剩余段」这种分段额度条。
 

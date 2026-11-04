@@ -9,6 +9,7 @@
 import { CSS } from "./generated-css";
 /** Dictionary namespace plus both locales. */
 import { NS, en, zh } from "./locale";
+import { UsageDock } from "./dock";
 import { UsageOverlay } from "./overlay";
 import { UsageSettings } from "./settings";
 import { usageStore } from "./store";
@@ -71,6 +72,14 @@ export function apply(ctx: ClientContext): void {
     locale: NS,
     inject: () => ({ openSettings }),
   }, UsageOverlay));
+
+  services.slots.inject("conversation.input.dock", () => services.slots.register({
+    name: "conversation.input.dock",
+    id: "opencode-usage",
+    order: 30,
+    locale: NS,
+    inject: () => ({ openSettings }),
+  }, UsageDock));
 
   services.slots.inject("plugins.bundle.config", () => services.slots.register({
     name: "plugins.bundle.config",

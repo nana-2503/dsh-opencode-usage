@@ -5,42 +5,50 @@
  */
 import { useSyncExternalStore } from "react";
 
-/** Storage key of the floating-widget switch. */
-const OVERLAY_KEY = "opencode-usage:overlay-visible";
+/** Where the allowance is drawn: the frame overlay, the strip above the composer, or nowhere. */
+export type WidgetMode = "overlay" | "dock" | "hidden";
 
-/** Registered listeners for the overlay switch. */
+/** Storage key of the placement. */
+const MODE_KEY = "opencode-usage:mode";
+/** Pre-placement key, kept so an existing "hidden" choice survives the upgrade. */
+const LEGACY_KEY = "opencode-usage:overlay-visible";
+
+/** Registered listeners for the placement. */
 const listeners = new Set<() => void>();
 
-/** Read the stored preference, defaulting to visible. */
-function read(): boolean {
+/** Read the stored placement, defaulting to the floating corner. */
+function read(): WidgetMode {
   try {
-    return window.localStorage.getItem(OVERLAY_KEY) !== "0";
+    const raw = window.localStorage.getItem(MODE_KEY);
+    if (raw === "overlay" || raw === "dock" || raw === "hidden") return raw;
+    if (window.localStorage.getItem(LEGACY_KEY) === "0") return "hidden";
   } catch {
-    return true;
+    /* storage may be unavailable in a hardened browser; the default still applies */
   }
+  return "overlay";
 }
 
-let visible = read();
+let mode = read();
 
 /**
- * Change the floating-widget preference.
- * @param next - whether the widget renders.
+ * Change where the widget is drawn.
+ * @param next - the chosen placement.
  */
-export function setOverlayVisible(next: boolean): void {
-  visible = next;
+export function setWidgetMode(next: WidgetMode): void {
+  mode = next;
   try {
-    window.localStorage.setItem(OVERLAY_KEY, next ? "1" : "0");
+    window.localStorage.setItem(MODE_KEY, next);
   } catch {
-    /* storage may be unavailable in a hardened browser; the in-memory value still applies */
+    /* the in-memory value still applies for this page lifetime */
   }
   for (const listener of listeners) listener();
 }
 
 /**
- * Subscribe one component to the floating-widget preference.
- * @returns the current preference.
+ * Subscribe one component to the placement.
+ * @returns the current placement.
  */
-export function useOverlayVisible(): boolean {
+export function useWidgetMode(): WidgetMode {
   return useSyncExternalStore(
     (listener) => {
       listeners.add(listener);
@@ -48,7 +56,7 @@ export function useOverlayVisible(): boolean {
         listeners.delete(listener);
       };
     },
-    () => visible,
+    () => mode,
   );
 }
 

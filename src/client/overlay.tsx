@@ -36,7 +36,7 @@ import {
   toneOf,
   type Translate,
 } from "./gauge";
-import { DEFAULT_CORNER, readCorner, saveCorner, useOverlayVisible, type Corner } from "./prefs";
+import { DEFAULT_CORNER, readCorner, saveCorner, useWidgetMode, type Corner } from "./prefs";
 import { usageStore } from "./store";
 import type { Snapshot } from "./locale";
 
@@ -81,7 +81,7 @@ function pillStatus(
  * Render the pill, or the expanded card, in its remembered corner.
  */
 export function UsageOverlay({ t, openSettings }: OverlayProps) {
-  const visible = useOverlayVisible();
+  const mode = useWidgetMode();
   const snapshot = useSyncExternalStore(usageStore.subscribe, usageStore.getSnapshot);
   const [open, setOpen] = useState(false);
   const [corner, setCorner] = useState<Corner>(readCorner);
@@ -110,7 +110,7 @@ export function UsageOverlay({ t, openSettings }: OverlayProps) {
       const next = clamp(current.right, current.bottom);
       return next.right === current.right && next.bottom === current.bottom ? current : next;
     });
-  }, [open, visible, clamp]);
+  }, [open, mode, clamp]);
 
   /** Re-clamp when the window resizes. */
   useEffect(() => {
@@ -166,7 +166,7 @@ export function UsageOverlay({ t, openSettings }: OverlayProps) {
     saveCorner(next);
   };
 
-  if (!visible) return null;
+  if (mode !== "overlay") return null;
 
   const worst = mostConstrained(snapshot.usage);
   /** The collapsed pill always reports the rolling window, the one that refills fastest. */

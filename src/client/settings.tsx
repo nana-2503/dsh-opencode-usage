@@ -11,12 +11,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
-import { Switch } from "@/components/ui/switch";
 import { failureText } from "./messages";
 import { MeterRow } from "./meter";
 import { WINDOWS, formatInstant, type Translate } from "./gauge";
-import { setOverlayVisible, useOverlayVisible } from "./prefs";
+import { setWidgetMode, useWidgetMode, type WidgetMode } from "./prefs";
 import { usageStore } from "./store";
+
+/** The three placements, in the order the settings page offers them. */
+const MODES = ["overlay", "dock", "hidden"] as const;
 
 /** Props the slot injects beside the locale-bound `t`. */
 interface SettingsProps {
@@ -24,11 +26,11 @@ interface SettingsProps {
 }
 
 /**
- * Render the credential form, the current allowance, and the widget switch.
+ * Render the credential form, the current allowance, and the placement choice.
  */
 export function UsageSettings({ t }: SettingsProps) {
   const snapshot = useSyncExternalStore(usageStore.subscribe, usageStore.getSnapshot);
-  const overlayVisible = useOverlayVisible();
+  const mode = useWidgetMode();
   const [key, setKey] = useState("");
   const [org, setOrg] = useState("");
   const [revealed, setRevealed] = useState(false);
@@ -191,18 +193,26 @@ export function UsageSettings({ t }: SettingsProps) {
         </CardContent>
       </Card>
 
-      <div className="flex items-start justify-between gap-4 rounded-lg bg-muted px-3 py-2.5">
-        <div className="flex flex-col gap-0.5">
-          <Label htmlFor="opencode-usage-overlay" className="text-xs font-medium">
-            {t("settings.showOverlay")}
-          </Label>
-          <p className="text-[11px] text-muted-foreground">{t("settings.showOverlayHint")}</p>
+      <div className="flex flex-col gap-2 rounded-lg bg-muted px-3 py-2.5">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <Label className="text-xs font-medium">{t("settings.mode")}</Label>
+          <div className="flex items-center gap-1" role="radiogroup" aria-label={t("settings.mode")}>
+            {(MODES satisfies readonly WidgetMode[]).map((option) => (
+              <Button
+                key={option}
+                type="button"
+                size="xs"
+                role="radio"
+                aria-checked={mode === option}
+                variant={mode === option ? "default" : "outline"}
+                onClick={() => setWidgetMode(option)}
+              >
+                {t(`settings.mode.${option}`)}
+              </Button>
+            ))}
+          </div>
         </div>
-        <Switch
-          id="opencode-usage-overlay"
-          checked={overlayVisible}
-          onCheckedChange={(checked) => setOverlayVisible(checked)}
-        />
+        <p className="text-[11px] text-muted-foreground">{t("settings.modeHint")}</p>
       </div>
     </section>
   );

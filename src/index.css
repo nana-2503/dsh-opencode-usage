@@ -113,6 +113,30 @@
 /* Gauge segments are outlined capsules: a 1px edge that is slightly stronger
    than the fill, and a soft top highlight on the fill, matching the allowance
    meter the OpenCode console draws. */
+/* The status dot breathes: a halo that fades out, tinted by currentColor. */
+.ou-dot {
+  background: currentColor;
+  animation: ou-dot-pulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes ou-dot-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, currentColor 45%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 5px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ou-dot {
+    animation: none;
+  }
+}
+
 .ou-gauge-fill {
   border: 1px solid rgb(0 0 0 / 0.06);
   background-color: var(--ou-tone);

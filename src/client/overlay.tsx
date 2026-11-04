@@ -26,7 +26,7 @@ import { cn } from "cn";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { failureText } from "./messages";
-import { BrandAvatar, MeterRow, PeriodTokens } from "./meter";
+import { MeterRow, PeriodTokens, StatusDot } from "./meter";
 import {
   WINDOWS,
   colorOf,
@@ -198,7 +198,7 @@ export function UsageOverlay({ t, openSettings }: OverlayProps) {
               className={cn("flex items-center justify-between gap-2 px-(--card-spacing)", draggable)}
             >
               <div className="flex min-w-0 items-center gap-2">
-                <BrandAvatar color={color} />
+                <StatusDot color={color} />
                 <span className="truncate text-sm font-medium">{t("pill.label")}</span>
               </div>
               <div className="flex items-center gap-0.5" data-no-drag>
@@ -296,7 +296,7 @@ export function UsageOverlay({ t, openSettings }: OverlayProps) {
               draggable,
             )}
           >
-            <BrandAvatar color={color} />
+            <StatusDot color={color} />
             <span className="font-medium max-sm:hidden">{t("pill.label")}</span>
             <span className="text-muted-foreground">{pillStatus(t, snapshot, reported)}</span>
           </button>

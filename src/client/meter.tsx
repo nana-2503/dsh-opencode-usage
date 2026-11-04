@@ -5,7 +5,6 @@
  * @module opencode-usage/client/meter
  */
 import type { CSSProperties } from "react";
-import avatar from "../../assets/avatar.png";
 import { cn } from "cn";
 import { Progress } from "@/components/ui/progress";
 import {
@@ -87,19 +86,9 @@ export function PeriodTokens({ summary, t }: { summary: TokenSummary; t: Transla
 }
 
 /**
- * The brand avatar shown where the status dot used to sit. The dot encoded the
- * most constrained window's tone, so the avatar keeps a 1.5px ring in that
- * colour; the artwork itself stays untouched.
+ * The live status dot: a filled circle in the most constrained window's tone
+ * with a slow halo, so the widget reads as "connected and watching" at a glance.
  */
-export function BrandAvatar({ color }: { color: string }) {
-  return (
-    <img
-      src={avatar}
-      alt=""
-      aria-hidden
-      draggable={false}
-      className="size-4 shrink-0 rounded-full object-cover"
-      style={{ boxShadow: `0 0 0 1.5px ${color}` }}
-    />
-  );
+export function StatusDot({ color }: { color: string }) {
+  return <span className="ou-dot size-2 shrink-0 rounded-full" style={{ color }} aria-hidden />;
 }

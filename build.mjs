@@ -43,7 +43,6 @@ const result = await build({
   absWorkingDir: root,
   entryPoints: [join(root, "src", "client", "index.tsx")],
   bundle: true,
-  loader: { ".png": "dataurl" },
   format: "cjs",
   platform: "browser",
   target: ["es2022"],

@@ -184,7 +184,13 @@ export function apply(ctx) {
 	const periodOf = (usage) => {
 		const end = new Date(usage.monthly?.resetsAt ?? Date.now());
 		const start = new Date(end);
-		start.setMonth(start.getMonth() - 1);
+		// Step to the previous month on the 1st, then restore the day clamped to
+		// that month's length: the naive setMonth(-1) turns March 31 into March 3.
+		const day = start.getUTCDate();
+		start.setUTCDate(1);
+		start.setUTCMonth(start.getUTCMonth() - 1);
+		const lastDay = new Date(Date.UTC(start.getUTCFullYear(), start.getUTCMonth() + 1, 0)).getUTCDate();
+		start.setUTCDate(Math.min(day, lastDay));
 		return { from: start.toISOString().slice(0, 10), to: end.toISOString().slice(0, 10) };
 	};
 
@@ -388,6 +394,10 @@ export function apply(ctx) {
 			const orgId = typeof body?.orgId === "string" ? body.orgId.trim() : "";
 			if (apiKey.length === 0) {
 				sendJson(res, 400, { configured: false, keyHint: "", error: { code: "empty" } });
+				return;
+			}
+			if (!/^[\x21-\x7e]+$/.test(apiKey)) {
+				sendJson(res, 400, { configured: false, keyHint: "", error: { code: "invalid" } });
 				return;
 			}
 			await writeStore({ apiKey, ...(orgId.length > 0 ? { orgId } : {}) });

@@ -6,7 +6,7 @@ import type { Failure } from "./locale";
 import type { Translate } from "./gauge";
 
 /** Failure codes that own a dedicated sentence. */
-const KNOWN = new Set(["unauthorized", "timeout", "network", "upstream", "shape", "empty"]);
+const KNOWN = new Set(["unauthorized", "timeout", "network", "upstream", "shape", "empty", "invalid"]);
 
 /**
  * Turn one wire failure into the viewer's language.

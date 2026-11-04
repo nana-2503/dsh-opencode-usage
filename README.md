@@ -112,6 +112,9 @@ GET https://opencode.ai/console/api/usage/summary?from=<YYYY-MM-DD>&to=<YYYY-MM-
 | `src/components/ui/*` | shadcn（base-nova / Base UI）组件 |
 | `build.mjs` | Tailwind 编译 → 内联 CSS → esbuild 打包 |
 
+新增组件用 `npx shadcn@latest add <name>`（`components.json` 已配好 base-nova 预设）。
+CLI 不设为依赖：它自带 deepmerge / minimatch 两处 dev 告警，而仓库只需要它偶尔生成一次组件。
+
 组件来自 shadcn registry 的 **base-nova** 预设，跑在 **Base UI** 原语上
 （`button`、`card`、`input`、`label`、`badge`、`progress`、`separator`）。
 `progress.tsx` 在原组件上加了 `trailing` / `indicatorClassName` 两个插槽，用来画

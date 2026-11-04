@@ -225,6 +225,42 @@ test("a rejected key is classified, not leaked", async () => {
   }
 });
 
+test("the summary window is clamped to the previous month's last day", async () => {
+  const dir = await home();
+  const endOfMarch = {
+    usage: { ...UPSTREAM.usage, monthly: { status: "ok", percent: 2, resetsAt: "2026-03-31T07:06:00.000Z" } },
+  };
+  const net = stubFetch((_attempt, url) => (url.includes("/usage/summary")
+    ? new Response(JSON.stringify(SUMMARY), { status: 200 })
+    : new Response(JSON.stringify(endOfMarch), { status: 200 })));
+  const host = harness(dir);
+  try {
+    apply(host.ctx);
+    await call(host, "POST", "/api/opencode-usage/key", { apiKey: KEY });
+    const summaryCall = net.calls.find((entry) => entry.url.includes("/usage/summary"));
+    assert.match(summaryCall.url, /from=2026-02-28&to=2026-03-31$/, "March 31 must clamp to February 28");
+  } finally {
+    host.dispose();
+    net.restore();
+  }
+});
+
+test("a key with control characters is refused", async () => {
+  const dir = await home();
+  const net = stubFetch(() => new Response("{}", { status: 500 }));
+  const host = harness(dir);
+  try {
+    apply(host.ctx);
+    const refused = await call(host, "POST", "/api/opencode-usage/key", { apiKey: "oc_evil\nInjected: 1" });
+    assert.equal(refused.status, 400);
+    assert.equal(refused.body.error.code, "invalid");
+    assert.equal(net.calls.length, 0);
+  } finally {
+    host.dispose();
+    net.restore();
+  }
+});
+
 test("a failing summary never hides the allowance", async () => {
   const dir = await home();
   const net = stubFetch((_attempt, url) => (url.includes("/usage/summary")

@@ -65,6 +65,7 @@ var zh = {
   "overlay.collapse": "\u6536\u8D77",
   "overlay.refresh": "\u5237\u65B0",
   "overlay.settings": "\u8BBE\u7F6E",
+  "overlay.reset": "\u590D\u4F4D\u4F4D\u7F6E",
   "overlay.updated": "{time} \u66F4\u65B0",
   "overlay.never": "\u5C1A\u672A\u83B7\u53D6",
   "overlay.limited": "\u5DF2\u8FBE\u4E0A\u9650",
@@ -118,6 +119,7 @@ var en = {
   "overlay.collapse": "Collapse",
   "overlay.refresh": "Refresh",
   "overlay.settings": "Settings",
+  "overlay.reset": "Reset position",
   "overlay.updated": "Updated {time}",
   "overlay.never": "Not fetched yet",
   "overlay.limited": "Limit reached",
@@ -493,6 +495,18 @@ var __iconData7 = {
 };
 __iconData7.node;
 var Trash = createLucideIcon(__iconData7);
+
+// node_modules/lucide-react/dist/esm/icons/undo-2.mjs
+var __iconData8 = {
+  name: "undo-2",
+  size: 24,
+  node: [
+    ["path", { d: "M9 14 4 9l5-5", key: "102s5s" }],
+    ["path", { d: "M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11", key: "f3b9sd" }]
+  ]
+};
+__iconData8.node;
+var Undo2 = createLucideIcon(__iconData8);
 
 // node_modules/cn/dist/tables.js
 var P = 48;
@@ -3407,9 +3421,15 @@ function UsageOverlay({ t, openSettings }) {
     dragged.current = true;
     saveCorner(clamp2(state.right - (event.clientX - state.startX), state.bottom - (event.clientY - state.startY)));
   };
+  const resetPosition = () => {
+    const next = clamp2(DEFAULT_CORNER.right, DEFAULT_CORNER.bottom);
+    setCorner(next);
+    saveCorner(next);
+  };
   if (!visible2) return null;
   const worst = mostConstrained(snapshot.usage);
   const color = worst === void 0 ? "var(--ou-muted-bar)" : colorOf(toneOf(worst.meter));
+  const moved = corner.right !== DEFAULT_CORNER.right || corner.bottom !== DEFAULT_CORNER.bottom;
   const draggable = cn(
     "touch-none select-none",
     dragging ? "cursor-grabbing" : "cursor-grab"
@@ -3435,6 +3455,17 @@ function UsageOverlay({ t, openSettings }) {
                 /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "truncate text-sm font-medium", children: t("pill.label") })
               ] }),
               /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex items-center gap-0.5", "data-no-drag": true, children: [
+                moved ? /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+                  Button3,
+                  {
+                    size: "icon-sm",
+                    variant: "ghost",
+                    "aria-label": t("overlay.reset"),
+                    title: t("overlay.reset"),
+                    onClick: resetPosition,
+                    children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Undo2, {})
+                  }
+                ) : null,
                 /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
                   Button3,
                   {

@@ -21,7 +21,7 @@ import {
   useSyncExternalStore,
   type PointerEvent as ReactPointerEvent,
 } from "react";
-import { ChevronDown, RefreshCw, Settings2 } from "lucide-react";
+import { ChevronDown, RefreshCw, Settings2, Undo2 } from "lucide-react";
 import { cn } from "cn";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -36,7 +36,7 @@ import {
   toneOf,
   type Translate,
 } from "./meter";
-import { readCorner, saveCorner, useOverlayVisible, type Corner } from "./prefs";
+import { DEFAULT_CORNER, readCorner, saveCorner, useOverlayVisible, type Corner } from "./prefs";
 import { usageStore } from "./store";
 import type { Snapshot } from "./locale";
 
@@ -159,10 +159,18 @@ export function UsageOverlay({ t, openSettings }: OverlayProps) {
     saveCorner(clamp(state.right - (event.clientX - state.startX), state.bottom - (event.clientY - state.startY)));
   };
 
+  /** Put the widget back in the bottom-right corner. */
+  const resetPosition = () => {
+    const next = clamp(DEFAULT_CORNER.right, DEFAULT_CORNER.bottom);
+    setCorner(next);
+    saveCorner(next);
+  };
+
   if (!visible) return null;
 
   const worst = mostConstrained(snapshot.usage);
   const color = worst === undefined ? "var(--ou-muted-bar)" : colorOf(toneOf(worst.meter));
+  const moved = corner.right !== DEFAULT_CORNER.right || corner.bottom !== DEFAULT_CORNER.bottom;
   const draggable = cn(
     "touch-none select-none",
     dragging ? "cursor-grabbing" : "cursor-grab",
@@ -189,6 +197,17 @@ export function UsageOverlay({ t, openSettings }: OverlayProps) {
                 <span className="truncate text-sm font-medium">{t("pill.label")}</span>
               </div>
               <div className="flex items-center gap-0.5" data-no-drag>
+                {moved ? (
+                  <Button
+                    size="icon-sm"
+                    variant="ghost"
+                    aria-label={t("overlay.reset")}
+                    title={t("overlay.reset")}
+                    onClick={resetPosition}
+                  >
+                    <Undo2 />
+                  </Button>
+                ) : null}
                 <Button
                   size="icon-sm"
                   variant="ghost"

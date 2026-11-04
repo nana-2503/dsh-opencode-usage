@@ -133,10 +133,8 @@ export function formatInstant(at: number | undefined): string | undefined {
   }
 }
 
-/** Minute, hour, and day thresholds used by {@link resetCountdown}. */
+/** One minute in milliseconds, the base unit of {@link resetCountdown}. */
 const MINUTE = 60_000;
-const HOUR = 60 * MINUTE;
-const DAY = 24 * HOUR;
 
 /**
  * Say how long is left before a window resets, the way the Console does
@@ -150,7 +148,19 @@ export function resetCountdown(resetsAt: number | undefined, t: Translate, now: 
   if (resetsAt === undefined || !Number.isFinite(resetsAt)) return t("overlay.noReset");
   const left = resetsAt - now;
   if (left <= MINUTE) return t("reset.soon");
-  if (left < HOUR) return t("reset.minutes", { count: Math.ceil(left / MINUTE) });
-  if (left < DAY) return t("reset.hours", { count: Math.round(left / HOUR) });
-  return t("reset.days", { count: Math.floor(left / DAY) });
+  const totalMinutes = Math.floor(left / MINUTE);
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+  const days = Math.floor(hours / 24);
+  const dayHours = hours % 24;
+  if (hours === 0) return t("reset.minutes", { count: totalMinutes });
+  // Two units at most: "4 天 17 小时", never "4 天 0 小时".
+  if (days === 0) {
+    return minutes === 0
+      ? t("reset.hours", { count: hours })
+      : t("reset.hoursMinutes", { hours, minutes });
+  }
+  return dayHours === 0
+    ? t("reset.days", { count: days })
+    : t("reset.daysHours", { days, hours: dayHours });
 }

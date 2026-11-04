@@ -81,6 +81,18 @@ test("resetCountdown phrases the remaining time in minutes, hours, then days", (
   assert.equal(resetCountdown(now + 3 * 86_400_000, t, now), 'reset.days:{"count":3}');
 });
 
+test("resetCountdown keeps the second unit while it is non-zero", () => {
+  const now = 1_800_000_000_000;
+  // 4 days 17 hours, the shape the Console itself prints
+  assert.equal(resetCountdown(now + ((4 * 24 + 17) * 3_600_000), t, now), 'reset.daysHours:{"days":4,"hours":17}');
+  // 2 hours 30 minutes
+  assert.equal(resetCountdown(now + (2 * 3_600_000 + 30 * 60_000), t, now), 'reset.hoursMinutes:{"hours":2,"minutes":30}');
+  // a whole number of days stays short
+  assert.equal(resetCountdown(now + 5 * 86_400_000, t, now), 'reset.days:{"count":5}');
+  // a whole number of hours stays short
+  assert.equal(resetCountdown(now + 6 * 3_600_000, t, now), 'reset.hours:{"count":6}');
+});
+
 test("resetCountdown falls back when the window carries no reset", () => {
   assert.equal(resetCountdown(undefined, t), "overlay.noReset");
 });

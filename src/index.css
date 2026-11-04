@@ -139,7 +139,9 @@
 /* Another dock entry before this one (the message queue) cancels the stack gap
    with a negative bottom margin, which would pull this strip over it. */
 .ou-dock:not(:first-child) {
-  margin-top: calc(var(--dsh-composer-stack-gap, 6px) + 3px);
+  /* One notch more than the stack gap: 6px alone read as touching, 15px as
+     detached, so the queue entry gets 10px of air. */
+  margin-top: 4px;
 }
 
 .ou-dock {

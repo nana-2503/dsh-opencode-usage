@@ -26,7 +26,7 @@ import { cn } from "cn";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { failureText } from "./messages";
-import { MeterRow } from "./meter";
+import { MeterRow, PeriodTokens } from "./meter";
 import {
   WINDOWS,
   colorOf,
@@ -58,6 +58,8 @@ interface DragState {
 
 /** Movement under this many pixels still counts as a click, not a drag. */
 const DRAG_SLOP = 3;
+
+
 
 /** The pill's status dot, tinted by the most constrained window. */
 function StatusDot({ color }: { color: string }) {
@@ -262,6 +264,7 @@ export function UsageOverlay({ t, openSettings }: OverlayProps) {
                     : <MeterRow key={window.key} label={t(window.label)} meter={meter} t={t} />;
                 })
               )}
+              {snapshot.summary === undefined ? null : <PeriodTokens summary={snapshot.summary} t={t} />}
             </CardContent>
 
             <CardFooter className="justify-between gap-2 border-border text-[11px] text-muted-foreground">

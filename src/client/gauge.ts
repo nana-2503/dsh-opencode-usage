@@ -21,6 +21,20 @@ export interface Meter {
 /** Allowance per window; a window missing upstream is simply absent. */
 export type Usage = Partial<Record<WindowKey, Meter>>;
 
+/** Token totals for one billing period, as the Console reports them. */
+export interface TokenSummary {
+  /** Inclusive `YYYY-MM-DD` bounds of the period. */
+  from: string;
+  to: string;
+  requests: number;
+  input: number;
+  output: number;
+  cacheRead: number;
+  cacheWrite: number;
+  /** Everything the period processed, cache included. */
+  total: number;
+}
+
 /** Translate function handed to slot entries through the `locale` option. */
 export type Translate = (key: string, params?: Record<string, string | number>) => string;
 
@@ -36,6 +50,19 @@ export const usedPercent = (meter: Meter): number => Math.min(100, Math.max(0, M
 
 /** Share of a window still available. */
 export const remainingPercent = (meter: Meter): number => 100 - usedPercent(meter);
+
+/**
+ * Compact token count, the way the composer's own counters read ("110M tok").
+ * @param value - raw token count.
+ * @returns a short label such as `840`, `12k`, `8.6M`, or `1.05B`.
+ */
+export function formatTokens(value: number): string {
+  if (!Number.isFinite(value) || value <= 0) return "0";
+  if (value >= 1e9) return `${(value / 1e9).toFixed(value >= 1e10 ? 1 : 2)}B`;
+  if (value >= 1e6) return `${(value / 1e6).toFixed(value >= 1e8 ? 1 : 2)}M`;
+  if (value >= 1e3) return `${Math.round(value / 1e3)}k`;
+  return String(Math.round(value));
+}
 
 /**
  * Gauge tier, read from the remaining share: green from 70% left, blue from

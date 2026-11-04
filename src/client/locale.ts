@@ -2,7 +2,7 @@
 export const NS = "opencodeUsage";
 
 /** Gauge shapes shared with the wire layer. */
-import type { Usage } from "./gauge";
+import type { TokenSummary, Usage } from "./gauge";
 export type { Meter, Usage, WindowKey } from "./gauge";
 
 /** Failure codes the Host reports, so the browser owns the wording. */
@@ -29,6 +29,8 @@ export interface Snapshot {
   orgId?: string;
   keyHint: string;
   usage?: Usage;
+  /** Token totals for the current billing period, when the Console answered. */
+  summary?: TokenSummary;
   fetchedAt?: number;
   error?: Failure;
   /** Transient outcome of the last save/clear, cleared by the next action. */
@@ -97,7 +99,9 @@ export const zh = {
   "settings.error.shape": "上游返回了无法识别的内容。",
   "settings.error.empty": "密钥不能为空。",
   "settings.error.unknown": "查询失败：{detail}",
-  "settings.footnote": "数据来自 OpenCode Console 的 /zen/go/v1/usage。",
+  "usage.period": "本周期 {total} tok",
+  "usage.breakdown": "输入 {input} · 输出 {output} · 缓存读 {cacheRead} · {from} ~ {to}",
+  "settings.footnote": "数据来自 OpenCode Console 的 /zen/go/v1/usage 与 /api/usage/summary。",
 };
 
 /** English copy. */
@@ -159,5 +163,7 @@ export const en: Record<keyof typeof zh, string> = {
   "settings.error.shape": "The upstream answer was not recognized.",
   "settings.error.empty": "The key must not be empty.",
   "settings.error.unknown": "Query failed: {detail}",
-  "settings.footnote": "Values come from the OpenCode Console /zen/go/v1/usage endpoint.",
+  "usage.period": "{total} tok this period",
+  "usage.breakdown": "in {input} · out {output} · cache {cacheRead} · {from} ~ {to}",
+  "settings.footnote": "Values come from the OpenCode Console /zen/go/v1/usage and /api/usage/summary endpoints.",
 };

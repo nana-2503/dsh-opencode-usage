@@ -6,6 +6,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import {
   colorOf,
+  formatTokens,
   formatInstant,
   mostConstrained,
   remainingPercent,
@@ -88,4 +89,15 @@ test("formatInstant renders a readable instant and tolerates absence", () => {
   const text = formatInstant(1_800_000_000_000);
   assert.equal(typeof text, "string");
   assert.ok((text ?? "").length > 0);
+});
+
+test("formatTokens keeps counts short and readable", () => {
+  assert.equal(formatTokens(0), "0");
+  assert.equal(formatTokens(Number.NaN), "0");
+  assert.equal(formatTokens(840), "840");
+  assert.equal(formatTokens(12_400), "12k");
+  assert.equal(formatTokens(8_620_000), "8.62M");
+  assert.equal(formatTokens(105_453_758), "105.5M");
+  assert.equal(formatTokens(8_506_197_529), "8.51B");
+  assert.equal(formatTokens(12_000_000_000), "12.0B");
 });

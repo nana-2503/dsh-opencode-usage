@@ -13,6 +13,16 @@ import { apply } from "../index.js";
 /** A credential whose last four characters are easy to assert. */
 const KEY = "oc_test_key_1234";
 
+/** Token totals the Console reports for a period. */
+const SUMMARY = {
+  totalRequests: "33150",
+  totalInputTokens: "105453758",
+  totalOutputTokens: "19549073",
+  totalCacheReadTokens: "8506197529",
+  totalCacheWrite5mTokens: "0",
+  totalCacheWrite1hTokens: "0",
+};
+
 /** One upstream answer in the shape the Console returns. */
 const UPSTREAM = {
   usage: {
@@ -63,7 +73,7 @@ function stubFetch(responder) {
   const calls = [];
   globalThis.fetch = async (url, init) => {
     calls.push({ url: String(url), init });
-    return responder(calls.length);
+    return responder(calls.length, String(url));
   };
   return {
     calls,
@@ -112,6 +122,12 @@ async function waitFor(predicate, timeout = 1_000) {
   return false;
 }
 
+/** Answer both upstream endpoints the way the Console does. */
+function respond(_attempt, url) {
+  if (url.includes("/console/api/usage/summary")) return new Response(JSON.stringify(SUMMARY), { status: 200 });
+  return new Response(JSON.stringify(UPSTREAM), { status: 200 });
+}
+
 /** Fresh temp profile home. */
 const home = () => mkdtemp(join(tmpdir(), "oc-usage-"));
 
@@ -133,7 +149,7 @@ test("state reports unconfigured before any key exists", async () => {
 
 test("saving a key reads the allowance and never echoes the key", async () => {
   const dir = await home();
-  const net = stubFetch(() => new Response(JSON.stringify(UPSTREAM), { status: 200 }));
+  const net = stubFetch(respond) ;
   const host = harness(dir);
   try {
     apply(host.ctx);
@@ -147,12 +163,19 @@ test("saving a key reads the allowance and never echoes the key", async () => {
 
     const stored = JSON.parse(await readFile(join(dir, "opencode-usage.json"), "utf8"));
     assert.equal(stored.apiKey, KEY);
-    assert.equal(net.calls.length, 1);
+    assert.equal(net.calls.length, 2, "one allowance read plus one token summary");
     assert.match(net.calls[0].init.headers.authorization, /^Bearer oc_test_key_1234$/);
+    assert.match(net.calls[1].url, /\/console\/api\/usage\/summary\?from=\d{4}-\d{2}-\d{2}&to=\d{4}-\d{2}-\d{2}$/);
+
+    // input + output + cache read + cache write
+    assert.equal(saved.body.summary.total, 8_631_200_360);
+    assert.equal(saved.body.summary.input, 105_453_758);
+    assert.equal(saved.body.summary.cacheRead, 8_506_197_529);
+    assert.match(saved.body.summary.from, /^\d{4}-\d{2}-\d{2}$/);
 
     const again = await call(host, "GET", "/api/opencode-usage/state");
     assert.equal(again.body.fetchedAt, saved.body.fetchedAt, "a warm cache must not re-read upstream");
-    assert.equal(net.calls.length, 1);
+    assert.equal(net.calls.length, 2);
   } finally {
     host.dispose();
     net.restore();
@@ -161,7 +184,7 @@ test("saving a key reads the allowance and never echoes the key", async () => {
 
 test("a restart paints from the remembered snapshot", async () => {
   const dir = await home();
-  const first = stubFetch(() => new Response(JSON.stringify(UPSTREAM), { status: 200 }));
+  const first = stubFetch(respond) ;
   const before = harness(dir);
   try {
     apply(before.ctx);
@@ -202,6 +225,24 @@ test("a rejected key is classified, not leaked", async () => {
   }
 });
 
+test("a failing summary never hides the allowance", async () => {
+  const dir = await home();
+  const net = stubFetch((_attempt, url) => (url.includes("/usage/summary")
+    ? new Response("{}", { status: 500 })
+    : new Response(JSON.stringify(UPSTREAM), { status: 200 })));
+  const host = harness(dir);
+  try {
+    apply(host.ctx);
+    const saved = await call(host, "POST", "/api/opencode-usage/key", { apiKey: KEY });
+    assert.equal(saved.body.configured, true);
+    assert.equal(saved.body.usage.rolling.percent, 3);
+    assert.equal(saved.body.summary, undefined);
+  } finally {
+    host.dispose();
+    net.restore();
+  }
+});
+
 test("an empty key is refused without touching upstream", async () => {
   const dir = await home();
   const net = stubFetch(() => new Response("{}", { status: 500 }));
@@ -220,7 +261,7 @@ test("an empty key is refused without touching upstream", async () => {
 
 test("clearing forgets the key and the remembered snapshot", async () => {
   const dir = await home();
-  const net = stubFetch(() => new Response(JSON.stringify(UPSTREAM), { status: 200 }));
+  const net = stubFetch(respond) ;
   const host = harness(dir);
   try {
     apply(host.ctx);
@@ -242,7 +283,7 @@ test("clearing forgets the key and the remembered snapshot", async () => {
 
 test("the credential file is owner-only", { skip: process.platform === "win32" }, async () => {
   const dir = await home();
-  const net = stubFetch(() => new Response(JSON.stringify(UPSTREAM), { status: 200 }));
+  const net = stubFetch(respond) ;
   const host = harness(dir);
   try {
     apply(host.ctx);

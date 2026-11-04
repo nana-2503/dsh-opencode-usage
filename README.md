@@ -36,6 +36,8 @@ bottom-right corner of the Web UI and stores the Console API key on the Host.
   上游返回 `rate-limited` 时直接标红。
 - **倒计时**：重置时间显示成「43 分钟后重置」这种相对时间（悬停可看绝对时刻），
   不用心算。
+- **本周期 Token 总量**：展开后多一行「本周期 8.51B tok」，悬停可看
+  输入 / 输出 / 缓存读的拆分和周期区间。
 - **重启即显**：Host 会把最后一次读取结果缓存到磁盘，重启后第一帧就有数字，不会闪「查询中」。
 - **密钥只在 Host**：浏览器只拿到末四位与用量数字，密钥永不回传页面。
 - **跟随主题**：全部颜色走 `--dsw-alias-*` 令牌，浅色/深色自动切换。
@@ -87,7 +89,12 @@ Host 半段注册四个同源路由，浏览器只与它们通信：
 GET https://opencode.ai/zen/go/v1/usage
 Authorization: Bearer <API key>
 x-opencode-org-id: <org id>     # 可选，多组织密钥才需要
+
+GET https://opencode.ai/console/api/usage/summary?from=<YYYY-MM-DD>&to=<YYYY-MM-DD>
 ```
+
+周期区间取「月度窗口重置时间往前一个月」，与订阅周期对齐；这个接口失败时
+只是不显示 Token 总量，百分比不受影响。
 
 返回 `usage.rolling / usage.weekly / usage.monthly`（`percent` = 已用百分比、`status`、
 `resetsAt`）。Host 侧最多每 60 秒刷新一次，页面每 60 秒轮询一次本地快照。

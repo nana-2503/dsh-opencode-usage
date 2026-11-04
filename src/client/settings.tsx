@@ -12,7 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { failureText } from "./messages";
-import { MeterRow } from "./meter";
+import { MeterRow, PeriodTokens } from "./meter";
 import { WINDOWS, formatInstant, type Translate } from "./gauge";
 import { setWidgetMode, useWidgetMode, type WidgetMode } from "./prefs";
 import { usageStore } from "./store";
@@ -187,6 +187,7 @@ export function UsageSettings({ t }: SettingsProps) {
                   ? null
                   : <MeterRow key={window.key} label={t(window.label)} meter={meter} t={t} />;
               })}
+              {snapshot.summary === undefined ? null : <PeriodTokens summary={snapshot.summary} t={t} />}
             </div>
           )}
           <p className="text-[10px] text-muted-foreground">{t("settings.footnote")}</p>

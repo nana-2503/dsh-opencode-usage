@@ -8,7 +8,7 @@
 import { useState, useSyncExternalStore } from "react";
 import { ChevronDown, ChevronUp, RefreshCw, Settings2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { MeterRow } from "./meter";
+import { MeterRow, PeriodTokens } from "./meter";
 import { failureText } from "./messages";
 import {
   WINDOWS,
@@ -20,6 +20,8 @@ import {
 } from "./gauge";
 import { useWidgetMode } from "./prefs";
 import { usageStore } from "./store";
+
+
 
 /** Props the slot injects beside the locale-bound `t`. */
 interface DockProps {
@@ -127,6 +129,7 @@ export function UsageDock({ t, openSettings }: DockProps) {
                 ? null
                 : <MeterRow key={window.key} label={t(window.label)} meter={meter} t={t} />;
             })}
+            {snapshot.summary === undefined ? null : <PeriodTokens summary={snapshot.summary} t={t} />}
           </div>
         ) : null}
       </div>

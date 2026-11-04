@@ -16,6 +16,8 @@ import { dirname, join } from "node:path";
 const PKG = "@nana-2503/dsh-opencode-usage";
 /** OpenCode Console allowance endpoint (`/zen/go/v1/usage` on the console origin). */
 const USAGE_URL = "https://opencode.ai/zen/go/v1/usage";
+/** Console usage summary, the only endpoint that reports token counts. */
+const SUMMARY_URL = "https://opencode.ai/console/api/usage/summary";
 /** Route prefix owned by this plugin. */
 const ROUTE = "/api/opencode-usage";
 /** Upstream request budget. A hung upstream must not pin a browser request. */
@@ -173,6 +175,54 @@ export function apply(ctx) {
 	};
 
 	/**
+	 * The billing period a monthly reset closes: one calendar month before it.
+	 * The summary endpoint only accepts whole days, so the window is slightly
+	 * wider than the exact reset instant.
+	 * @param {{ monthly?: { resetsAt?: number } }} usage - the allowance just read.
+	 * @returns {{ from: string, to: string }} inclusive `YYYY-MM-DD` bounds.
+	 */
+	const periodOf = (usage) => {
+		const end = new Date(usage.monthly?.resetsAt ?? Date.now());
+		const start = new Date(end);
+		start.setMonth(start.getMonth() - 1);
+		return { from: start.toISOString().slice(0, 10), to: end.toISOString().slice(0, 10) };
+	};
+
+	/**
+	 * Read the token totals for one billing period. Best effort: a failure here
+	 * never hides the allowance percentages.
+	 * @param {{ apiKey: string, orgId?: string }} record - stored credential.
+	 * @param {{ monthly?: { resetsAt?: number } }} usage - the allowance just read.
+	 * @param {AbortSignal} signal - caller lifetime.
+	 * @returns {Promise<object>} per-type totals plus the period.
+	 */
+	const fetchSummary = async (record, usage, signal) => {
+		const period = periodOf(usage);
+		const headers = { accept: "application/json", authorization: `Bearer ${record.apiKey}` };
+		if (record.orgId !== undefined) headers["x-opencode-org-id"] = record.orgId;
+		const response = await fetch(`${SUMMARY_URL}?from=${period.from}&to=${period.to}`, { headers, signal });
+		if (!response.ok) throw new UsageError("upstream", `summary HTTP ${response.status}`);
+		const body = await response.json();
+		const count = (value) => {
+			const parsed = Number(value);
+			return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
+		};
+		const input = count(body?.totalInputTokens);
+		const output = count(body?.totalOutputTokens);
+		const cacheRead = count(body?.totalCacheReadTokens);
+		const cacheWrite = count(body?.totalCacheWrite5mTokens) + count(body?.totalCacheWrite1hTokens);
+		return {
+			...period,
+			requests: count(body?.totalRequests),
+			input,
+			output,
+			cacheRead,
+			cacheWrite,
+			total: input + output + cacheRead + cacheWrite,
+		};
+	};
+
+	/**
 	 * Refresh the cached allowance, joining an in-flight read instead of stacking one.
 	 * @param {{ force?: boolean }} [options] - `force` ignores the staleness check.
 	 * @returns {Promise<void>} resolves once the cache reflects this attempt.
@@ -194,6 +244,11 @@ export function apply(ctx) {
 				const usage = await fetchUsage(record, controller.signal);
 				cached = { usage, fetchedAt: Date.now(), hint: hintOf(record.apiKey) };
 				lastError = undefined;
+				try {
+					cached = { ...cached, summary: await fetchSummary(record, usage, controller.signal) };
+				} catch (error) {
+					ctx.logger.warn("opencode-usage: token summary unavailable: %s", String(error?.message ?? error));
+				}
 				void writeCache(cached);
 			} catch (error) {
 				lastError = error?.name === "AbortError"
@@ -218,6 +273,7 @@ export function apply(ctx) {
 			orgId: record.orgId,
 			keyHint: configured ? hintOf(record.apiKey) : "",
 			usage: configured ? cached?.usage : undefined,
+			summary: configured ? cached?.summary : undefined,
 			fetchedAt: configured ? cached?.fetchedAt : undefined,
 			error: configured ? lastError : undefined,
 		};

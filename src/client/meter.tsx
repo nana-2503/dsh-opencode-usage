@@ -10,10 +10,12 @@ import { Progress } from "@/components/ui/progress";
 import {
   colorOf,
   formatInstant,
+  formatTokens,
   resetCountdown,
   toneOf,
   usedPercent,
   type Meter,
+  type TokenSummary,
   type Translate,
 } from "./gauge";
 
@@ -62,5 +64,23 @@ export function MeterRow({ label, meter, t }: { label: string; meter: Meter; t: 
         style={{ "--ou-tone": color } as CSSProperties}
       />
     </div>
+  );
+}
+
+/** The billing-period token total, with its split in the tooltip. */
+export function PeriodTokens({ summary, t }: { summary: TokenSummary; t: Translate }) {
+  return (
+    <p
+      className="text-[11px] text-muted-foreground"
+      title={t("usage.breakdown", {
+        input: formatTokens(summary.input),
+        output: formatTokens(summary.output),
+        cacheRead: formatTokens(summary.cacheRead),
+        from: summary.from,
+        to: summary.to,
+      })}
+    >
+      {t("usage.period", { total: formatTokens(summary.total) })}
+    </p>
   );
 }

@@ -6,6 +6,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import {
   colorOf,
+  formatCount,
   formatTokens,
   formatInstant,
   mostConstrained,
@@ -100,4 +101,10 @@ test("formatTokens keeps counts short and readable", () => {
   assert.equal(formatTokens(105_453_758), "105.5M");
   assert.equal(formatTokens(8_506_197_529), "8.51B");
   assert.equal(formatTokens(12_000_000_000), "12.0B");
+});
+
+test("formatCount keeps request totals exact and grouped", () => {
+  assert.equal(formatCount(0), "0");
+  assert.equal(formatCount(1311), (1311).toLocaleString());
+  assert.equal(formatCount(33_150.4), (33_150).toLocaleString());
 });

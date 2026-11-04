@@ -65,6 +65,17 @@ export function formatTokens(value: number): string {
 }
 
 /**
+ * Exact count with the viewer's grouping ("1,311"), for request totals where a
+ * compact "1.3k" would lose information.
+ * @param value - raw count.
+ * @returns the grouped number.
+ */
+export function formatCount(value: number): string {
+  if (!Number.isFinite(value) || value <= 0) return "0";
+  return Math.round(value).toLocaleString();
+}
+
+/**
  * Gauge tier, read from the remaining share: green from 70% left, blue from
  * 50%, yellow from 20%, and red below that (or as soon as the allowance is
  * spent or the upstream reports the window rate-limited).

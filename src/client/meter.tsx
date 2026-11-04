@@ -9,6 +9,7 @@ import { cn } from "cn";
 import { Progress } from "@/components/ui/progress";
 import {
   colorOf,
+  formatCount,
   formatInstant,
   formatTokens,
   resetCountdown,
@@ -67,20 +68,19 @@ export function MeterRow({ label, meter, t }: { label: string; meter: Meter; t: 
   );
 }
 
-/** The billing-period token total, with its split in the tooltip. */
+/** The billing period's request count and token split, one wrapping line. */
 export function PeriodTokens({ summary, t }: { summary: TokenSummary; t: Translate }) {
   return (
     <p
-      className="text-[11px] text-muted-foreground"
-      title={t("usage.breakdown", {
+      className="text-[11px] leading-relaxed text-muted-foreground"
+      title={t("usage.period", { from: summary.from, to: summary.to })}
+    >
+      {t("usage.stats", {
+        requests: formatCount(summary.requests),
         input: formatTokens(summary.input),
         output: formatTokens(summary.output),
-        cacheRead: formatTokens(summary.cacheRead),
-        from: summary.from,
-        to: summary.to,
+        cache: formatTokens(summary.cacheRead),
       })}
-    >
-      {t("usage.period", { total: formatTokens(summary.total) })}
     </p>
   );
 }

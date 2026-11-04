@@ -121,3 +121,13 @@
   border: 1px solid var(--ou-track-edge);
   background-color: var(--ou-track);
 }
+
+/* The composer dock slot is a full-width flex child; this pulls the strip in to
+   the composer card's width using the host's own layout variables. */
+.ou-dock {
+  box-sizing: border-box;
+  width: calc(100% - 2 * var(--dsh-composer-side-clearance, 16px) - 2 * var(--dsh-composer-dock-inset, 8px));
+  max-width: calc(var(--dsh-composer-card-max-width, 952px) - 2 * var(--dsh-composer-dock-inset, 8px));
+  margin-inline: auto;
+  flex: none;
+}

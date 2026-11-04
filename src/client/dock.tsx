@@ -37,8 +37,8 @@ export function UsageDock({ t, openSettings }: DockProps) {
   const color = worst === undefined ? "var(--ou-muted-bar)" : colorOf(toneOf(worst.meter));
 
   return (
-    <div className="ou-root w-full">
-      <div className="flex items-center gap-3 rounded-lg bg-card/60 px-2.5 py-1.5 text-xs ring-1 ring-border">
+    <div className="ou-root ou-dock">
+      <div className="flex items-center gap-3 rounded-lg bg-card px-3 py-1.5 text-xs ring-1 ring-border shadow-sm">
         <span className="flex shrink-0 items-center gap-1.5">
           <span className="size-2 rounded-full" style={{ background: color }} aria-hidden />
           <span className="font-medium text-foreground max-sm:hidden">{t("pill.label")}</span>

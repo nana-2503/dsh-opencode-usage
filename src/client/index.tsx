@@ -6,7 +6,7 @@
  * stylesheet they render with.
  * @module opencode-usage/client
  */
-import { CSS } from "./generated-css";
+import { CSS } from "../../build/generated-css";
 /** Dictionary namespace plus both locales. */
 import { NS, en, zh } from "./locale";
 import { UsageDock } from "./dock";

@@ -4,6 +4,7 @@
  * @module opencode-usage/client/prefs
  */
 import { useSyncExternalStore } from "react";
+import { clampBase, DEFAULT_BASE } from "./radius";
 
 /** Where the allowance is drawn: the frame overlay, the strip above the composer, or nowhere. */
 export type WidgetMode = "overlay" | "dock" | "hidden";
@@ -101,5 +102,34 @@ export function saveCorner(corner: Corner): void {
     window.localStorage.setItem(CORNER_KEY, JSON.stringify(corner));
   } catch {
     /* the in-memory position still applies for this page lifetime */
+  }
+}
+
+/** Storage key of the corner-radius preference, kept from the standalone plugin. */
+const RADIUS_KEY = "dsh.global-radius.base";
+
+/**
+ * Read the stored base radius, falling back to the shipped default.
+ * @returns a clamped base radius in px.
+ */
+export function readRadiusBase(): number {
+  try {
+    const raw = window.localStorage.getItem(RADIUS_KEY);
+    if (raw === null) return DEFAULT_BASE;
+    return clampBase(Number.parseInt(raw, 10));
+  } catch {
+    return DEFAULT_BASE;
+  }
+}
+
+/**
+ * Persist the base radius for this browser.
+ * @param base - base radius in px.
+ */
+export function writeRadiusBase(base: number): void {
+  try {
+    window.localStorage.setItem(RADIUS_KEY, String(base));
+  } catch {
+    /* storage may be unavailable; the override still applies for this session */
   }
 }

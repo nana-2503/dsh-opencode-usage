@@ -1,7 +1,7 @@
 {
   "name": "@nana-2503/dsh-opencode-usage",
-  "version": "0.1.0",
-  "description": "DeepSeek Harness plugin: floating OpenCode Go allowance widget with a Console API-key settings page",
+  "version": "0.2.0",
+  "description": "DeepSeek Harness plugin: floating OpenCode Go allowance widget with a Console API-key settings page, plus a global corner-radius preference",
   "license": "MIT",
   "author": "nana-2503",
   "repository": {
@@ -52,7 +52,8 @@
       "inject": [
         "@deepseek-ai/dsh-client-ui-layout",
         "@deepseek-ai/dsh-client-ui-plugin-manager",
-        "@deepseek-ai/dsh-client-ui-conversation"
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings-general"
       ]
     }
   },

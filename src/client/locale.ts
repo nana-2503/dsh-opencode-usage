@@ -104,6 +104,12 @@ export const zh = {
   "settings.error.unknown": "查询失败：{detail}",
   "usage.stats": "本周期 {requests} 次请求 · 输入 {input} · 输出 {output} · 缓存读 {cache}",
   "usage.period": "{from} ~ {to}",
+  "radius.title": "全局圆角",
+  "radius.description": "统一缩放界面各处的圆角，仅保存在当前浏览器",
+  "radius.increase": "增大圆角",
+  "radius.decrease": "减小圆角",
+  "radius.unit": "px",
+  "radius.reset": "恢复默认",
   "settings.footnote": "数据来自 OpenCode Console 的 /zen/go/v1/usage 与 /api/usage/summary。",
 };
 
@@ -171,5 +177,11 @@ export const en: Record<keyof typeof zh, string> = {
   "settings.error.unknown": "Query failed: {detail}",
   "usage.stats": "this period · {requests} req · in {input} · out {output} · cache {cache}",
   "usage.period": "{from} ~ {to}",
+  "radius.title": "Corner radius",
+  "radius.description": "Rescales the interface corners; saved in this browser only",
+  "radius.increase": "Increase corner radius",
+  "radius.decrease": "Decrease corner radius",
+  "radius.unit": "px",
+  "radius.reset": "Reset",
   "settings.footnote": "Values come from the OpenCode Console /zen/go/v1/usage and /api/usage/summary endpoints.",
 };

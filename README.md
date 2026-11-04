@@ -30,6 +30,9 @@ bottom-right corner of the Web UI and stores the Console API key on the Host.
   拖离默认位置后，卡片右上角会出现「复位位置」按钮。
 - **插件设置页**：左侧「插件」→ 已安装 → 本插件。粘贴 API Key（可选组织 ID），
   「保存并测试」立即查一次；支持刷新、移除密钥。
+- **全局圆角**：设置 → 通用里多一行「全局圆角」，一个步进器按比例缩放
+  `--dsw-radius-xs … --dsw-radius-panel`（默认 16px，0–24px），整个界面的卡片、
+  菜单、输入框、按钮和输入框上方的用量条都会跟着变；偏好存在浏览器里，禁用插件即恢复。
 - **显示位置**：可切「悬浮窗 / 输入框上方 / 隐藏」。选「输入框上方」时，额度以一条
   紧凑横条挂在输入框上方（可点箭头展开成三段进度条），右下角悬浮窗自动不显示。
 - **四档配色**（按剩余额度）：≥70% 深绿 → ≥50% 蓝 → ≥20% 黄 → <20% 红；
@@ -108,7 +111,7 @@ GET https://opencode.ai/console/api/usage/summary?from=<YYYY-MM-DD>&to=<YYYY-MM-
 | `client.js` | 浏览器构件（由 `build.mjs` 生成，随仓库提交） |
 | `cordis.patch.yml` | bundle 插入的插件行 |
 | `locale/{zh,en}.json` | 插件列表里的标题与描述 |
-| `src/client/*` | 悬浮窗、设置页、store、locale |
+| `src/client/*` | 悬浮窗、输入框上方横条、设置页、圆角行、store、locale |
 | `src/components/ui/*` | shadcn（base-nova / Base UI）组件 |
 | `build.mjs` | Tailwind 编译 → 内联 CSS → esbuild 打包 |
 
@@ -136,6 +139,13 @@ Tailwind 只引 `theme` + `utilities` 两层、不含 preflight；插件自带�
 `.ou-root` 内的作用域重置，避免影响 Harness 页面本身。改了 `client.js` 后，
 DSH 的 client HMR 会自动重载浏览器模块；改了 `index.js`（Host 半段）需要重启
 DSH，或在插件页把该行禁用/启用一次。
+
+## 合并说明 / Merged bundle
+
+「全局圆角」原本是独立的 `@local/dsh-global-radius`，现已并入本插件：
+`src/client/radius.ts`（刻度与夹取，纯函数、有单测）和 `src/client/radius-row.tsx`
+（设置行）。覆盖层通过 `ctx.theme.overrideTokens` 安装，插件卸载时自动撤除，
+所以只需要安装这一个插件。
 
 ## 许可 / License
 

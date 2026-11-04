@@ -9,16 +9,19 @@
 import { CSS } from "../../build/generated-css";
 /** Dictionary namespace plus both locales. */
 import { NS, en, zh } from "./locale";
+import { CornerRadiusRow } from "./radius-row";
 import { UsageDock } from "./dock";
 import { UsageOverlay } from "./overlay";
 import { UsageSettings } from "./settings";
 import { usageStore } from "./store";
+import { readRadiusBase, writeRadiusBase } from "./prefs";
+import { RADIUS_SOURCE, clampBase, radiusTokens } from "./radius";
 
 /** Public package name; also the bundle page key this plugin configures. */
 const PKG = "@nana-2503/dsh-opencode-usage";
 
 /** Services this client half needs before it mounts. */
-export const inject = ["slots", "locale"];
+export const inject = ["slots", "locale", "theme"];
 
 /**
  * Mount the contribution.
@@ -29,6 +32,9 @@ interface ClientContext {
   effect(callback: () => unknown, label?: string): () => void;
   get(name: string): unknown;
   locale: { register(ns: string, dicts: Record<string, unknown>): () => void };
+  theme: {
+    overrideTokens(source: string, tokens: Record<string, { light: string; dark: string }>): () => void;
+  };
   slots: {
     inject(key: string, callback: () => unknown): unknown;
     register(options: Record<string, unknown>, component: unknown): unknown;
@@ -54,6 +60,24 @@ export function apply(ctx: ClientContext): void {
 
   ctx.effect(() => usageStore.start(), "opencode-usage: allowance polling");
 
+  // Global corner radius: one override layer rescales the shared radius tokens.
+  let base = readRadiusBase();
+  let radiusLayer = services.theme.overrideTokens(RADIUS_SOURCE, radiusTokens(base));
+  ctx.effect(() => () => {
+    radiusLayer();
+    radiusLayer = () => {};
+  }, "opencode-usage: radius override layer");
+
+  /** Apply and remember one corner-radius choice. */
+  const setRadius = (next: number) => {
+    const clamped = clampBase(next);
+    if (clamped === base) return;
+    base = clamped;
+    writeRadiusBase(base);
+    radiusLayer();
+    radiusLayer = services.theme.overrideTokens(RADIUS_SOURCE, radiusTokens(base));
+  };
+
   /** Open this bundle's page in Settings → Plugins, where the key form lives. */
   const openSettings = () => {
     const navigation = services.get("pluginNavigation") as { openBundle?: (name: string) => void } | undefined;
@@ -72,6 +96,14 @@ export function apply(ctx: ClientContext): void {
     locale: NS,
     inject: () => ({ openSettings }),
   }, UsageOverlay));
+
+  services.slots.inject("settings.general.item", () => services.slots.register({
+    name: "settings.general.item",
+    id: "global-radius",
+    order: 12,
+    locale: NS,
+    inject: () => ({ getRadius: () => base, setRadius }),
+  }, CornerRadiusRow));
 
   services.slots.inject("conversation.input.dock", () => services.slots.register({
     name: "conversation.input.dock",

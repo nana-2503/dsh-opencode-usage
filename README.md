@@ -69,8 +69,9 @@ git clone https://github.com/nana-2503/dsh-opencode-usage
 2. DSH 里点胶囊 →「设置密钥」，或走「插件 → 已安装 → OpenCode Go 用量」。
 3. 粘贴保存，页面会立即用该密钥查一次；失败会按原因提示（密钥被拒 / 超时 / 网络 / 上游异常）。
 
-密钥保存在当前 profile 的 `opencode-usage.json`（权限 `0600`，例如
-`~/.dsh/profiles/web/opencode-usage.json`）。浏览器侧只保存一个偏好：悬浮窗是否显示。
+密钥保存在 DSH 主目录的 `opencode-usage.json`（权限 `0600`，即
+`~/.dsh/opencode-usage.json`），最近一次读取结果缓存在同目录的
+`opencode-usage.cache.json`。浏览器侧只保存偏好：显示位置、悬浮窗坐标。
 
 ## 工作原理 / How it works
 

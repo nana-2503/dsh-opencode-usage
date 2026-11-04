@@ -5,6 +5,7 @@
  * @module opencode-usage/client/api
  */
 import type { Failure, Snapshot, Usage } from "./locale";
+import type { TokenSummary } from "./gauge";
 
 /** Route prefix registered by the Host half. */
 const ROUTE = "/api/opencode-usage";
@@ -28,8 +29,34 @@ function normalizeUsage(input: unknown): Usage | undefined {
   return Object.keys(out).length > 0 ? out : undefined;
 }
 
-/** Shape one untrusted answer into a snapshot, defaulting every optional field. */
-function normalize(body: unknown): Snapshot {
+/** Narrow the token totals the Host reports for the billing period. */
+function normalizeSummary(input: unknown): TokenSummary | undefined {
+  if (input === null || typeof input !== "object") return undefined;
+  const value = input as Record<string, unknown>;
+  const total = Number(value.total);
+  if (!Number.isFinite(total)) return undefined;
+  const count = (inputValue: unknown) => {
+    const parsed = Number(inputValue);
+    return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
+  };
+  return {
+    from: typeof value.from === "string" ? value.from : "",
+    to: typeof value.to === "string" ? value.to : "",
+    requests: count(value.requests),
+    input: count(value.input),
+    output: count(value.output),
+    cacheRead: count(value.cacheRead),
+    cacheWrite: count(value.cacheWrite),
+    total,
+  };
+}
+
+/**
+ * Shape one untrusted answer into a snapshot, defaulting every optional field.
+ * Exported for the wire tests: a field the Host sends but this drops is invisible
+ * in the UI, which is how the token totals went missing once.
+ */
+export function parseSnapshot(body: unknown): Snapshot {
   const value = (body ?? {}) as Record<string, unknown>;
   const error = value.error;
   const failure: Failure | undefined = error !== null && typeof error === "object"
@@ -44,6 +71,7 @@ function normalize(body: unknown): Snapshot {
     orgId: typeof value.orgId === "string" ? value.orgId : undefined,
     keyHint: typeof value.keyHint === "string" ? value.keyHint : "",
     usage: normalizeUsage(value.usage),
+    summary: normalizeSummary(value.summary),
     fetchedAt: typeof value.fetchedAt === "number" ? value.fetchedAt : undefined,
     error: failure,
     saving: false,
@@ -73,7 +101,7 @@ async function call(path: string, init?: { method?: string; body?: unknown }): P
   if (!response.ok && (parsed === null || typeof parsed !== "object")) {
     return { status: "error", configured: false, keyHint: "", error: { code: "upstream" }, saving: false, busy: false };
   }
-  return normalize(parsed);
+  return parseSnapshot(parsed);
 }
 
 /** Read the cached snapshot, refreshing it when the Host considers it stale. */

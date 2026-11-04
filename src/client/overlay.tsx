@@ -48,7 +48,7 @@ function pillStatus(
   if (snapshot.error !== undefined) return t("overlay.error");
   if (worst === undefined) return t("overlay.loading");
   if (worst.meter.limited) return t("overlay.limited");
-  return t("pill.remaining", { percent: remainingPercent(worst.meter) });
+  return t("pill.compact", { window: t(worst.short), percent: remainingPercent(worst.meter) });
 }
 
 /**

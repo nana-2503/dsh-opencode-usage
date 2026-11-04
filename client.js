@@ -54,6 +54,10 @@ var zh = {
   "pill.label": "OpenCode Go",
   "pill.remaining": "\u5269\u4F59 {percent}%",
   "pill.setup": "\u8BBE\u7F6E\u5BC6\u94A5",
+  "pill.short.rolling": "\u6EDA\u52A8",
+  "pill.short.weekly": "\u672C\u5468",
+  "pill.short.monthly": "\u672C\u6708",
+  "pill.compact": "{window} {percent}%",
   "pill.window.rolling": "\u6EDA\u52A8\u7A97\u53E3",
   "pill.window.weekly": "\u672C\u5468",
   "pill.window.monthly": "\u672C\u6708",
@@ -103,6 +107,10 @@ var en = {
   "pill.label": "OpenCode Go",
   "pill.remaining": "{percent}% left",
   "pill.setup": "Set up key",
+  "pill.short.rolling": "Rolling",
+  "pill.short.weekly": "Week",
+  "pill.short.monthly": "Month",
+  "pill.compact": "{window} {percent}%",
   "pill.window.rolling": "Rolling",
   "pill.window.weekly": "This week",
   "pill.window.monthly": "This month",
@@ -3016,9 +3024,9 @@ function ProgressIndicator3({
 // src/client/meter.tsx
 var import_jsx_runtime5 = require("react/jsx-runtime");
 var WINDOWS = [
-  { key: "rolling", label: "pill.window.rolling" },
-  { key: "weekly", label: "pill.window.weekly" },
-  { key: "monthly", label: "pill.window.monthly" }
+  { key: "rolling", label: "pill.window.rolling", short: "pill.short.rolling" },
+  { key: "weekly", label: "pill.window.weekly", short: "pill.short.weekly" },
+  { key: "monthly", label: "pill.window.monthly", short: "pill.short.monthly" }
 ];
 var usedPercent = (meter) => Math.round(meter.percent);
 var remainingPercent = (meter) => Math.max(0, 100 - usedPercent(meter));
@@ -3040,7 +3048,7 @@ function mostConstrained(usage) {
     const meter = usage[window2.key];
     if (meter === void 0) continue;
     if (best === void 0 || remainingPercent(meter) < remainingPercent(best.meter)) {
-      best = { key: window2.key, label: window2.label, meter };
+      best = { key: window2.key, label: window2.label, short: window2.short, meter };
     }
   }
   return best;
@@ -3307,7 +3315,7 @@ function pillStatus(t, snapshot, worst) {
   if (snapshot.error !== void 0) return t("overlay.error");
   if (worst === void 0) return t("overlay.loading");
   if (worst.meter.limited) return t("overlay.limited");
-  return t("pill.remaining", { percent: remainingPercent(worst.meter) });
+  return t("pill.compact", { window: t(worst.short), percent: remainingPercent(worst.meter) });
 }
 function UsageOverlay({ t, openSettings }) {
   const visible2 = useOverlayVisible();

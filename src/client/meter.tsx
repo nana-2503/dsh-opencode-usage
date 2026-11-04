@@ -14,10 +14,10 @@ import { Progress } from "@/components/ui/progress";
 import type { Meter, Usage, WindowKey } from "./locale";
 
 /** Display order and dictionary key of each allowance window. */
-export const WINDOWS: ReadonlyArray<{ key: WindowKey; label: string }> = [
-  { key: "rolling", label: "pill.window.rolling" },
-  { key: "weekly", label: "pill.window.weekly" },
-  { key: "monthly", label: "pill.window.monthly" },
+export const WINDOWS: ReadonlyArray<{ key: WindowKey; label: string; short: string }> = [
+  { key: "rolling", label: "pill.window.rolling", short: "pill.short.rolling" },
+  { key: "weekly", label: "pill.window.weekly", short: "pill.short.weekly" },
+  { key: "monthly", label: "pill.window.monthly", short: "pill.short.monthly" },
 ];
 
 /** Translate function handed to slot entries through the `locale` option. */
@@ -52,14 +52,14 @@ export function colorOf(tone: Tone): string {
 }
 
 /** The window with the least allowance left, which the collapsed pill reports. */
-export function mostConstrained(usage: Usage | undefined): { key: WindowKey; label: string; meter: Meter } | undefined {
+export function mostConstrained(usage: Usage | undefined): { key: WindowKey; label: string; short: string; meter: Meter } | undefined {
   if (usage === undefined) return undefined;
-  let best: { key: WindowKey; label: string; meter: Meter } | undefined;
+  let best: { key: WindowKey; label: string; short: string; meter: Meter } | undefined;
   for (const window of WINDOWS) {
     const meter = usage[window.key];
     if (meter === undefined) continue;
     if (best === undefined || remainingPercent(meter) < remainingPercent(best.meter)) {
-      best = { key: window.key, label: window.label, meter };
+      best = { key: window.key, label: window.label, short: window.short, meter };
     }
   }
   return best;

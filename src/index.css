@@ -124,6 +124,16 @@
   background-color: var(--ou-track);
 }
 
+/* The strip is a sibling of the composer card, so it borrows the card's own
+   surface, radius, and elevation rather than inventing its own. */
+.ou-dock-card {
+  border: 0;
+  border-radius: var(--dsw-radius-panel, 28px);
+  background: var(--dsw-specific-input-major, var(--ou-card));
+  --dsw-elevation-stroke-color: var(--dsw-alias-border-l2);
+  box-shadow: var(--dsw-elevation-soft, var(--ou-shadow));
+}
+
 /* The composer dock slot is a full-width flex child; this pulls the strip in to
    the composer card's width using the host's own layout variables. */
 /* Another dock entry before this one (the message queue) cancels the stack gap

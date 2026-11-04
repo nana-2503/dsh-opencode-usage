@@ -8,7 +8,7 @@
 import { useState, useSyncExternalStore } from "react";
 import { ChevronDown, ChevronUp, RefreshCw, Settings2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { MeterRow, PeriodTokens } from "./meter";
+import { BrandAvatar, MeterRow, PeriodTokens } from "./meter";
 import { failureText } from "./messages";
 import {
   WINDOWS,
@@ -47,7 +47,7 @@ export function UsageDock({ t, openSettings }: DockProps) {
       <div className="ou-dock-card flex flex-col px-4 py-1.5 text-xs">
         <div className="flex items-center gap-3">
           <span className="flex shrink-0 items-center gap-1.5">
-            <span className="size-2 rounded-full" style={{ background: color }} aria-hidden />
+            <BrandAvatar color={color} />
             <span className="font-medium text-foreground max-sm:hidden">{t("pill.label")}</span>
           </span>
 

@@ -169,7 +169,14 @@ export function UsageOverlay({ t, openSettings }: OverlayProps) {
   if (!visible) return null;
 
   const worst = mostConstrained(snapshot.usage);
-  const color = worst === undefined ? "var(--ou-muted-bar)" : colorOf(toneOf(worst.meter));
+  /** The collapsed pill always reports the rolling window, the one that refills fastest. */
+  const rolling = snapshot.usage?.rolling;
+  const reported = rolling === undefined
+    ? worst
+    : { key: "rolling" as const, label: "pill.window.rolling", short: "pill.short.rolling", meter: rolling };
+  /** Collapsed shows that window's tone; expanded shows the most constrained window's. */
+  const summary = open ? worst : reported;
+  const color = summary === undefined ? "var(--ou-muted-bar)" : colorOf(toneOf(summary.meter));
   const moved = corner.right !== DEFAULT_CORNER.right || corner.bottom !== DEFAULT_CORNER.bottom;
   const draggable = cn(
     "touch-none select-none",
@@ -291,8 +298,8 @@ export function UsageOverlay({ t, openSettings }: OverlayProps) {
             )}
           >
             <StatusDot color={color} />
-            <span className="font-medium">{t("pill.label")}</span>
-            <span className="text-muted-foreground">{pillStatus(t, snapshot, worst)}</span>
+            <span className="font-medium max-sm:hidden">{t("pill.label")}</span>
+            <span className="text-muted-foreground">{pillStatus(t, snapshot, reported)}</span>
           </button>
         )}
       </div>

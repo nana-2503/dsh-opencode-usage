@@ -113,21 +113,22 @@
 /* Gauge segments are outlined capsules: a 1px edge that is slightly stronger
    than the fill, and a soft top highlight on the fill, matching the allowance
    meter the OpenCode console draws. */
-/* The status dot breathes: a halo that fades out, tinted by currentColor. */
+/* The status dot sits inside a visible ring that breathes outward. The ring is
+   part of the static style, so the dot still reads as "live" when the system
+   asks for reduced motion (or when the animation is paused). */
 .ou-dot {
   background: currentColor;
+  box-shadow: 0 0 0 2px color-mix(in oklab, currentColor 38%, transparent);
   animation: ou-dot-pulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 @keyframes ou-dot-pulse {
-  0% {
-    box-shadow: 0 0 0 0 color-mix(in oklab, currentColor 45%, transparent);
-  }
-  70% {
-    box-shadow: 0 0 0 5px transparent;
-  }
+  0%,
   100% {
-    box-shadow: 0 0 0 0 transparent;
+    box-shadow: 0 0 0 2px color-mix(in oklab, currentColor 38%, transparent);
+  }
+  55% {
+    box-shadow: 0 0 0 6px color-mix(in oklab, currentColor 0%, transparent);
   }
 }
 

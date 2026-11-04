@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="OpenCode Go usage gauge">
+  <rect width="64" height="64" rx="16" fill="#0f172a"/>
+  <circle cx="32" cy="32" r="16" fill="none" stroke="#1e293b" stroke-width="6" stroke-linecap="round"
+          stroke-dasharray="75.4 25.13" transform="rotate(-90 32 32)"/>
+  <circle cx="32" cy="32" r="16" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"
+          stroke-dasharray="52.9 47.63" transform="rotate(-90 32 32)"/>
+  <circle cx="32" cy="32" r="4" fill="#e2e8f0"/>
+</svg>

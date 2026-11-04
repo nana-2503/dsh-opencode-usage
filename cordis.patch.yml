@@ -1,0 +1,3 @@
+- insert:
+    - id: opencode-usage
+      name: '@nana-2503/dsh-opencode-usage'

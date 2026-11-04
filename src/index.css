@@ -1,0 +1,120 @@
+/* OpenCode Go usage widget — Tailwind utilities only (no preflight, so the
+   host page keeps its own resets). Theme tokens are mapped onto the Harness
+   `--dsw-alias-*` tokens so light/dark follow the application theme. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@source "./**/*.{ts,tsx}";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-background: var(--ou-background);
+  --color-foreground: var(--ou-foreground);
+  --color-card: var(--ou-card);
+  --color-card-foreground: var(--ou-card-foreground);
+  --color-popover: var(--ou-popover);
+  --color-popover-foreground: var(--ou-foreground);
+  --color-primary: var(--ou-primary);
+  --color-primary-foreground: var(--ou-primary-foreground);
+  --color-secondary: var(--ou-secondary);
+  --color-secondary-foreground: var(--ou-foreground);
+  --color-muted: var(--ou-muted);
+  --color-muted-foreground: var(--ou-muted-foreground);
+  --color-accent: var(--ou-accent);
+  --color-accent-foreground: var(--ou-foreground);
+  --color-destructive: var(--ou-destructive);
+  --color-border: var(--ou-border);
+  --color-input: var(--ou-input);
+  --color-ring: var(--ou-ring);
+  --radius-sm: calc(var(--ou-radius) * 0.6);
+  --radius-md: calc(var(--ou-radius) * 0.8);
+  --radius-lg: var(--ou-radius);
+  --radius-xl: calc(var(--ou-radius) * 1.4);
+  --radius-2xl: calc(var(--ou-radius) * 1.8);
+}
+
+.ou-root {
+  --ou-background: var(--dsw-alias-bg-overlay);
+  --ou-foreground: var(--dsw-alias-label-primary);
+  --ou-card: var(--dsw-alias-bg-layer-1);
+  --ou-card-foreground: var(--dsw-alias-label-primary);
+  --ou-popover: var(--dsw-alias-bg-overlay);
+  --ou-primary: var(--dsw-alias-brand-primary);
+  --ou-primary-foreground: var(--dsw-alias-bg-base);
+  --ou-secondary: var(--dsw-alias-bg-layer-2);
+  --ou-muted: var(--dsw-alias-bg-layer-2);
+  --ou-muted-foreground: var(--dsw-alias-label-secondary);
+  --ou-accent: var(--dsw-alias-bg-layer-2);
+  --ou-destructive: var(--dsw-alias-state-error-primary);
+  --ou-border: var(--dsw-alias-border-l1);
+  --ou-input: var(--dsw-alias-border-l2);
+  --ou-ring: var(--dsw-alias-brand-primary);
+  --ou-radius: 0.625rem;
+  --ou-success: var(--dsw-alias-state-success-primary);
+  --ou-warn: var(--dsw-alias-state-warn-primary);
+  --ou-error: var(--dsw-alias-state-error-primary);
+  --ou-muted-bar: var(--dsw-alias-state-idle-primary);
+  /* Gauge tiers by remaining allowance: plenty, comfortable, watch, critical. */
+  /* Deep green: the palette's only saturated green is #22c55e, so pull it toward
+     the label colour — darker on the light card, lighter on the dark one. */
+  --ou-bar-green: color-mix(in oklab, var(--dsw-alias-state-success-primary) 72%, var(--dsw-alias-label-primary));
+  --ou-bar-blue: var(--dsw-alias-state-business-primary);
+  --ou-bar-yellow: var(--dsw-alias-state-warn-primary);
+  --ou-bar-red: var(--dsw-alias-state-error-primary);
+  --ou-track: var(--dsw-alias-border-l2);
+  --ou-track-edge: var(--dsw-alias-border-l3);
+  --ou-hairline: color-mix(in oklab, var(--dsw-alias-label-primary) 14%, transparent);
+  --ou-surface: var(--dsw-alias-bg-layer-1);
+  font-family: inherit;
+  color: var(--ou-foreground);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scoped reset for this widget's subtree only: the Harness page keeps its own
+   document resets, and utilities still win over these base declarations. */
+@layer base {
+  .ou-root,
+  .ou-root *,
+  .ou-root *::before,
+  .ou-root *::after {
+    box-sizing: border-box;
+  }
+  .ou-root p,
+  .ou-root h1,
+  .ou-root h2,
+  .ou-root h3,
+  .ou-root h4 {
+    margin: 0;
+  }
+  .ou-root button,
+  .ou-root input,
+  .ou-root select,
+  .ou-root textarea {
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+  }
+  .ou-root button {
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  .ou-root svg {
+    display: block;
+  }
+}
+
+/* Gauge segments are outlined capsules: a 1px edge that is slightly stronger
+   than the fill, and a soft top highlight on the fill, matching the allowance
+   meter the OpenCode console draws. */
+.ou-gauge-fill {
+  border: 1px solid rgb(0 0 0 / 0.06);
+  background-color: var(--ou-tone);
+  background-image: linear-gradient(to bottom, rgb(255 255 255 / 0.12), rgb(0 0 0 / 0.03));
+}
+
+.ou-gauge-rest {
+  border: 1px solid var(--ou-track-edge);
+  background-color: var(--ou-track);
+}

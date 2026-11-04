@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "OpenCode Go 用量",
+    "description": "悬浮显示 OpenCode Go 订阅的剩余额度，Console API Key 只保存在本机配置里。"
+  }
+}

@@ -1,0 +1,5 @@
+node_modules/
+build/
+src/client/generated-css.ts
+*.log
+.DS_Store

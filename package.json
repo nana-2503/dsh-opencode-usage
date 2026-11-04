@@ -1,0 +1,72 @@
+{
+  "name": "@nana-2503/dsh-opencode-usage",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin: floating OpenCode Go allowance widget with a Console API-key settings page",
+  "license": "MIT",
+  "author": "nana-2503",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nana-2503/dsh-opencode-usage.git"
+  },
+  "homepage": "https://github.com/nana-2503/dsh-opencode-usage#readme",
+  "bugs": {
+    "url": "https://github.com/nana-2503/dsh-opencode-usage/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "opencode",
+    "opencode-go",
+    "quota"
+  ],
+  "type": "module",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-plugin-manager"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@base-ui/react": "^1.9.0",
+    "@tailwindcss/cli": "^4.3.4",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "class-variance-authority": "^0.7.1",
+    "cn": "^0.5.2",
+    "esbuild": "^0.28.2",
+    "lucide-react": "^1.67.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "shadcn": "^4.23.0",
+    "tailwindcss": "^4",
+    "typescript": "~6.0.2"
+  }
+}

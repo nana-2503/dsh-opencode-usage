@@ -1,18 +1,9 @@
 /** Dictionary namespace owned by this plugin. */
 export const NS = "opencodeUsage";
 
-/** Window keys the Console allowance endpoint reports, in display order. */
-export type WindowKey = "rolling" | "weekly" | "monthly";
-
-/** One allowance window. `percent` is the share already consumed (0–100). */
-export interface Meter {
-  percent: number;
-  limited: boolean;
-  resetsAt?: number;
-}
-
-/** Allowance per window; a window missing upstream is simply absent. */
-export type Usage = Partial<Record<WindowKey, Meter>>;
+/** Gauge shapes shared with the wire layer. */
+import type { Usage } from "./gauge";
+export type { Meter, Usage, WindowKey } from "./gauge";
 
 /** Failure codes the Host reports, so the browser owns the wording. */
 export type FailureCode =
@@ -68,7 +59,10 @@ export const zh = {
   "overlay.never": "尚未获取",
   "overlay.limited": "已达上限",
   "overlay.used": "已用 {percent}%",
-  "overlay.resetAt": "{time} 重置",
+  "reset.soon": "即将重置",
+  "reset.minutes": "{count} 分钟后重置",
+  "reset.hours": "{count} 小时后重置",
+  "reset.days": "{count} 天后重置",
   "overlay.noReset": "无重置时间",
   "overlay.empty": "还没有密钥，先设置后再查询。",
   "overlay.loading": "正在查询用量…",
@@ -124,7 +118,10 @@ export const en: Record<keyof typeof zh, string> = {
   "overlay.never": "Not fetched yet",
   "overlay.limited": "Limit reached",
   "overlay.used": "{percent}% used",
-  "overlay.resetAt": "resets {time}",
+  "reset.soon": "resets soon",
+  "reset.minutes": "resets in {count}m",
+  "reset.hours": "resets in {count}h",
+  "reset.days": "resets in {count}d",
   "overlay.noReset": "no reset time",
   "overlay.empty": "Add an API key to start tracking.",
   "overlay.loading": "Reading allowance…",

@@ -26,16 +26,16 @@ import { cn } from "cn";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { failureText } from "./messages";
+import { MeterRow } from "./meter";
 import {
-  MeterRow,
   WINDOWS,
   colorOf,
-  formatUpdated,
+  formatInstant,
   mostConstrained,
   remainingPercent,
   toneOf,
   type Translate,
-} from "./meter";
+} from "./gauge";
 import { DEFAULT_CORNER, readCorner, saveCorner, useOverlayVisible, type Corner } from "./prefs";
 import { usageStore } from "./store";
 import type { Snapshot } from "./locale";
@@ -184,7 +184,7 @@ export function UsageOverlay({ t, openSettings }: OverlayProps) {
         className="absolute"
       >
         {open ? (
-          <Card size="sm" className="pointer-events-auto w-[19.5rem] gap-3 shadow-xl">
+          <Card size="sm" className="pointer-events-auto w-[19.5rem] max-w-[calc(100vw-1.5rem)] gap-3 shadow-xl">
             <div
               onPointerDown={startDrag}
               onPointerMove={moveDrag}
@@ -259,9 +259,9 @@ export function UsageOverlay({ t, openSettings }: OverlayProps) {
 
             <CardFooter className="justify-between gap-2 border-border text-[11px] text-muted-foreground">
               <span className="tabular-nums">
-                {formatUpdated(snapshot.fetchedAt) === undefined
+                {formatInstant(snapshot.fetchedAt) === undefined
                   ? t("overlay.never")
-                  : t("overlay.updated", { time: formatUpdated(snapshot.fetchedAt) as string })}
+                  : t("overlay.updated", { time: formatInstant(snapshot.fetchedAt) as string })}
               </span>
               <Button size="xs" variant="ghost" onClick={openSettings}>
                 <Settings2 data-icon="inline-start" />

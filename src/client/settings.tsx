@@ -13,7 +13,8 @@ import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
 import { failureText } from "./messages";
-import { MeterRow, WINDOWS, formatUpdated, type Translate } from "./meter";
+import { MeterRow } from "./meter";
+import { WINDOWS, formatInstant, type Translate } from "./gauge";
 import { setOverlayVisible, useOverlayVisible } from "./prefs";
 import { usageStore } from "./store";
 
@@ -167,9 +168,9 @@ export function UsageSettings({ t }: SettingsProps) {
           <div className="flex items-baseline justify-between gap-2">
             <h3 className="text-sm font-semibold">{t("settings.current")}</h3>
             <span className="text-[10px] tabular-nums text-muted-foreground">
-              {formatUpdated(snapshot.fetchedAt) === undefined
+              {formatInstant(snapshot.fetchedAt) === undefined
                 ? t("overlay.never")
-                : t("overlay.updated", { time: formatUpdated(snapshot.fetchedAt) as string })}
+                : t("overlay.updated", { time: formatInstant(snapshot.fetchedAt) as string })}
             </span>
           </div>
           {snapshot.usage === undefined ? (

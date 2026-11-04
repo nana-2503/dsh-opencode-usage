@@ -3,7 +3,7 @@
  * @module opencode-usage/client/messages
  */
 import type { Failure } from "./locale";
-import type { Translate } from "./meter";
+import type { Translate } from "./gauge";
 
 /** Failure codes that own a dedicated sentence. */
 const KNOWN = new Set(["unauthorized", "timeout", "network", "upstream", "shape", "empty"]);

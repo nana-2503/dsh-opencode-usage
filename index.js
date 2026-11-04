@@ -9,7 +9,7 @@
  *
  * @module @nana-2503/dsh-opencode-usage
  */
-import { chmod, mkdir, readFile, rename, writeFile } from "node:fs/promises";
+import { chmod, mkdir, readFile, rename, rm, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 
 /** Public package name, also the bundle page key the Client registers under. */
@@ -89,6 +89,41 @@ export function apply(ctx) {
 	const hintOf = (key) => (typeof key === "string" && key.length >= 4 ? key.slice(-4) : "");
 
 	/**
+	 * Where the last successful read is remembered. It sits beside the credential
+	 * so a restart paints the widget immediately instead of a spinner, and it is
+	 * keyed by the credential's hint so a different key never inherits it.
+	 */
+	const cachePath = () => join(dirname(storePath()), "opencode-usage.cache.json");
+
+	/** Read the remembered snapshot for one credential hint, or undefined. */
+	const readCache = async (hint) => {
+		try {
+			const parsed = JSON.parse(await readFile(cachePath(), "utf8"));
+			if (parsed?.hint !== hint) return undefined;
+			if (parsed.usage === null || typeof parsed.usage !== "object") return undefined;
+			const fetchedAt = Number(parsed.fetchedAt);
+			return { usage: parsed.usage, fetchedAt: Number.isFinite(fetchedAt) ? fetchedAt : Date.now(), hint };
+		} catch {
+			return undefined;
+		}
+	};
+
+	/** Remember one successful read; failures here never affect the answer. */
+	const writeCache = async (next) => {
+		try {
+			await mkdir(dirname(cachePath()), { recursive: true });
+			await writeFile(cachePath(), `${JSON.stringify({ version: 1, ...next })}\n`, { mode: 0o600 });
+		} catch (error) {
+			ctx.logger.warn("opencode-usage: could not remember the last read: %s", String(error?.message ?? error));
+		}
+	};
+
+	/** Forget the remembered snapshot (credential removed). */
+	const dropCache = async () => {
+		await rm(cachePath(), { force: true }).catch(() => {});
+	};
+
+	/**
 	 * Normalize one upstream meter.
 	 * @param {unknown} input - wire value.
 	 * @returns {{ percent: number, limited: boolean, resetsAt: number } | undefined}
@@ -150,6 +185,7 @@ export function apply(ctx) {
 			return;
 		}
 		if (pending !== undefined) return pending;
+		if (cached === undefined) cached = await readCache(hintOf(record.apiKey));
 		if (!options.force && cached !== undefined && Date.now() - cached.fetchedAt < STALE_AFTER_MS) return;
 		const task = (async () => {
 			const controller = new AbortController();
@@ -158,6 +194,7 @@ export function apply(ctx) {
 				const usage = await fetchUsage(record, controller.signal);
 				cached = { usage, fetchedAt: Date.now(), hint: hintOf(record.apiKey) };
 				lastError = undefined;
+				void writeCache(cached);
 			} catch (error) {
 				lastError = error?.name === "AbortError"
 					? { code: "timeout" }
@@ -192,7 +229,11 @@ export function apply(ctx) {
 	 */
 	const respondState = async (force) => {
 		const record = await readStore();
-		if (record.apiKey !== undefined) await refresh({ force });
+		if (record.apiKey !== undefined) {
+			if (cached === undefined) cached = await readCache(hintOf(record.apiKey));
+			if (force || cached === undefined) await refresh({ force: true });
+			else void refresh().catch((error) => ctx.logger.warn("opencode-usage: background refresh failed: %s", String(error)));
+		}
 		return snapshotOf();
 	};
 
@@ -315,6 +356,7 @@ export function apply(ctx) {
 			await writeStore({});
 			cached = undefined;
 			lastError = undefined;
+			await dropCache();
 			sendJson(res, 200, await snapshotOf());
 		},
 	}), `opencode-usage: POST ${ROUTE}/clear`);

@@ -1,5 +1,7 @@
 # dsh-opencode-usage
 
+[![ci](https://github.com/nana-2503/dsh-opencode-usage/actions/workflows/ci.yml/badge.svg)](https://github.com/nana-2503/dsh-opencode-usage/actions/workflows/ci.yml)
+
 DeepSeek Harness（DSH）插件：在 Web 界面右下角**悬浮显示 OpenCode Go 订阅的剩余额度**，
 并在插件设置页里输入 Console API Key 保存后查询。
 
@@ -29,6 +31,9 @@ bottom-right corner of the Web UI and stores the Console API key on the Host.
   「保存并测试」立即查一次；支持刷新、移除密钥、开关悬浮窗。
 - **四档配色**（按剩余额度）：≥70% 深绿 → ≥50% 蓝 → ≥20% 黄 → <20% 红；
   上游返回 `rate-limited` 时直接标红。
+- **倒计时**：重置时间显示成「43 分钟后重置」这种相对时间（悬停可看绝对时刻），
+  不用心算。
+- **重启即显**：Host 会把最后一次读取结果缓存到磁盘，重启后第一帧就有数字，不会闪「查询中」。
 - **密钥只在 Host**：浏览器只拿到末四位与用量数字，密钥永不回传页面。
 - **跟随主题**：全部颜色走 `--dsw-alias-*` 令牌，浅色/深色自动切换。
 
@@ -105,9 +110,13 @@ x-opencode-org-id: <org id>     # 可选，多组织密钥才需要
 
 ```bash
 npm install
-npm run build      # 生成 client.js
+npm run build      # 生成 client.js（已 minify）
 npm run typecheck
+npm test           # node:test，无第三方测试框架
 ```
+
+CI（`.github/workflows/ci.yml`）跑 `typecheck → test → build`，并校验提交的
+`client.js` 与源码一致 —— 改了 `src/` 忘记 `npm run build` 会被拦下。
 
 Tailwind 只引 `theme` + `utilities` 两层、不含 preflight；插件自带一个限定在
 `.ou-root` 内的作用域重置，避免影响 Harness 页面本身。改了 `client.js` 后，

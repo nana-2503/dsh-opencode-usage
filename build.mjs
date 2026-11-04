@@ -44,6 +44,7 @@ const result = await build({
   alias: { "@": join(root, "src") },
   define: { "process.env.NODE_ENV": "\"production\"" },
   legalComments: "none",
+  minify: true,
   write: false,
 });
 

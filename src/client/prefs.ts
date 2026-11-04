@@ -51,3 +51,47 @@ export function useOverlayVisible(): boolean {
     () => visible,
   );
 }
+
+/** Where the floating widget sits, measured from the frame's right and bottom edges. */
+export interface Corner {
+  right: number;
+  bottom: number;
+}
+
+/** Storage key of the dragged position. */
+const CORNER_KEY = "opencode-usage:corner";
+
+/** Default corner: the conventional bottom-right seat, inset by 12px. */
+export const DEFAULT_CORNER: Corner = { right: 12, bottom: 12 };
+
+/**
+ * Read the stored corner, falling back to the default when absent or malformed.
+ * @returns the remembered position.
+ */
+export function readCorner(): Corner {
+  try {
+    const raw = window.localStorage.getItem(CORNER_KEY);
+    if (raw !== null) {
+      const value = JSON.parse(raw) as Partial<Corner>;
+      if (typeof value.right === "number" && typeof value.bottom === "number"
+        && Number.isFinite(value.right) && Number.isFinite(value.bottom)) {
+        return { right: Math.max(0, value.right), bottom: Math.max(0, value.bottom) };
+      }
+    }
+  } catch {
+    /* storage may be unavailable in a hardened browser; the default still applies */
+  }
+  return DEFAULT_CORNER;
+}
+
+/**
+ * Remember where the user dropped the widget.
+ * @param corner - position measured from the frame's right and bottom edges.
+ */
+export function saveCorner(corner: Corner): void {
+  try {
+    window.localStorage.setItem(CORNER_KEY, JSON.stringify(corner));
+  } catch {
+    /* the in-memory position still applies for this page lifetime */
+  }
+}

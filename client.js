@@ -46,7 +46,7 @@ module.exports = __toCommonJS(index_exports);
 
 // src/client/generated-css.ts
 var CSS2 = `/*! tailwindcss v4.3.4 | MIT License | https://tailwindcss.com */
-@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:block))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-translate-x:0;--tw-translate-y:0;--tw-translate-z:0;--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-border-style:solid;--tw-leading:initial;--tw-font-weight:initial;--tw-ordinal:initial;--tw-slashed-zero:initial;--tw-numeric-figure:initial;--tw-numeric-spacing:initial;--tw-numeric-fraction:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-outline-style:solid;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:initial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate:initial;--tw-backdrop-sepia:initial;--tw-content:""}}}@layer theme{:root,:host{--font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--spacing:.25rem;--text-xs:.75rem;--text-xs--line-height:calc(1 / .75);--text-sm:.875rem;--text-sm--line-height:calc(1.25 / .875);--text-base:1rem;--text-base--line-height:calc(1.5 / 1);--font-weight-medium:500;--font-weight-semibold:600;--leading-snug:1.375;--leading-relaxed:1.625;--radius-md:calc(var(--ou-radius) * .8);--radius-4xl:2rem;--animate-spin:spin 1s linear infinite;--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4, 0, .2, 1)}}@layer base{.ou-root,.ou-root *,.ou-root :before,.ou-root :after{box-sizing:border-box}.ou-root p,.ou-root h1,.ou-root h2,.ou-root h3,.ou-root h4{margin:0}.ou-root button,.ou-root input,.ou-root select,.ou-root textarea{font:inherit;color:inherit;letter-spacing:inherit}.ou-root button{cursor:pointer;background:0 0;border:0;padding:0}.ou-root svg{display:block}}@layer components;@layer utilities{.\\@container\\/card-header{container:card-header/inline-size}.\\@container{container-type:inline-size}.pointer-events-auto{pointer-events:auto}.pointer-events-none{pointer-events:none}.collapse{visibility:collapse}.invisible{visibility:hidden}.visible{visibility:visible}.not-sr-only{clip-path:none;white-space:normal;width:auto;height:auto;margin:0;padding:0;position:static;overflow:visible}.absolute{position:absolute}.fixed{position:fixed}.relative{position:relative}.static{position:static}.inset-0{inset:0}.top-1{top:var(--spacing)}.top-1\\/2{top:50%}.right-1{right:var(--spacing)}.z-30{z-index:30}.col-start-2{grid-column-start:2}.row-span-2{grid-row:span 2/span 2}.row-start-1{grid-row-start:1}.container{width:100%}@media (min-width:40rem){.container{max-width:40rem}}@media (min-width:48rem){.container{max-width:48rem}}@media (min-width:64rem){.container{max-width:64rem}}@media (min-width:80rem){.container{max-width:80rem}}@media (min-width:96rem){.container{max-width:96rem}}.ml-auto{margin-left:auto}.block{display:block}.contents{display:contents}.flex{display:flex}.flow-root{display:flow-root}.grid{display:grid}.hidden{display:none}.inline-flex{display:inline-flex}.table{display:table}.table-caption{display:table-caption}.table-cell{display:table-cell}.table-column{display:table-column}.table-column-group{display:table-column-group}.table-footer-group{display:table-footer-group}.table-header-group{display:table-header-group}.table-row{display:table-row}.size-2{width:calc(var(--spacing) * 2);height:calc(var(--spacing) * 2)}.size-4{width:calc(var(--spacing) * 4);height:calc(var(--spacing) * 4)}.size-6{width:calc(var(--spacing) * 6);height:calc(var(--spacing) * 6)}.size-7{width:calc(var(--spacing) * 7);height:calc(var(--spacing) * 7)}.size-8{width:calc(var(--spacing) * 8);height:calc(var(--spacing) * 8)}.size-9{width:calc(var(--spacing) * 9);height:calc(var(--spacing) * 9)}.h-1{height:var(--spacing)}.h-5{height:calc(var(--spacing) * 5)}.h-6{height:calc(var(--spacing) * 6)}.h-7{height:calc(var(--spacing) * 7)}.h-8{height:calc(var(--spacing) * 8)}.h-9{height:calc(var(--spacing) * 9)}.h-full{height:100%}.w-\\[19\\.5rem\\]{width:19.5rem}.w-fit{width:fit-content}.w-full{width:100%}.max-w-\\[640px\\]{max-width:640px}.min-w-0{min-width:0}.flex-1{flex:1}.shrink-0{flex-shrink:0}.-translate-y-1{--tw-translate-y:calc(var(--spacing) * -1);translate:var(--tw-translate-x) var(--tw-translate-y)}.-translate-y-1\\/2{--tw-translate-y:calc(calc(1 / 2 * 100%) * -1);translate:var(--tw-translate-x) var(--tw-translate-y)}.transform{transform:var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, )}.animate-spin{animation:var(--animate-spin)}.auto-rows-min{grid-auto-rows:min-content}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-baseline{align-items:baseline}.items-center{align-items:center}.items-end{align-items:flex-end}.items-start{align-items:flex-start}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.justify-end{justify-content:flex-end}.gap-\\(--card-spacing\\){gap:var(--card-spacing)}.gap-0{gap:0}.gap-0\\.5{gap:calc(var(--spacing) * .5)}.gap-1{gap:var(--spacing)}.gap-1\\.5{gap:calc(var(--spacing) * 1.5)}.gap-2{gap:calc(var(--spacing) * 2)}.gap-2\\.5{gap:calc(var(--spacing) * 2.5)}.gap-3{gap:calc(var(--spacing) * 3)}.gap-3\\.5{gap:calc(var(--spacing) * 3.5)}.gap-4{gap:calc(var(--spacing) * 4)}.self-start{align-self:flex-start}.justify-self-end{justify-self:flex-end}.truncate{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.rounded{border-radius:.25rem}.rounded-4xl{border-radius:var(--radius-4xl)}.rounded-\\[2px\\]{border-radius:2px}.rounded-\\[min\\(var\\(--radius-md\\)\\,10px\\)\\]{border-radius:min(var(--radius-md), 10px)}.rounded-\\[min\\(var\\(--radius-md\\)\\,12px\\)\\]{border-radius:min(var(--radius-md), 12px)}.rounded-full{border-radius:2147483647px}.rounded-lg{border-radius:var(--ou-radius)}.rounded-xl{border-radius:calc(var(--ou-radius) * 1.4)}.rounded-t-xl{border-top-left-radius:calc(var(--ou-radius) * 1.4);border-top-right-radius:calc(var(--ou-radius) * 1.4)}.rounded-b-xl{border-bottom-right-radius:calc(var(--ou-radius) * 1.4);border-bottom-left-radius:calc(var(--ou-radius) * 1.4)}.border{border-style:var(--tw-border-style);border-width:1px}.border-t{border-top-style:var(--tw-border-style);border-top-width:1px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.border-border{border-color:var(--ou-border)}.border-input{border-color:var(--ou-input)}.border-transparent{border-color:#0000}.bg-background{background-color:var(--ou-background)}.bg-border{background-color:var(--ou-border)}.bg-card{background-color:var(--ou-card)}.bg-destructive,.bg-destructive\\/10{background-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.bg-destructive\\/10{background-color:color-mix(in oklab, var(--ou-destructive) 10%, transparent)}}.bg-muted,.bg-muted\\/50{background-color:var(--ou-muted)}@supports (color:color-mix(in lab, red, red)){.bg-muted\\/50{background-color:color-mix(in oklab, var(--ou-muted) 50%, transparent)}}.bg-popover{background-color:var(--ou-popover)}.bg-primary{background-color:var(--ou-primary)}.bg-secondary{background-color:var(--ou-secondary)}.bg-transparent{background-color:#0000}.bg-clip-padding{background-clip:padding-box}.p-\\(--card-spacing\\){padding:var(--card-spacing)}.p-3{padding:calc(var(--spacing) * 3)}.px-\\(--card-spacing\\){padding-inline:var(--card-spacing)}.px-2{padding-inline:calc(var(--spacing) * 2)}.px-2\\.5{padding-inline:calc(var(--spacing) * 2.5)}.px-3{padding-inline:calc(var(--spacing) * 3)}.py-\\(--card-spacing\\){padding-block:var(--card-spacing)}.py-0{padding-block:0}.py-0\\.5{padding-block:calc(var(--spacing) * .5)}.py-1{padding-block:var(--spacing)}.py-1\\.5{padding-block:calc(var(--spacing) * 1.5)}.py-2{padding-block:calc(var(--spacing) * 2)}.py-2\\.5{padding-block:calc(var(--spacing) * 2.5)}.pt-0{padding-top:0}.pt-0\\.5{padding-top:calc(var(--spacing) * .5)}.pr-3{padding-right:calc(var(--spacing) * 3)}.pr-9{padding-right:calc(var(--spacing) * 9)}.pb-1{padding-bottom:var(--spacing)}.pl-2{padding-left:calc(var(--spacing) * 2)}.pl-2\\.5{padding-left:calc(var(--spacing) * 2.5)}.font-mono{font-family:var(--font-mono)}.text-base{font-size:var(--text-base);line-height:var(--tw-leading,var(--text-base--line-height))}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.text-\\[0\\.8rem\\]{font-size:.8rem}.text-\\[10px\\]{font-size:10px}.text-\\[11px\\]{font-size:11px}.leading-none{--tw-leading:1;line-height:1}.leading-relaxed{--tw-leading:var(--leading-relaxed);line-height:var(--leading-relaxed)}.leading-snug{--tw-leading:var(--leading-snug);line-height:var(--leading-snug)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.whitespace-nowrap{white-space:nowrap}.text-card-foreground{color:var(--ou-card-foreground)}.text-destructive{color:var(--ou-destructive)}.text-foreground{color:var(--ou-foreground)}.text-muted-foreground{color:var(--ou-muted-foreground)}.text-primary{color:var(--ou-primary)}.text-primary-foreground{color:var(--ou-primary-foreground)}.text-secondary-foreground{color:var(--ou-foreground)}.capitalize{text-transform:capitalize}.lowercase{text-transform:lowercase}.normal-case{text-transform:none}.italic{font-style:italic}.diagonal-fractions{--tw-numeric-fraction:diagonal-fractions;font-variant-numeric:var(--tw-ordinal, ) var(--tw-slashed-zero, ) var(--tw-numeric-figure, ) var(--tw-numeric-spacing, ) var(--tw-numeric-fraction, )}.lining-nums{--tw-numeric-figure:lining-nums;font-variant-numeric:var(--tw-ordinal, ) var(--tw-slashed-zero, ) var(--tw-numeric-figure, ) var(--tw-numeric-spacing, ) var(--tw-numeric-fraction, )}.proportional-nums{--tw-numeric-spacing:proportional-nums;font-variant-numeric:var(--tw-ordinal, ) var(--tw-slashed-zero, ) var(--tw-numeric-figure, ) var(--tw-numeric-spacing, ) var(--tw-numeric-fraction, )}.tabular-nums{--tw-numeric-spacing:tabular-nums;font-variant-numeric:var(--tw-ordinal, ) var(--tw-slashed-zero, ) var(--tw-numeric-figure, ) var(--tw-numeric-spacing, ) var(--tw-numeric-fraction, )}.no-underline{text-decoration-line:none}.underline-offset-4{text-underline-offset:4px}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a), 0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,#0000001a), 0 4px 6px -4px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a), 0 8px 10px -6px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.ring-0{--tw-ring-shadow:var(--tw-ring-inset, ) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.ring-1{--tw-ring-shadow:var(--tw-ring-inset, ) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.ring-border{--tw-ring-color:var(--ou-border)}.ring-foreground,.ring-foreground\\/10{--tw-ring-color:var(--ou-foreground)}@supports (color:color-mix(in lab, red, red)){.ring-foreground\\/10{--tw-ring-color:color-mix(in oklab, var(--ou-foreground) 10%, transparent)}}.outline{outline-style:var(--tw-outline-style);outline-width:1px}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );backdrop-filter:var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, )}.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-colors{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-transform{transition-property:transform,translate,scale,rotate;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.outline-none{--tw-outline-style:none;outline-style:none}.select-none{-webkit-user-select:none;user-select:none}.\\[--card-spacing\\:--spacing\\(4\\)\\]{--card-spacing:calc(var(--spacing) * 4)}:is(:where(.group\\/field-label):has(:focus-visible) .group-has-\\[\\:focus-visible\\]\\/field-label\\:border-transparent){border-color:#0000}:is(:where(.group\\/field-label):has(:focus-visible) .group-has-\\[\\:focus-visible\\]\\/field-label\\:ring-0){--tw-ring-shadow:var(--tw-ring-inset, ) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}:is(:where(.group)[data-disabled=true] .group-data-\\[disabled\\=true\\]\\:pointer-events-none){pointer-events:none}:is(:where(.group)[data-disabled=true] .group-data-\\[disabled\\=true\\]\\:opacity-50){opacity:.5}:is(:where(.group\\/switch)[data-size=default] .group-data-\\[size\\=default\\]\\/switch\\:size-4){width:calc(var(--spacing) * 4);height:calc(var(--spacing) * 4)}:is(:where(.group\\/card)[data-size=sm] .group-data-\\[size\\=sm\\]\\/card\\:text-sm){font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}:is(:where(.group\\/switch)[data-size=sm] .group-data-\\[size\\=sm\\]\\/switch\\:size-3){width:calc(var(--spacing) * 3);height:calc(var(--spacing) * 3)}:is(:where(.peer):disabled~.peer-disabled\\:cursor-not-allowed){cursor:not-allowed}:is(:where(.peer):disabled~.peer-disabled\\:opacity-50){opacity:.5}.file\\:inline-flex::file-selector-button{display:inline-flex}.file\\:h-6::file-selector-button{height:calc(var(--spacing) * 6)}.file\\:border-0::file-selector-button{border-style:var(--tw-border-style);border-width:0}.file\\:bg-transparent::file-selector-button{background-color:#0000}.file\\:text-sm::file-selector-button{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.file\\:font-medium::file-selector-button{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.file\\:text-foreground::file-selector-button{color:var(--ou-foreground)}.placeholder\\:text-muted-foreground::placeholder{color:var(--ou-muted-foreground)}.after\\:absolute:after{content:var(--tw-content);position:absolute}.after\\:-inset-x-3:after{content:var(--tw-content);inset-inline:calc(var(--spacing) * -3)}.after\\:-inset-y-2:after{content:var(--tw-content);inset-block:calc(var(--spacing) * -2)}@media (hover:hover){.hover\\:bg-\\[color-mix\\(in_oklch\\,var\\(--secondary\\)\\,var\\(--foreground\\)_5\\%\\)\\]:hover{background-color:var(--secondary)}@supports (color:color-mix(in lab, red, red)){.hover\\:bg-\\[color-mix\\(in_oklch\\,var\\(--secondary\\)\\,var\\(--foreground\\)_5\\%\\)\\]:hover{background-color:color-mix(in oklch,var(--secondary),var(--foreground) 5%)}}.hover\\:bg-accent:hover{background-color:var(--ou-accent)}.hover\\:bg-destructive\\/20:hover{background-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.hover\\:bg-destructive\\/20:hover{background-color:color-mix(in oklab, var(--ou-destructive) 20%, transparent)}}.hover\\:bg-muted:hover{background-color:var(--ou-muted)}.hover\\:bg-primary\\/80:hover{background-color:var(--ou-primary)}@supports (color:color-mix(in lab, red, red)){.hover\\:bg-primary\\/80:hover{background-color:color-mix(in oklab, var(--ou-primary) 80%, transparent)}}.hover\\:text-foreground:hover{color:var(--ou-foreground)}.hover\\:text-muted-foreground:hover{color:var(--ou-muted-foreground)}.hover\\:underline:hover{text-decoration-line:underline}}.focus-visible\\:border-destructive\\/40:focus-visible{border-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.focus-visible\\:border-destructive\\/40:focus-visible{border-color:color-mix(in oklab, var(--ou-destructive) 40%, transparent)}}.focus-visible\\:border-ring:focus-visible{border-color:var(--ou-ring)}.focus-visible\\:ring-3:focus-visible,.focus-visible\\:ring-\\[3px\\]:focus-visible{--tw-ring-shadow:var(--tw-ring-inset, ) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.focus-visible\\:ring-destructive\\/20:focus-visible{--tw-ring-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.focus-visible\\:ring-destructive\\/20:focus-visible{--tw-ring-color:color-mix(in oklab, var(--ou-destructive) 20%, transparent)}}.focus-visible\\:ring-ring\\/50:focus-visible{--tw-ring-color:var(--ou-ring)}@supports (color:color-mix(in lab, red, red)){.focus-visible\\:ring-ring\\/50:focus-visible{--tw-ring-color:color-mix(in oklab, var(--ou-ring) 50%, transparent)}}.active\\:not-aria-\\[haspopup\\]\\:translate-y-px:active:not([aria-haspopup]){--tw-translate-y:1px;translate:var(--tw-translate-x) var(--tw-translate-y)}.disabled\\:pointer-events-none:disabled{pointer-events:none}.disabled\\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\\:bg-input\\/50:disabled{background-color:var(--ou-input)}@supports (color:color-mix(in lab, red, red)){.disabled\\:bg-input\\/50:disabled{background-color:color-mix(in oklab, var(--ou-input) 50%, transparent)}}.disabled\\:opacity-50:disabled{opacity:.5}:where([data-slot=button-group]) .in-data-\\[slot\\=button-group\\]\\:rounded-lg{border-radius:var(--ou-radius)}.has-data-\\[icon\\=inline-end\\]\\:pr-1\\.5:has([data-icon=inline-end]){padding-right:calc(var(--spacing) * 1.5)}.has-data-\\[icon\\=inline-end\\]\\:pr-2:has([data-icon=inline-end]){padding-right:calc(var(--spacing) * 2)}.has-data-\\[icon\\=inline-start\\]\\:pl-1\\.5:has([data-icon=inline-start]){padding-left:calc(var(--spacing) * 1.5)}.has-data-\\[icon\\=inline-start\\]\\:pl-2:has([data-icon=inline-start]){padding-left:calc(var(--spacing) * 2)}.has-data-\\[slot\\=card-action\\]\\:grid-cols-\\[1fr_auto\\]:has([data-slot=card-action]){grid-template-columns:1fr auto}.has-data-\\[slot\\=card-description\\]\\:grid-rows-\\[auto_auto\\]:has([data-slot=card-description]){grid-template-rows:auto auto}.has-data-\\[slot\\=card-footer\\]\\:pb-0:has([data-slot=card-footer]){padding-bottom:0}.has-\\[\\>img\\:first-child\\]\\:pt-0:has(>img:first-child){padding-top:0}.aria-expanded\\:bg-muted[aria-expanded=true]{background-color:var(--ou-muted)}.aria-expanded\\:bg-secondary[aria-expanded=true]{background-color:var(--ou-secondary)}.aria-expanded\\:text-foreground[aria-expanded=true],.aria-expanded\\:text-secondary-foreground[aria-expanded=true]{color:var(--ou-foreground)}.aria-invalid\\:border-destructive[aria-invalid=true]{border-color:var(--ou-destructive)}.aria-invalid\\:ring-3[aria-invalid=true]{--tw-ring-shadow:var(--tw-ring-inset, ) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.aria-invalid\\:ring-destructive\\/20[aria-invalid=true]{--tw-ring-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.aria-invalid\\:ring-destructive\\/20[aria-invalid=true]{--tw-ring-color:color-mix(in oklab, var(--ou-destructive) 20%, transparent)}}.data-checked\\:bg-primary[data-checked]{background-color:var(--ou-primary)}:is(:where(.group\\/switch)[data-size=default] .group-data-\\[size\\=default\\]\\/switch\\:data-checked\\:translate-x-\\[calc\\(100\\%-2px\\)\\])[data-checked],:is(:where(.group\\/switch)[data-size=sm] .group-data-\\[size\\=sm\\]\\/switch\\:data-checked\\:translate-x-\\[calc\\(100\\%-2px\\)\\])[data-checked]{--tw-translate-x:calc(100% - 2px);translate:var(--tw-translate-x) var(--tw-translate-y)}.data-disabled\\:cursor-not-allowed[data-disabled]{cursor:not-allowed}.data-disabled\\:opacity-50[data-disabled]{opacity:.5}.data-horizontal\\:h-px[data-horizontal]{height:1px}.data-horizontal\\:w-full[data-horizontal]{width:100%}.data-unchecked\\:bg-input[data-unchecked]{background-color:var(--ou-input)}:is(:where(.group\\/switch)[data-size=default] .group-data-\\[size\\=default\\]\\/switch\\:data-unchecked\\:translate-x-0)[data-unchecked],:is(:where(.group\\/switch)[data-size=sm] .group-data-\\[size\\=sm\\]\\/switch\\:data-unchecked\\:translate-x-0)[data-unchecked]{--tw-translate-x:0px;translate:var(--tw-translate-x) var(--tw-translate-y)}.data-vertical\\:w-px[data-vertical]{width:1px}.data-vertical\\:self-stretch[data-vertical]{align-self:stretch}.data-\\[size\\=default\\]\\:h-\\[18\\.4px\\][data-size=default]{height:18.4px}.data-\\[size\\=default\\]\\:w-\\[32px\\][data-size=default]{width:32px}.data-\\[size\\=sm\\]\\:h-\\[14px\\][data-size=sm]{height:14px}.data-\\[size\\=sm\\]\\:w-\\[24px\\][data-size=sm]{width:24px}.data-\\[size\\=sm\\]\\:\\[--card-spacing\\:--spacing\\(3\\)\\][data-size=sm]{--card-spacing:calc(var(--spacing) * 3)}.data-\\[size\\=sm\\]\\:has-data-\\[slot\\=card-footer\\]\\:pb-0[data-size=sm]:has([data-slot=card-footer]){padding-bottom:0}@media (min-width:48rem){.md\\:text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}}.dark\\:border-input:where(.dark,.dark *){border-color:var(--ou-input)}.dark\\:bg-destructive\\/20:where(.dark,.dark *){background-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.dark\\:bg-destructive\\/20:where(.dark,.dark *){background-color:color-mix(in oklab, var(--ou-destructive) 20%, transparent)}}.dark\\:bg-input\\/30:where(.dark,.dark *){background-color:var(--ou-input)}@supports (color:color-mix(in lab, red, red)){.dark\\:bg-input\\/30:where(.dark,.dark *){background-color:color-mix(in oklab, var(--ou-input) 30%, transparent)}}@media (hover:hover){.dark\\:hover\\:bg-destructive\\/30:where(.dark,.dark *):hover{background-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.dark\\:hover\\:bg-destructive\\/30:where(.dark,.dark *):hover{background-color:color-mix(in oklab, var(--ou-destructive) 30%, transparent)}}.dark\\:hover\\:bg-input\\/50:where(.dark,.dark *):hover{background-color:var(--ou-input)}@supports (color:color-mix(in lab, red, red)){.dark\\:hover\\:bg-input\\/50:where(.dark,.dark *):hover{background-color:color-mix(in oklab, var(--ou-input) 50%, transparent)}}.dark\\:hover\\:bg-muted\\/50:where(.dark,.dark *):hover{background-color:var(--ou-muted)}@supports (color:color-mix(in lab, red, red)){.dark\\:hover\\:bg-muted\\/50:where(.dark,.dark *):hover{background-color:color-mix(in oklab, var(--ou-muted) 50%, transparent)}}}.dark\\:focus-visible\\:ring-destructive\\/40:where(.dark,.dark *):focus-visible{--tw-ring-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.dark\\:focus-visible\\:ring-destructive\\/40:where(.dark,.dark *):focus-visible{--tw-ring-color:color-mix(in oklab, var(--ou-destructive) 40%, transparent)}}.dark\\:disabled\\:bg-input\\/80:where(.dark,.dark *):disabled{background-color:var(--ou-input)}@supports (color:color-mix(in lab, red, red)){.dark\\:disabled\\:bg-input\\/80:where(.dark,.dark *):disabled{background-color:color-mix(in oklab, var(--ou-input) 80%, transparent)}}.dark\\:aria-invalid\\:border-destructive\\/50:where(.dark,.dark *)[aria-invalid=true]{border-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.dark\\:aria-invalid\\:border-destructive\\/50:where(.dark,.dark *)[aria-invalid=true]{border-color:color-mix(in oklab, var(--ou-destructive) 50%, transparent)}}.dark\\:aria-invalid\\:ring-destructive\\/40:where(.dark,.dark *)[aria-invalid=true]{--tw-ring-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.dark\\:aria-invalid\\:ring-destructive\\/40:where(.dark,.dark *)[aria-invalid=true]{--tw-ring-color:color-mix(in oklab, var(--ou-destructive) 40%, transparent)}}.dark\\:data-checked\\:bg-primary-foreground:where(.dark,.dark *)[data-checked]{background-color:var(--ou-primary-foreground)}.dark\\:data-unchecked\\:bg-foreground:where(.dark,.dark *)[data-unchecked]{background-color:var(--ou-foreground)}.dark\\:data-unchecked\\:bg-input\\/80:where(.dark,.dark *)[data-unchecked]{background-color:var(--ou-input)}@supports (color:color-mix(in lab, red, red)){.dark\\:data-unchecked\\:bg-input\\/80:where(.dark,.dark *)[data-unchecked]{background-color:color-mix(in oklab, var(--ou-input) 80%, transparent)}}.\\[\\&_\\[data-slot\\=progress-indicator\\]\\]\\:shrink-0 [data-slot=progress-indicator]{flex-shrink:0}.\\[\\&_\\[data-slot\\=progress-track\\]\\]\\:h-2 [data-slot=progress-track]{height:calc(var(--spacing) * 2)}.\\[\\&_\\[data-slot\\=progress-track\\]\\]\\:gap-0 [data-slot=progress-track]{gap:0}.\\[\\&_\\[data-slot\\=progress-track\\]\\]\\:gap-\\[3px\\] [data-slot=progress-track]{gap:3px}.\\[\\&_\\[data-slot\\=progress-track\\]\\]\\:rounded-\\[2px\\] [data-slot=progress-track]{border-radius:2px}.\\[\\&_\\[data-slot\\=progress-track\\]\\]\\:bg-transparent [data-slot=progress-track]{background-color:#0000}.\\[\\&_svg\\]\\:pointer-events-none svg{pointer-events:none}.\\[\\&_svg\\]\\:shrink-0 svg{flex-shrink:0}.\\[\\&_svg\\:not\\(\\[class\\*\\=\\'size-\\'\\]\\)\\]\\:size-3 svg:not([class*=size-]){width:calc(var(--spacing) * 3);height:calc(var(--spacing) * 3)}.\\[\\&_svg\\:not\\(\\[class\\*\\=\\'size-\\'\\]\\)\\]\\:size-3\\.5 svg:not([class*=size-]){width:calc(var(--spacing) * 3.5);height:calc(var(--spacing) * 3.5)}.\\[\\&_svg\\:not\\(\\[class\\*\\=\\'size-\\'\\]\\)\\]\\:size-4 svg:not([class*=size-]){width:calc(var(--spacing) * 4);height:calc(var(--spacing) * 4)}.\\[\\.border-b\\]\\:pb-\\(--card-spacing\\).border-b{padding-bottom:var(--card-spacing)}@media (hover:hover){.\\[a\\]\\:hover\\:bg-destructive\\/20:is(a):hover{background-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.\\[a\\]\\:hover\\:bg-destructive\\/20:is(a):hover{background-color:color-mix(in oklab, var(--ou-destructive) 20%, transparent)}}.\\[a\\]\\:hover\\:bg-muted:is(a):hover{background-color:var(--ou-muted)}.\\[a\\]\\:hover\\:bg-primary\\/80:is(a):hover{background-color:var(--ou-primary)}@supports (color:color-mix(in lab, red, red)){.\\[a\\]\\:hover\\:bg-primary\\/80:is(a):hover{background-color:color-mix(in oklab, var(--ou-primary) 80%, transparent)}}.\\[a\\]\\:hover\\:bg-secondary\\/80:is(a):hover{background-color:var(--ou-secondary)}@supports (color:color-mix(in lab, red, red)){.\\[a\\]\\:hover\\:bg-secondary\\/80:is(a):hover{background-color:color-mix(in oklab, var(--ou-secondary) 80%, transparent)}}.\\[a\\]\\:hover\\:text-muted-foreground:is(a):hover{color:var(--ou-muted-foreground)}}:is(.\\*\\:\\[img\\:first-child\\]\\:rounded-t-xl>*):is(img:first-child){border-top-left-radius:calc(var(--ou-radius) * 1.4);border-top-right-radius:calc(var(--ou-radius) * 1.4)}:is(.\\*\\:\\[img\\:last-child\\]\\:rounded-b-xl>*):is(img:last-child){border-bottom-right-radius:calc(var(--ou-radius) * 1.4);border-bottom-left-radius:calc(var(--ou-radius) * 1.4)}.\\[\\&\\>svg\\]\\:pointer-events-none>svg{pointer-events:none}.\\[\\&\\>svg\\]\\:size-3\\!>svg{width:calc(var(--spacing) * 3)!important;height:calc(var(--spacing) * 3)!important}}.ou-root{--ou-background:var(--dsw-alias-bg-overlay);--ou-foreground:var(--dsw-alias-label-primary);--ou-card:var(--dsw-alias-bg-layer-1);--ou-card-foreground:var(--dsw-alias-label-primary);--ou-popover:var(--dsw-alias-bg-overlay);--ou-primary:var(--dsw-alias-brand-primary);--ou-primary-foreground:var(--dsw-alias-bg-base);--ou-secondary:var(--dsw-alias-bg-layer-2);--ou-muted:var(--dsw-alias-bg-layer-2);--ou-muted-foreground:var(--dsw-alias-label-secondary);--ou-accent:var(--dsw-alias-bg-layer-2);--ou-destructive:var(--dsw-alias-state-error-primary);--ou-border:var(--dsw-alias-border-l1);--ou-input:var(--dsw-alias-border-l2);--ou-ring:var(--dsw-alias-brand-primary);--ou-radius:.625rem;--ou-success:var(--dsw-alias-state-success-primary);--ou-warn:var(--dsw-alias-state-warn-primary);--ou-error:var(--dsw-alias-state-error-primary);--ou-muted-bar:var(--dsw-alias-state-idle-primary);--ou-bar-green:var(--dsw-alias-state-success-primary)}@supports (color:color-mix(in lab, red, red)){.ou-root{--ou-bar-green:color-mix(in oklab, var(--dsw-alias-state-success-primary) 72%, var(--dsw-alias-label-primary))}}.ou-root{--ou-bar-blue:var(--dsw-alias-state-business-primary);--ou-bar-yellow:var(--dsw-alias-state-warn-primary);--ou-bar-red:var(--dsw-alias-state-error-primary);--ou-track:var(--dsw-alias-border-l2);--ou-track-edge:var(--dsw-alias-border-l3);--ou-hairline:var(--dsw-alias-label-primary)}@supports (color:color-mix(in lab, red, red)){.ou-root{--ou-hairline:color-mix(in oklab, var(--dsw-alias-label-primary) 14%, transparent)}}.ou-root{--ou-surface:var(--dsw-alias-bg-layer-1);color:var(--ou-foreground);-webkit-font-smoothing:antialiased;font-family:inherit}.ou-gauge-fill{background-color:var(--ou-tone);background-image:linear-gradient(#ffffff1f,#00000008);border:1px solid #0000000f}.ou-gauge-rest{border:1px solid var(--ou-track-edge);background-color:var(--ou-track)}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}@property --tw-rotate-x{syntax:"*";inherits:false}@property --tw-rotate-y{syntax:"*";inherits:false}@property --tw-rotate-z{syntax:"*";inherits:false}@property --tw-skew-x{syntax:"*";inherits:false}@property --tw-skew-y{syntax:"*";inherits:false}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-leading{syntax:"*";inherits:false}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-ordinal{syntax:"*";inherits:false}@property --tw-slashed-zero{syntax:"*";inherits:false}@property --tw-numeric-figure{syntax:"*";inherits:false}@property --tw-numeric-spacing{syntax:"*";inherits:false}@property --tw-numeric-fraction{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-outline-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-backdrop-blur{syntax:"*";inherits:false}@property --tw-backdrop-brightness{syntax:"*";inherits:false}@property --tw-backdrop-contrast{syntax:"*";inherits:false}@property --tw-backdrop-grayscale{syntax:"*";inherits:false}@property --tw-backdrop-hue-rotate{syntax:"*";inherits:false}@property --tw-backdrop-invert{syntax:"*";inherits:false}@property --tw-backdrop-opacity{syntax:"*";inherits:false}@property --tw-backdrop-saturate{syntax:"*";inherits:false}@property --tw-backdrop-sepia{syntax:"*";inherits:false}@property --tw-content{syntax:"*";inherits:false;initial-value:""}@keyframes spin{to{transform:rotate(360deg)}}`;
+@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:block))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-translate-x:0;--tw-translate-y:0;--tw-translate-z:0;--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-border-style:solid;--tw-leading:initial;--tw-font-weight:initial;--tw-ordinal:initial;--tw-slashed-zero:initial;--tw-numeric-figure:initial;--tw-numeric-spacing:initial;--tw-numeric-fraction:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-outline-style:solid;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:initial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate:initial;--tw-backdrop-sepia:initial;--tw-content:""}}}@layer theme{:root,:host{--font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--spacing:.25rem;--text-xs:.75rem;--text-xs--line-height:calc(1 / .75);--text-sm:.875rem;--text-sm--line-height:calc(1.25 / .875);--text-base:1rem;--text-base--line-height:calc(1.5 / 1);--font-weight-medium:500;--font-weight-semibold:600;--leading-snug:1.375;--leading-relaxed:1.625;--radius-md:calc(var(--ou-radius) * .8);--radius-4xl:2rem;--animate-spin:spin 1s linear infinite;--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4, 0, .2, 1)}}@layer base{.ou-root,.ou-root *,.ou-root :before,.ou-root :after{box-sizing:border-box}.ou-root p,.ou-root h1,.ou-root h2,.ou-root h3,.ou-root h4{margin:0}.ou-root button,.ou-root input,.ou-root select,.ou-root textarea{font:inherit;color:inherit;letter-spacing:inherit}.ou-root button{cursor:pointer;background:0 0;border:0;padding:0}.ou-root svg{display:block}}@layer components;@layer utilities{.\\@container\\/card-header{container:card-header/inline-size}.\\@container{container-type:inline-size}.pointer-events-auto{pointer-events:auto}.pointer-events-none{pointer-events:none}.collapse{visibility:collapse}.invisible{visibility:hidden}.visible{visibility:visible}.not-sr-only{clip-path:none;white-space:normal;width:auto;height:auto;margin:0;padding:0;position:static;overflow:visible}.absolute{position:absolute}.fixed{position:fixed}.relative{position:relative}.static{position:static}.inset-0{inset:0}.top-1{top:var(--spacing)}.top-1\\/2{top:50%}.right-1{right:var(--spacing)}.z-30{z-index:30}.col-start-2{grid-column-start:2}.row-span-2{grid-row:span 2/span 2}.row-start-1{grid-row-start:1}.container{width:100%}@media (min-width:40rem){.container{max-width:40rem}}@media (min-width:48rem){.container{max-width:48rem}}@media (min-width:64rem){.container{max-width:64rem}}@media (min-width:80rem){.container{max-width:80rem}}@media (min-width:96rem){.container{max-width:96rem}}.ml-auto{margin-left:auto}.block{display:block}.contents{display:contents}.flex{display:flex}.flow-root{display:flow-root}.grid{display:grid}.hidden{display:none}.inline-flex{display:inline-flex}.table{display:table}.table-caption{display:table-caption}.table-cell{display:table-cell}.table-column{display:table-column}.table-column-group{display:table-column-group}.table-footer-group{display:table-footer-group}.table-header-group{display:table-header-group}.table-row{display:table-row}.size-2{width:calc(var(--spacing) * 2);height:calc(var(--spacing) * 2)}.size-4{width:calc(var(--spacing) * 4);height:calc(var(--spacing) * 4)}.size-6{width:calc(var(--spacing) * 6);height:calc(var(--spacing) * 6)}.size-7{width:calc(var(--spacing) * 7);height:calc(var(--spacing) * 7)}.size-8{width:calc(var(--spacing) * 8);height:calc(var(--spacing) * 8)}.size-9{width:calc(var(--spacing) * 9);height:calc(var(--spacing) * 9)}.h-1{height:var(--spacing)}.h-5{height:calc(var(--spacing) * 5)}.h-6{height:calc(var(--spacing) * 6)}.h-7{height:calc(var(--spacing) * 7)}.h-8{height:calc(var(--spacing) * 8)}.h-9{height:calc(var(--spacing) * 9)}.h-full{height:100%}.w-\\[19\\.5rem\\]{width:19.5rem}.w-fit{width:fit-content}.w-full{width:100%}.max-w-\\[640px\\]{max-width:640px}.min-w-0{min-width:0}.flex-1{flex:1}.shrink-0{flex-shrink:0}.-translate-y-1{--tw-translate-y:calc(var(--spacing) * -1);translate:var(--tw-translate-x) var(--tw-translate-y)}.-translate-y-1\\/2{--tw-translate-y:calc(calc(1 / 2 * 100%) * -1);translate:var(--tw-translate-x) var(--tw-translate-y)}.transform{transform:var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, )}.animate-spin{animation:var(--animate-spin)}.cursor-grab{cursor:grab}.cursor-grabbing{cursor:grabbing}.touch-none{touch-action:none}.resize{resize:both}.auto-rows-min{grid-auto-rows:min-content}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-baseline{align-items:baseline}.items-center{align-items:center}.items-end{align-items:flex-end}.items-start{align-items:flex-start}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.justify-end{justify-content:flex-end}.gap-\\(--card-spacing\\){gap:var(--card-spacing)}.gap-0{gap:0}.gap-0\\.5{gap:calc(var(--spacing) * .5)}.gap-1{gap:var(--spacing)}.gap-1\\.5{gap:calc(var(--spacing) * 1.5)}.gap-2{gap:calc(var(--spacing) * 2)}.gap-2\\.5{gap:calc(var(--spacing) * 2.5)}.gap-3{gap:calc(var(--spacing) * 3)}.gap-3\\.5{gap:calc(var(--spacing) * 3.5)}.gap-4{gap:calc(var(--spacing) * 4)}.self-start{align-self:flex-start}.justify-self-end{justify-self:flex-end}.truncate{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.rounded{border-radius:.25rem}.rounded-4xl{border-radius:var(--radius-4xl)}.rounded-\\[2px\\]{border-radius:2px}.rounded-\\[min\\(var\\(--radius-md\\)\\,10px\\)\\]{border-radius:min(var(--radius-md), 10px)}.rounded-\\[min\\(var\\(--radius-md\\)\\,12px\\)\\]{border-radius:min(var(--radius-md), 12px)}.rounded-full{border-radius:2147483647px}.rounded-lg{border-radius:var(--ou-radius)}.rounded-xl{border-radius:calc(var(--ou-radius) * 1.4)}.rounded-t-xl{border-top-left-radius:calc(var(--ou-radius) * 1.4);border-top-right-radius:calc(var(--ou-radius) * 1.4)}.rounded-b-xl{border-bottom-right-radius:calc(var(--ou-radius) * 1.4);border-bottom-left-radius:calc(var(--ou-radius) * 1.4)}.border{border-style:var(--tw-border-style);border-width:1px}.border-t{border-top-style:var(--tw-border-style);border-top-width:1px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.border-border{border-color:var(--ou-border)}.border-input{border-color:var(--ou-input)}.border-transparent{border-color:#0000}.bg-background{background-color:var(--ou-background)}.bg-border{background-color:var(--ou-border)}.bg-card{background-color:var(--ou-card)}.bg-destructive,.bg-destructive\\/10{background-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.bg-destructive\\/10{background-color:color-mix(in oklab, var(--ou-destructive) 10%, transparent)}}.bg-muted,.bg-muted\\/50{background-color:var(--ou-muted)}@supports (color:color-mix(in lab, red, red)){.bg-muted\\/50{background-color:color-mix(in oklab, var(--ou-muted) 50%, transparent)}}.bg-popover{background-color:var(--ou-popover)}.bg-primary{background-color:var(--ou-primary)}.bg-secondary{background-color:var(--ou-secondary)}.bg-transparent{background-color:#0000}.bg-clip-padding{background-clip:padding-box}.p-\\(--card-spacing\\){padding:var(--card-spacing)}.p-3{padding:calc(var(--spacing) * 3)}.px-\\(--card-spacing\\){padding-inline:var(--card-spacing)}.px-2{padding-inline:calc(var(--spacing) * 2)}.px-2\\.5{padding-inline:calc(var(--spacing) * 2.5)}.px-3{padding-inline:calc(var(--spacing) * 3)}.py-\\(--card-spacing\\){padding-block:var(--card-spacing)}.py-0{padding-block:0}.py-0\\.5{padding-block:calc(var(--spacing) * .5)}.py-1{padding-block:var(--spacing)}.py-1\\.5{padding-block:calc(var(--spacing) * 1.5)}.py-2{padding-block:calc(var(--spacing) * 2)}.py-2\\.5{padding-block:calc(var(--spacing) * 2.5)}.pt-0{padding-top:0}.pt-0\\.5{padding-top:calc(var(--spacing) * .5)}.pr-3{padding-right:calc(var(--spacing) * 3)}.pr-9{padding-right:calc(var(--spacing) * 9)}.pb-1{padding-bottom:var(--spacing)}.pl-2{padding-left:calc(var(--spacing) * 2)}.pl-2\\.5{padding-left:calc(var(--spacing) * 2.5)}.font-mono{font-family:var(--font-mono)}.text-base{font-size:var(--text-base);line-height:var(--tw-leading,var(--text-base--line-height))}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.text-\\[0\\.8rem\\]{font-size:.8rem}.text-\\[10px\\]{font-size:10px}.text-\\[11px\\]{font-size:11px}.leading-none{--tw-leading:1;line-height:1}.leading-relaxed{--tw-leading:var(--leading-relaxed);line-height:var(--leading-relaxed)}.leading-snug{--tw-leading:var(--leading-snug);line-height:var(--leading-snug)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.whitespace-nowrap{white-space:nowrap}.text-card-foreground{color:var(--ou-card-foreground)}.text-destructive{color:var(--ou-destructive)}.text-foreground{color:var(--ou-foreground)}.text-muted-foreground{color:var(--ou-muted-foreground)}.text-primary{color:var(--ou-primary)}.text-primary-foreground{color:var(--ou-primary-foreground)}.text-secondary-foreground{color:var(--ou-foreground)}.capitalize{text-transform:capitalize}.lowercase{text-transform:lowercase}.normal-case{text-transform:none}.italic{font-style:italic}.diagonal-fractions{--tw-numeric-fraction:diagonal-fractions;font-variant-numeric:var(--tw-ordinal, ) var(--tw-slashed-zero, ) var(--tw-numeric-figure, ) var(--tw-numeric-spacing, ) var(--tw-numeric-fraction, )}.lining-nums{--tw-numeric-figure:lining-nums;font-variant-numeric:var(--tw-ordinal, ) var(--tw-slashed-zero, ) var(--tw-numeric-figure, ) var(--tw-numeric-spacing, ) var(--tw-numeric-fraction, )}.proportional-nums{--tw-numeric-spacing:proportional-nums;font-variant-numeric:var(--tw-ordinal, ) var(--tw-slashed-zero, ) var(--tw-numeric-figure, ) var(--tw-numeric-spacing, ) var(--tw-numeric-fraction, )}.tabular-nums{--tw-numeric-spacing:tabular-nums;font-variant-numeric:var(--tw-ordinal, ) var(--tw-slashed-zero, ) var(--tw-numeric-figure, ) var(--tw-numeric-spacing, ) var(--tw-numeric-fraction, )}.no-underline{text-decoration-line:none}.underline-offset-4{text-underline-offset:4px}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a), 0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,#0000001a), 0 4px 6px -4px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a), 0 8px 10px -6px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.ring-0{--tw-ring-shadow:var(--tw-ring-inset, ) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.ring-1{--tw-ring-shadow:var(--tw-ring-inset, ) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.ring-border{--tw-ring-color:var(--ou-border)}.ring-foreground,.ring-foreground\\/10{--tw-ring-color:var(--ou-foreground)}@supports (color:color-mix(in lab, red, red)){.ring-foreground\\/10{--tw-ring-color:color-mix(in oklab, var(--ou-foreground) 10%, transparent)}}.outline{outline-style:var(--tw-outline-style);outline-width:1px}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );backdrop-filter:var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, )}.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-colors{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-transform{transition-property:transform,translate,scale,rotate;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.outline-none{--tw-outline-style:none;outline-style:none}.select-none{-webkit-user-select:none;user-select:none}.\\[--card-spacing\\:--spacing\\(4\\)\\]{--card-spacing:calc(var(--spacing) * 4)}:is(:where(.group\\/field-label):has(:focus-visible) .group-has-\\[\\:focus-visible\\]\\/field-label\\:border-transparent){border-color:#0000}:is(:where(.group\\/field-label):has(:focus-visible) .group-has-\\[\\:focus-visible\\]\\/field-label\\:ring-0){--tw-ring-shadow:var(--tw-ring-inset, ) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}:is(:where(.group)[data-disabled=true] .group-data-\\[disabled\\=true\\]\\:pointer-events-none){pointer-events:none}:is(:where(.group)[data-disabled=true] .group-data-\\[disabled\\=true\\]\\:opacity-50){opacity:.5}:is(:where(.group\\/switch)[data-size=default] .group-data-\\[size\\=default\\]\\/switch\\:size-4){width:calc(var(--spacing) * 4);height:calc(var(--spacing) * 4)}:is(:where(.group\\/card)[data-size=sm] .group-data-\\[size\\=sm\\]\\/card\\:text-sm){font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}:is(:where(.group\\/switch)[data-size=sm] .group-data-\\[size\\=sm\\]\\/switch\\:size-3){width:calc(var(--spacing) * 3);height:calc(var(--spacing) * 3)}:is(:where(.peer):disabled~.peer-disabled\\:cursor-not-allowed){cursor:not-allowed}:is(:where(.peer):disabled~.peer-disabled\\:opacity-50){opacity:.5}.file\\:inline-flex::file-selector-button{display:inline-flex}.file\\:h-6::file-selector-button{height:calc(var(--spacing) * 6)}.file\\:border-0::file-selector-button{border-style:var(--tw-border-style);border-width:0}.file\\:bg-transparent::file-selector-button{background-color:#0000}.file\\:text-sm::file-selector-button{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.file\\:font-medium::file-selector-button{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.file\\:text-foreground::file-selector-button{color:var(--ou-foreground)}.placeholder\\:text-muted-foreground::placeholder{color:var(--ou-muted-foreground)}.after\\:absolute:after{content:var(--tw-content);position:absolute}.after\\:-inset-x-3:after{content:var(--tw-content);inset-inline:calc(var(--spacing) * -3)}.after\\:-inset-y-2:after{content:var(--tw-content);inset-block:calc(var(--spacing) * -2)}@media (hover:hover){.hover\\:bg-\\[color-mix\\(in_oklch\\,var\\(--secondary\\)\\,var\\(--foreground\\)_5\\%\\)\\]:hover{background-color:var(--secondary)}@supports (color:color-mix(in lab, red, red)){.hover\\:bg-\\[color-mix\\(in_oklch\\,var\\(--secondary\\)\\,var\\(--foreground\\)_5\\%\\)\\]:hover{background-color:color-mix(in oklch,var(--secondary),var(--foreground) 5%)}}.hover\\:bg-accent:hover{background-color:var(--ou-accent)}.hover\\:bg-destructive\\/20:hover{background-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.hover\\:bg-destructive\\/20:hover{background-color:color-mix(in oklab, var(--ou-destructive) 20%, transparent)}}.hover\\:bg-muted:hover{background-color:var(--ou-muted)}.hover\\:bg-primary\\/80:hover{background-color:var(--ou-primary)}@supports (color:color-mix(in lab, red, red)){.hover\\:bg-primary\\/80:hover{background-color:color-mix(in oklab, var(--ou-primary) 80%, transparent)}}.hover\\:text-foreground:hover{color:var(--ou-foreground)}.hover\\:text-muted-foreground:hover{color:var(--ou-muted-foreground)}.hover\\:underline:hover{text-decoration-line:underline}}.focus-visible\\:border-destructive\\/40:focus-visible{border-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.focus-visible\\:border-destructive\\/40:focus-visible{border-color:color-mix(in oklab, var(--ou-destructive) 40%, transparent)}}.focus-visible\\:border-ring:focus-visible{border-color:var(--ou-ring)}.focus-visible\\:ring-3:focus-visible,.focus-visible\\:ring-\\[3px\\]:focus-visible{--tw-ring-shadow:var(--tw-ring-inset, ) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.focus-visible\\:ring-destructive\\/20:focus-visible{--tw-ring-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.focus-visible\\:ring-destructive\\/20:focus-visible{--tw-ring-color:color-mix(in oklab, var(--ou-destructive) 20%, transparent)}}.focus-visible\\:ring-ring\\/50:focus-visible{--tw-ring-color:var(--ou-ring)}@supports (color:color-mix(in lab, red, red)){.focus-visible\\:ring-ring\\/50:focus-visible{--tw-ring-color:color-mix(in oklab, var(--ou-ring) 50%, transparent)}}.active\\:not-aria-\\[haspopup\\]\\:translate-y-px:active:not([aria-haspopup]){--tw-translate-y:1px;translate:var(--tw-translate-x) var(--tw-translate-y)}.disabled\\:pointer-events-none:disabled{pointer-events:none}.disabled\\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\\:bg-input\\/50:disabled{background-color:var(--ou-input)}@supports (color:color-mix(in lab, red, red)){.disabled\\:bg-input\\/50:disabled{background-color:color-mix(in oklab, var(--ou-input) 50%, transparent)}}.disabled\\:opacity-50:disabled{opacity:.5}:where([data-slot=button-group]) .in-data-\\[slot\\=button-group\\]\\:rounded-lg{border-radius:var(--ou-radius)}.has-data-\\[icon\\=inline-end\\]\\:pr-1\\.5:has([data-icon=inline-end]){padding-right:calc(var(--spacing) * 1.5)}.has-data-\\[icon\\=inline-end\\]\\:pr-2:has([data-icon=inline-end]){padding-right:calc(var(--spacing) * 2)}.has-data-\\[icon\\=inline-start\\]\\:pl-1\\.5:has([data-icon=inline-start]){padding-left:calc(var(--spacing) * 1.5)}.has-data-\\[icon\\=inline-start\\]\\:pl-2:has([data-icon=inline-start]){padding-left:calc(var(--spacing) * 2)}.has-data-\\[slot\\=card-action\\]\\:grid-cols-\\[1fr_auto\\]:has([data-slot=card-action]){grid-template-columns:1fr auto}.has-data-\\[slot\\=card-description\\]\\:grid-rows-\\[auto_auto\\]:has([data-slot=card-description]){grid-template-rows:auto auto}.has-data-\\[slot\\=card-footer\\]\\:pb-0:has([data-slot=card-footer]){padding-bottom:0}.has-\\[\\>img\\:first-child\\]\\:pt-0:has(>img:first-child){padding-top:0}.aria-expanded\\:bg-muted[aria-expanded=true]{background-color:var(--ou-muted)}.aria-expanded\\:bg-secondary[aria-expanded=true]{background-color:var(--ou-secondary)}.aria-expanded\\:text-foreground[aria-expanded=true],.aria-expanded\\:text-secondary-foreground[aria-expanded=true]{color:var(--ou-foreground)}.aria-invalid\\:border-destructive[aria-invalid=true]{border-color:var(--ou-destructive)}.aria-invalid\\:ring-3[aria-invalid=true]{--tw-ring-shadow:var(--tw-ring-inset, ) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.aria-invalid\\:ring-destructive\\/20[aria-invalid=true]{--tw-ring-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.aria-invalid\\:ring-destructive\\/20[aria-invalid=true]{--tw-ring-color:color-mix(in oklab, var(--ou-destructive) 20%, transparent)}}.data-checked\\:bg-primary[data-checked]{background-color:var(--ou-primary)}:is(:where(.group\\/switch)[data-size=default] .group-data-\\[size\\=default\\]\\/switch\\:data-checked\\:translate-x-\\[calc\\(100\\%-2px\\)\\])[data-checked],:is(:where(.group\\/switch)[data-size=sm] .group-data-\\[size\\=sm\\]\\/switch\\:data-checked\\:translate-x-\\[calc\\(100\\%-2px\\)\\])[data-checked]{--tw-translate-x:calc(100% - 2px);translate:var(--tw-translate-x) var(--tw-translate-y)}.data-disabled\\:cursor-not-allowed[data-disabled]{cursor:not-allowed}.data-disabled\\:opacity-50[data-disabled]{opacity:.5}.data-horizontal\\:h-px[data-horizontal]{height:1px}.data-horizontal\\:w-full[data-horizontal]{width:100%}.data-unchecked\\:bg-input[data-unchecked]{background-color:var(--ou-input)}:is(:where(.group\\/switch)[data-size=default] .group-data-\\[size\\=default\\]\\/switch\\:data-unchecked\\:translate-x-0)[data-unchecked],:is(:where(.group\\/switch)[data-size=sm] .group-data-\\[size\\=sm\\]\\/switch\\:data-unchecked\\:translate-x-0)[data-unchecked]{--tw-translate-x:0px;translate:var(--tw-translate-x) var(--tw-translate-y)}.data-vertical\\:w-px[data-vertical]{width:1px}.data-vertical\\:self-stretch[data-vertical]{align-self:stretch}.data-\\[size\\=default\\]\\:h-\\[18\\.4px\\][data-size=default]{height:18.4px}.data-\\[size\\=default\\]\\:w-\\[32px\\][data-size=default]{width:32px}.data-\\[size\\=sm\\]\\:h-\\[14px\\][data-size=sm]{height:14px}.data-\\[size\\=sm\\]\\:w-\\[24px\\][data-size=sm]{width:24px}.data-\\[size\\=sm\\]\\:\\[--card-spacing\\:--spacing\\(3\\)\\][data-size=sm]{--card-spacing:calc(var(--spacing) * 3)}.data-\\[size\\=sm\\]\\:has-data-\\[slot\\=card-footer\\]\\:pb-0[data-size=sm]:has([data-slot=card-footer]){padding-bottom:0}@media (min-width:48rem){.md\\:text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}}.dark\\:border-input:where(.dark,.dark *){border-color:var(--ou-input)}.dark\\:bg-destructive\\/20:where(.dark,.dark *){background-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.dark\\:bg-destructive\\/20:where(.dark,.dark *){background-color:color-mix(in oklab, var(--ou-destructive) 20%, transparent)}}.dark\\:bg-input\\/30:where(.dark,.dark *){background-color:var(--ou-input)}@supports (color:color-mix(in lab, red, red)){.dark\\:bg-input\\/30:where(.dark,.dark *){background-color:color-mix(in oklab, var(--ou-input) 30%, transparent)}}@media (hover:hover){.dark\\:hover\\:bg-destructive\\/30:where(.dark,.dark *):hover{background-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.dark\\:hover\\:bg-destructive\\/30:where(.dark,.dark *):hover{background-color:color-mix(in oklab, var(--ou-destructive) 30%, transparent)}}.dark\\:hover\\:bg-input\\/50:where(.dark,.dark *):hover{background-color:var(--ou-input)}@supports (color:color-mix(in lab, red, red)){.dark\\:hover\\:bg-input\\/50:where(.dark,.dark *):hover{background-color:color-mix(in oklab, var(--ou-input) 50%, transparent)}}.dark\\:hover\\:bg-muted\\/50:where(.dark,.dark *):hover{background-color:var(--ou-muted)}@supports (color:color-mix(in lab, red, red)){.dark\\:hover\\:bg-muted\\/50:where(.dark,.dark *):hover{background-color:color-mix(in oklab, var(--ou-muted) 50%, transparent)}}}.dark\\:focus-visible\\:ring-destructive\\/40:where(.dark,.dark *):focus-visible{--tw-ring-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.dark\\:focus-visible\\:ring-destructive\\/40:where(.dark,.dark *):focus-visible{--tw-ring-color:color-mix(in oklab, var(--ou-destructive) 40%, transparent)}}.dark\\:disabled\\:bg-input\\/80:where(.dark,.dark *):disabled{background-color:var(--ou-input)}@supports (color:color-mix(in lab, red, red)){.dark\\:disabled\\:bg-input\\/80:where(.dark,.dark *):disabled{background-color:color-mix(in oklab, var(--ou-input) 80%, transparent)}}.dark\\:aria-invalid\\:border-destructive\\/50:where(.dark,.dark *)[aria-invalid=true]{border-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.dark\\:aria-invalid\\:border-destructive\\/50:where(.dark,.dark *)[aria-invalid=true]{border-color:color-mix(in oklab, var(--ou-destructive) 50%, transparent)}}.dark\\:aria-invalid\\:ring-destructive\\/40:where(.dark,.dark *)[aria-invalid=true]{--tw-ring-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.dark\\:aria-invalid\\:ring-destructive\\/40:where(.dark,.dark *)[aria-invalid=true]{--tw-ring-color:color-mix(in oklab, var(--ou-destructive) 40%, transparent)}}.dark\\:data-checked\\:bg-primary-foreground:where(.dark,.dark *)[data-checked]{background-color:var(--ou-primary-foreground)}.dark\\:data-unchecked\\:bg-foreground:where(.dark,.dark *)[data-unchecked]{background-color:var(--ou-foreground)}.dark\\:data-unchecked\\:bg-input\\/80:where(.dark,.dark *)[data-unchecked]{background-color:var(--ou-input)}@supports (color:color-mix(in lab, red, red)){.dark\\:data-unchecked\\:bg-input\\/80:where(.dark,.dark *)[data-unchecked]{background-color:color-mix(in oklab, var(--ou-input) 80%, transparent)}}.\\[\\&_\\[data-slot\\=progress-indicator\\]\\]\\:shrink-0 [data-slot=progress-indicator]{flex-shrink:0}.\\[\\&_\\[data-slot\\=progress-track\\]\\]\\:h-2 [data-slot=progress-track]{height:calc(var(--spacing) * 2)}.\\[\\&_\\[data-slot\\=progress-track\\]\\]\\:gap-0 [data-slot=progress-track]{gap:0}.\\[\\&_\\[data-slot\\=progress-track\\]\\]\\:gap-\\[3px\\] [data-slot=progress-track]{gap:3px}.\\[\\&_\\[data-slot\\=progress-track\\]\\]\\:rounded-\\[2px\\] [data-slot=progress-track]{border-radius:2px}.\\[\\&_\\[data-slot\\=progress-track\\]\\]\\:bg-transparent [data-slot=progress-track]{background-color:#0000}.\\[\\&_svg\\]\\:pointer-events-none svg{pointer-events:none}.\\[\\&_svg\\]\\:shrink-0 svg{flex-shrink:0}.\\[\\&_svg\\:not\\(\\[class\\*\\=\\'size-\\'\\]\\)\\]\\:size-3 svg:not([class*=size-]){width:calc(var(--spacing) * 3);height:calc(var(--spacing) * 3)}.\\[\\&_svg\\:not\\(\\[class\\*\\=\\'size-\\'\\]\\)\\]\\:size-3\\.5 svg:not([class*=size-]){width:calc(var(--spacing) * 3.5);height:calc(var(--spacing) * 3.5)}.\\[\\&_svg\\:not\\(\\[class\\*\\=\\'size-\\'\\]\\)\\]\\:size-4 svg:not([class*=size-]){width:calc(var(--spacing) * 4);height:calc(var(--spacing) * 4)}.\\[\\.border-b\\]\\:pb-\\(--card-spacing\\).border-b{padding-bottom:var(--card-spacing)}@media (hover:hover){.\\[a\\]\\:hover\\:bg-destructive\\/20:is(a):hover{background-color:var(--ou-destructive)}@supports (color:color-mix(in lab, red, red)){.\\[a\\]\\:hover\\:bg-destructive\\/20:is(a):hover{background-color:color-mix(in oklab, var(--ou-destructive) 20%, transparent)}}.\\[a\\]\\:hover\\:bg-muted:is(a):hover{background-color:var(--ou-muted)}.\\[a\\]\\:hover\\:bg-primary\\/80:is(a):hover{background-color:var(--ou-primary)}@supports (color:color-mix(in lab, red, red)){.\\[a\\]\\:hover\\:bg-primary\\/80:is(a):hover{background-color:color-mix(in oklab, var(--ou-primary) 80%, transparent)}}.\\[a\\]\\:hover\\:bg-secondary\\/80:is(a):hover{background-color:var(--ou-secondary)}@supports (color:color-mix(in lab, red, red)){.\\[a\\]\\:hover\\:bg-secondary\\/80:is(a):hover{background-color:color-mix(in oklab, var(--ou-secondary) 80%, transparent)}}.\\[a\\]\\:hover\\:text-muted-foreground:is(a):hover{color:var(--ou-muted-foreground)}}:is(.\\*\\:\\[img\\:first-child\\]\\:rounded-t-xl>*):is(img:first-child){border-top-left-radius:calc(var(--ou-radius) * 1.4);border-top-right-radius:calc(var(--ou-radius) * 1.4)}:is(.\\*\\:\\[img\\:last-child\\]\\:rounded-b-xl>*):is(img:last-child){border-bottom-right-radius:calc(var(--ou-radius) * 1.4);border-bottom-left-radius:calc(var(--ou-radius) * 1.4)}.\\[\\&\\>svg\\]\\:pointer-events-none>svg{pointer-events:none}.\\[\\&\\>svg\\]\\:size-3\\!>svg{width:calc(var(--spacing) * 3)!important;height:calc(var(--spacing) * 3)!important}}.ou-root{--ou-background:var(--dsw-alias-bg-overlay);--ou-foreground:var(--dsw-alias-label-primary);--ou-card:var(--dsw-alias-bg-layer-1);--ou-card-foreground:var(--dsw-alias-label-primary);--ou-popover:var(--dsw-alias-bg-overlay);--ou-primary:var(--dsw-alias-brand-primary);--ou-primary-foreground:var(--dsw-alias-bg-base);--ou-secondary:var(--dsw-alias-bg-layer-2);--ou-muted:var(--dsw-alias-bg-layer-2);--ou-muted-foreground:var(--dsw-alias-label-secondary);--ou-accent:var(--dsw-alias-bg-layer-2);--ou-destructive:var(--dsw-alias-state-error-primary);--ou-border:var(--dsw-alias-border-l1);--ou-input:var(--dsw-alias-border-l2);--ou-ring:var(--dsw-alias-brand-primary);--ou-radius:.625rem;--ou-success:var(--dsw-alias-state-success-primary);--ou-warn:var(--dsw-alias-state-warn-primary);--ou-error:var(--dsw-alias-state-error-primary);--ou-muted-bar:var(--dsw-alias-state-idle-primary);--ou-bar-green:var(--dsw-alias-state-success-primary)}@supports (color:color-mix(in lab, red, red)){.ou-root{--ou-bar-green:color-mix(in oklab, var(--dsw-alias-state-success-primary) 72%, var(--dsw-alias-label-primary))}}.ou-root{--ou-bar-blue:var(--dsw-alias-state-business-primary);--ou-bar-yellow:var(--dsw-alias-state-warn-primary);--ou-bar-red:var(--dsw-alias-state-error-primary);--ou-track:var(--dsw-alias-border-l2);--ou-track-edge:var(--dsw-alias-border-l3);--ou-hairline:var(--dsw-alias-label-primary)}@supports (color:color-mix(in lab, red, red)){.ou-root{--ou-hairline:color-mix(in oklab, var(--dsw-alias-label-primary) 14%, transparent)}}.ou-root{--ou-surface:var(--dsw-alias-bg-layer-1);color:var(--ou-foreground);-webkit-font-smoothing:antialiased;font-family:inherit}.ou-gauge-fill{background-color:var(--ou-tone);background-image:linear-gradient(#ffffff1f,#00000008);border:1px solid #0000000f}.ou-gauge-rest{border:1px solid var(--ou-track-edge);background-color:var(--ou-track)}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}@property --tw-rotate-x{syntax:"*";inherits:false}@property --tw-rotate-y{syntax:"*";inherits:false}@property --tw-rotate-z{syntax:"*";inherits:false}@property --tw-skew-x{syntax:"*";inherits:false}@property --tw-skew-y{syntax:"*";inherits:false}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-leading{syntax:"*";inherits:false}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-ordinal{syntax:"*";inherits:false}@property --tw-slashed-zero{syntax:"*";inherits:false}@property --tw-numeric-figure{syntax:"*";inherits:false}@property --tw-numeric-spacing{syntax:"*";inherits:false}@property --tw-numeric-fraction{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-outline-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-backdrop-blur{syntax:"*";inherits:false}@property --tw-backdrop-brightness{syntax:"*";inherits:false}@property --tw-backdrop-contrast{syntax:"*";inherits:false}@property --tw-backdrop-grayscale{syntax:"*";inherits:false}@property --tw-backdrop-hue-rotate{syntax:"*";inherits:false}@property --tw-backdrop-invert{syntax:"*";inherits:false}@property --tw-backdrop-opacity{syntax:"*";inherits:false}@property --tw-backdrop-saturate{syntax:"*";inherits:false}@property --tw-backdrop-sepia{syntax:"*";inherits:false}@property --tw-content{syntax:"*";inherits:false;initial-value:""}@keyframes spin{to{transform:rotate(360deg)}}`;
 
 // src/client/locale.ts
 var NS = "opencodeUsage";
@@ -493,849 +493,6 @@ var __iconData7 = {
 };
 __iconData7.node;
 var Trash = createLucideIcon(__iconData7);
-
-// node_modules/@base-ui/react/button/Button.mjs
-var React10 = __toESM(require("react"), 1);
-
-// node_modules/@base-ui/react/internals/use-button/useButton.mjs
-var React6 = __toESM(require("react"), 1);
-
-// node_modules/@floating-ui/utils/dist/floating-ui.utils.dom.mjs
-function hasWindow() {
-  return typeof window !== "undefined";
-}
-function getWindow(node) {
-  var _node$ownerDocument;
-  return (node == null || (_node$ownerDocument = node.ownerDocument) == null ? void 0 : _node$ownerDocument.defaultView) || window;
-}
-function isElement(value) {
-  if (!hasWindow()) {
-    return false;
-  }
-  return value instanceof Element || value instanceof getWindow(value).Element;
-}
-function isHTMLElement(value) {
-  if (!hasWindow()) {
-    return false;
-  }
-  return value instanceof HTMLElement || value instanceof getWindow(value).HTMLElement;
-}
-function isShadowRoot(value) {
-  if (!hasWindow() || typeof ShadowRoot === "undefined") {
-    return false;
-  }
-  return value instanceof ShadowRoot || value instanceof getWindow(value).ShadowRoot;
-}
-
-// node_modules/@base-ui/utils/safeReact.mjs
-var React = __toESM(require("react"), 1);
-var SafeReact = {
-  ...React
-};
-
-// node_modules/@base-ui/utils/useRefWithInit.mjs
-var React2 = __toESM(require("react"), 1);
-var UNINITIALIZED = {};
-function useRefWithInit(init, initArg) {
-  const ref = React2.useRef(UNINITIALIZED);
-  if (ref.current === UNINITIALIZED) {
-    ref.current = init(initArg);
-  }
-  return ref;
-}
-
-// node_modules/@base-ui/utils/useStableCallback.mjs
-var useInsertionEffect = SafeReact.useInsertionEffect;
-var useSafeInsertionEffect = (
-  // React 17 doesn't have useInsertionEffect.
-  useInsertionEffect && // Preact replaces useInsertionEffect with useLayoutEffect and fires too late.
-  useInsertionEffect !== SafeReact.useLayoutEffect ? useInsertionEffect : (fn) => fn()
-);
-function useStableCallback(callback) {
-  const stable = useRefWithInit(createStableCallback).current;
-  stable.next = callback;
-  useSafeInsertionEffect(stable.effect);
-  return stable.trampoline;
-}
-function createStableCallback() {
-  const stable = {
-    next: void 0,
-    callback: assertNotCalled,
-    trampoline: (...args) => stable.callback?.(...args),
-    effect: () => {
-      stable.callback = stable.next;
-    }
-  };
-  return stable;
-}
-function assertNotCalled() {
-  if (false) {
-    throw (
-      /* minify-error-disabled */
-      new Error("Base UI: Cannot call an event handler while rendering.")
-    );
-  }
-}
-
-// node_modules/@base-ui/utils/useIsoLayoutEffect.mjs
-var React3 = __toESM(require("react"), 1);
-var noop = () => {
-};
-var useIsoLayoutEffect = typeof document !== "undefined" ? React3.useLayoutEffect : noop;
-
-// node_modules/@base-ui/utils/mergeObjects.mjs
-function mergeObjects(a, b) {
-  if (a && !b) {
-    return a;
-  }
-  if (!a && b) {
-    return b;
-  }
-  if (a || b) {
-    return {
-      ...a,
-      ...b
-    };
-  }
-  return void 0;
-}
-
-// node_modules/@base-ui/react/merge-props/mergeProps.mjs
-var EMPTY_PROPS = {};
-function mergeProps(a, b, c, d, e) {
-  if (!c && !d && !e && !a) {
-    return createInitialMergedProps(b);
-  }
-  let merged = createInitialMergedProps(a);
-  if (b) {
-    merged = mergeInto(merged, b);
-  }
-  if (c) {
-    merged = mergeInto(merged, c);
-  }
-  if (d) {
-    merged = mergeInto(merged, d);
-  }
-  if (e) {
-    merged = mergeInto(merged, e);
-  }
-  return merged;
-}
-function mergePropsN(props) {
-  if (props.length === 0) {
-    return EMPTY_PROPS;
-  }
-  if (props.length === 1) {
-    return createInitialMergedProps(props[0]);
-  }
-  let merged = createInitialMergedProps(props[0]);
-  for (let i = 1; i < props.length; i += 1) {
-    merged = mergeInto(merged, props[i]);
-  }
-  return merged;
-}
-function createInitialMergedProps(inputProps) {
-  if (isPropsGetter(inputProps)) {
-    return {
-      ...inputProps(EMPTY_PROPS)
-    };
-  }
-  return copyInitialProps(inputProps);
-}
-function mergeInto(merged, inputProps) {
-  if (isPropsGetter(inputProps)) {
-    return inputProps(merged);
-  }
-  return mutablyMergeInto(merged, inputProps);
-}
-function copyInitialProps(inputProps) {
-  const copiedProps = {
-    ...inputProps
-  };
-  for (const propName in copiedProps) {
-    const propValue = copiedProps[propName];
-    if (isEventHandler(propName, propValue)) {
-      copiedProps[propName] = wrapEventHandler(propValue);
-    }
-  }
-  return copiedProps;
-}
-function mutablyMergeInto(mergedProps, externalProps) {
-  if (!externalProps) {
-    return mergedProps;
-  }
-  for (const propName in externalProps) {
-    const externalPropValue = externalProps[propName];
-    switch (propName) {
-      case "style": {
-        mergedProps[propName] = mergeObjects(mergedProps.style, externalPropValue);
-        break;
-      }
-      case "className": {
-        mergedProps[propName] = mergeClassNames(mergedProps.className, externalPropValue);
-        break;
-      }
-      default: {
-        if (isEventHandler(propName, externalPropValue)) {
-          mergedProps[propName] = mergeEventHandlers(mergedProps[propName], externalPropValue);
-        } else {
-          mergedProps[propName] = externalPropValue;
-        }
-      }
-    }
-  }
-  return mergedProps;
-}
-function isEventHandler(key, value) {
-  const code0 = key.charCodeAt(0);
-  const code1 = key.charCodeAt(1);
-  const code2 = key.charCodeAt(2);
-  return code0 === 111 && code1 === 110 && code2 >= 65 && code2 <= 90 && (typeof value === "function" || typeof value === "undefined");
-}
-function isPropsGetter(inputProps) {
-  return typeof inputProps === "function";
-}
-function mergeEventHandlers(ourHandler, theirHandler) {
-  if (!theirHandler) {
-    return ourHandler;
-  }
-  if (!ourHandler) {
-    return wrapEventHandler(theirHandler);
-  }
-  return (...args) => {
-    const event = args[0];
-    if (isSyntheticEvent(event)) {
-      const baseUIEvent = event;
-      makeEventPreventable(baseUIEvent);
-      const result2 = theirHandler(...args);
-      if (!baseUIEvent.baseUIHandlerPrevented) {
-        ourHandler?.(...args);
-      }
-      return result2;
-    }
-    const result = theirHandler(...args);
-    ourHandler?.(...args);
-    return result;
-  };
-}
-function wrapEventHandler(handler) {
-  if (!handler) {
-    return handler;
-  }
-  return (...args) => {
-    const event = args[0];
-    if (isSyntheticEvent(event)) {
-      makeEventPreventable(event);
-    }
-    return handler(...args);
-  };
-}
-function makeEventPreventable(event) {
-  event.preventBaseUIHandler = () => {
-    event.baseUIHandlerPrevented = true;
-  };
-  return event;
-}
-function mergeClassNames(ourClassName, theirClassName) {
-  if (theirClassName) {
-    if (ourClassName) {
-      return theirClassName + " " + ourClassName;
-    }
-    return theirClassName;
-  }
-  return ourClassName;
-}
-function isSyntheticEvent(event) {
-  return event != null && typeof event === "object" && "nativeEvent" in event;
-}
-
-// node_modules/@base-ui/utils/formatErrorMessage.mjs
-function createFormatErrorMessage(baseUrl, prefix) {
-  return function formatErrorMessage2(code, ...args) {
-    const url = new URL(baseUrl);
-    url.searchParams.set("code", code.toString());
-    args.forEach((arg) => url.searchParams.append("args[]", arg));
-    return `${prefix} error #${code}; visit ${url} for the full message.`;
-  };
-}
-var formatErrorMessage = createFormatErrorMessage("https://base-ui.com/production-error", "Base UI");
-var formatErrorMessage_default = formatErrorMessage;
-
-// node_modules/@base-ui/react/internals/composite/root/CompositeRootContext.mjs
-var React4 = __toESM(require("react"), 1);
-var CompositeRootContext = /* @__PURE__ */ React4.createContext(void 0);
-if (false) CompositeRootContext.displayName = "CompositeRootContext";
-function useCompositeRootContext(optional = false) {
-  const context = React4.useContext(CompositeRootContext);
-  if (context === void 0 && !optional) {
-    throw new Error(false ? "Base UI: CompositeRootContext is missing. Composite parts must be placed within <Composite.Root>." : formatErrorMessage_default(16));
-  }
-  return context;
-}
-
-// node_modules/@base-ui/react/utils/useFocusableWhenDisabled.mjs
-var React5 = __toESM(require("react"), 1);
-function useFocusableWhenDisabled(parameters) {
-  const {
-    focusableWhenDisabled,
-    disabled: disabled2,
-    composite = false,
-    tabIndex: tabIndexProp = 0,
-    isNativeButton
-  } = parameters;
-  const isFocusableComposite = composite && focusableWhenDisabled !== false;
-  const isNonFocusableComposite = composite && focusableWhenDisabled === false;
-  const props = React5.useMemo(() => {
-    const additionalProps = {
-      // allow Tabbing away from focusableWhenDisabled elements
-      onKeyDown(event) {
-        if (disabled2 && focusableWhenDisabled && event.key !== "Tab") {
-          event.preventDefault();
-        }
-      }
-    };
-    if (!composite) {
-      additionalProps.tabIndex = tabIndexProp;
-      if (!isNativeButton && disabled2) {
-        additionalProps.tabIndex = focusableWhenDisabled ? tabIndexProp : -1;
-      }
-    }
-    if (isNativeButton && (focusableWhenDisabled || isFocusableComposite) || !isNativeButton && disabled2) {
-      additionalProps["aria-disabled"] = disabled2;
-    }
-    if (isNativeButton && (!focusableWhenDisabled || isNonFocusableComposite)) {
-      additionalProps.disabled = disabled2;
-    }
-    return additionalProps;
-  }, [composite, disabled2, focusableWhenDisabled, isFocusableComposite, isNonFocusableComposite, isNativeButton, tabIndexProp]);
-  return {
-    props
-  };
-}
-
-// node_modules/@base-ui/utils/owner.mjs
-function ownerDocument(node) {
-  return node?.ownerDocument || document;
-}
-
-// node_modules/@base-ui/react/utils/dispatchClickWithModifiers.mjs
-function dispatchClickWithModifiers(target, sourceEvent, {
-  detail = 0,
-  pointerType = ""
-} = {}) {
-  target.dispatchEvent(new (getWindow(target)).PointerEvent("click", {
-    bubbles: true,
-    cancelable: true,
-    composed: true,
-    detail,
-    pointerType,
-    shiftKey: sourceEvent.shiftKey,
-    ctrlKey: sourceEvent.ctrlKey,
-    altKey: sourceEvent.altKey,
-    metaKey: sourceEvent.metaKey
-  }));
-}
-
-// node_modules/@base-ui/react/internals/use-button/useButton.mjs
-function useButton(parameters = {}) {
-  const {
-    disabled: disabled2 = false,
-    focusableWhenDisabled,
-    tabIndex = 0,
-    native: isNativeButton = true,
-    composite: compositeProp
-  } = parameters;
-  const elementRef = React6.useRef(null);
-  const compositeRootContext = useCompositeRootContext(true);
-  const isCompositeItem = compositeProp ?? compositeRootContext !== void 0;
-  const {
-    props: focusableWhenDisabledProps
-  } = useFocusableWhenDisabled({
-    focusableWhenDisabled,
-    disabled: disabled2,
-    composite: isCompositeItem,
-    tabIndex,
-    isNativeButton
-  });
-  if (false) {
-    React6.useEffect(() => {
-      if (!elementRef.current) {
-        return;
-      }
-      const isButtonTag = isButtonElement(elementRef.current);
-      if (isNativeButton) {
-        if (!isButtonTag) {
-          const ownerStackMessage = SafeReact.captureOwnerStack?.() || "";
-          const message = "A component that acts as a button expected a native <button> because the `nativeButton` prop is true. Rendering a non-<button> removes native button semantics, which can impact forms and accessibility. Use a real <button> in the `render` prop, or set `nativeButton` to `false`.";
-          error(`${message}${ownerStackMessage}`);
-        }
-      } else if (isButtonTag) {
-        const ownerStackMessage = SafeReact.captureOwnerStack?.() || "";
-        const message = "A component that acts as a button expected a non-<button> because the `nativeButton` prop is false. Rendering a <button> keeps native behavior while Base UI applies non-native attributes and handlers, which can add unintended extra attributes (such as `role` or `aria-disabled`). Use a non-<button> in the `render` prop, or set `nativeButton` to `true`.";
-        error(`${message}${ownerStackMessage}`);
-      }
-    }, [isNativeButton]);
-  }
-  const updateDisabled = React6.useCallback(() => {
-    const element = elementRef.current;
-    if (!isButtonElement(element)) {
-      return;
-    }
-    if (isCompositeItem && disabled2 && focusableWhenDisabledProps.disabled === void 0 && element.disabled) {
-      element.disabled = false;
-    }
-  }, [disabled2, focusableWhenDisabledProps.disabled, isCompositeItem]);
-  useIsoLayoutEffect(updateDisabled, [updateDisabled]);
-  const getButtonProps = React6.useCallback((externalProps = {}) => {
-    const {
-      onClick: externalOnClick,
-      onMouseDown: externalOnMouseDown,
-      onKeyUp: externalOnKeyUp,
-      onKeyDown: externalOnKeyDown,
-      onPointerDown: externalOnPointerDown,
-      ...otherExternalProps
-    } = externalProps;
-    return mergeProps({
-      onClick(event) {
-        if (disabled2) {
-          event.preventDefault();
-          return;
-        }
-        externalOnClick?.(event);
-      },
-      onMouseDown(event) {
-        if (!disabled2) {
-          externalOnMouseDown?.(event);
-        }
-      },
-      onKeyDown(event) {
-        if (disabled2) {
-          return;
-        }
-        makeEventPreventable(event);
-        externalOnKeyDown?.(event);
-        if (event.baseUIHandlerPrevented) {
-          return;
-        }
-        const isCurrentTarget = event.target === event.currentTarget;
-        const currentTarget = event.currentTarget;
-        const isButton = isButtonElement(currentTarget);
-        const isLink = !isNativeButton && isValidLinkElement(currentTarget);
-        const shouldClick = isCurrentTarget && (isNativeButton ? isButton : !isLink);
-        const isEnterKey = event.key === "Enter";
-        const isSpaceKey = event.key === " ";
-        const role = currentTarget.getAttribute("role");
-        const isTextNavigationRole = role?.startsWith("menuitem") || role === "option" || role === "gridcell";
-        if (isCurrentTarget && isCompositeItem && isSpaceKey) {
-          if (event.defaultPrevented && isTextNavigationRole) {
-            return;
-          }
-          event.preventDefault();
-          if (!isNativeButton || isButton) {
-            event.preventBaseUIHandler();
-            dispatchClickWithModifiers(currentTarget, event);
-          }
-          return;
-        }
-        if (!shouldClick || isNativeButton || !isSpaceKey && !isEnterKey) {
-          if (isCurrentTarget && isLink && isSpaceKey) {
-            event.preventDefault();
-          }
-          return;
-        }
-        if (event.defaultPrevented) {
-          return;
-        }
-        event.preventDefault();
-        if (isEnterKey) {
-          event.preventBaseUIHandler();
-          dispatchClickWithModifiers(currentTarget, event);
-        }
-      },
-      onKeyUp(event) {
-        if (disabled2) {
-          return;
-        }
-        makeEventPreventable(event);
-        externalOnKeyUp?.(event);
-        if (event.target === event.currentTarget && isNativeButton && isCompositeItem && isButtonElement(event.currentTarget) && event.key === " ") {
-          event.preventDefault();
-          return;
-        }
-        if (event.baseUIHandlerPrevented) {
-          return;
-        }
-        if (event.target === event.currentTarget && !isNativeButton && !isCompositeItem && !event.defaultPrevented && event.key === " ") {
-          event.preventBaseUIHandler();
-          dispatchClickWithModifiers(event.currentTarget, event);
-        }
-      },
-      onPointerDown(event) {
-        if (disabled2) {
-          event.preventDefault();
-          return;
-        }
-        externalOnPointerDown?.(event);
-      }
-    }, isNativeButton ? {
-      type: "button"
-    } : {
-      role: "button"
-    }, focusableWhenDisabledProps, otherExternalProps);
-  }, [disabled2, focusableWhenDisabledProps, isCompositeItem, isNativeButton]);
-  const buttonRef = useStableCallback((element) => {
-    elementRef.current = element;
-    updateDisabled();
-  });
-  return {
-    getButtonProps,
-    buttonRef
-  };
-}
-function isButtonElement(elem) {
-  return isHTMLElement(elem) && elem.tagName === "BUTTON";
-}
-function isValidLinkElement(elem) {
-  return isHTMLElement(elem) && elem.tagName === "A" && Boolean(elem.href);
-}
-
-// node_modules/@base-ui/react/internals/useRenderElement.mjs
-var React9 = __toESM(require("react"), 1);
-
-// node_modules/@base-ui/utils/useMergedRefs.mjs
-function useMergedRefs(a, b, c, d) {
-  const forkRef = useRefWithInit(createForkRef).current;
-  if (didChange(forkRef, a, b, c, d)) {
-    update(forkRef, [a, b, c, d]);
-  }
-  return forkRef.callback;
-}
-function useMergedRefsN(refs) {
-  const forkRef = useRefWithInit(createForkRef).current;
-  if (didChangeN(forkRef, refs)) {
-    update(forkRef, refs);
-  }
-  return forkRef.callback;
-}
-function createForkRef() {
-  return {
-    callback: null,
-    cleanup: null,
-    refs: []
-  };
-}
-function didChange(forkRef, a, b, c, d) {
-  return forkRef.refs[0] !== a || forkRef.refs[1] !== b || forkRef.refs[2] !== c || forkRef.refs[3] !== d;
-}
-function didChangeN(forkRef, newRefs) {
-  return forkRef.refs.length !== newRefs.length || forkRef.refs.some((ref, index) => ref !== newRefs[index]);
-}
-function update(forkRef, refs) {
-  forkRef.refs = refs;
-  if (refs.every((ref) => ref == null)) {
-    forkRef.callback = null;
-    return;
-  }
-  forkRef.callback = (instance2) => {
-    if (forkRef.cleanup) {
-      forkRef.cleanup();
-      forkRef.cleanup = null;
-    }
-    if (instance2 != null) {
-      const cleanupCallbacks = Array(refs.length).fill(null);
-      for (let i = 0; i < refs.length; i += 1) {
-        const ref = refs[i];
-        if (ref == null) {
-          continue;
-        }
-        switch (typeof ref) {
-          case "function": {
-            const refCleanup = ref(instance2);
-            if (typeof refCleanup === "function") {
-              cleanupCallbacks[i] = refCleanup;
-            }
-            break;
-          }
-          case "object": {
-            ref.current = instance2;
-            break;
-          }
-          default:
-        }
-      }
-      forkRef.cleanup = () => {
-        for (let i = 0; i < refs.length; i += 1) {
-          const ref = refs[i];
-          if (ref == null) {
-            continue;
-          }
-          switch (typeof ref) {
-            case "function": {
-              const cleanupCallback = cleanupCallbacks[i];
-              if (typeof cleanupCallback === "function") {
-                cleanupCallback();
-              } else {
-                void ref(null);
-              }
-              break;
-            }
-            case "object": {
-              ref.current = null;
-              break;
-            }
-            default:
-          }
-        }
-      };
-    }
-  };
-}
-
-// node_modules/@base-ui/utils/getReactElementRef.mjs
-var React8 = __toESM(require("react"), 1);
-
-// node_modules/@base-ui/utils/reactVersion.mjs
-var React7 = __toESM(require("react"), 1);
-var majorVersion = parseInt(React7.version, 10);
-function isReactVersionAtLeast(reactVersionToCheck) {
-  return majorVersion >= reactVersionToCheck;
-}
-
-// node_modules/@base-ui/utils/getReactElementRef.mjs
-function getReactElementRef(element) {
-  if (!/* @__PURE__ */ React8.isValidElement(element)) {
-    return null;
-  }
-  const reactElement = element;
-  const propsWithRef = reactElement.props;
-  return (isReactVersionAtLeast(19) ? propsWithRef?.ref : reactElement.ref) ?? null;
-}
-
-// node_modules/@base-ui/utils/empty.mjs
-function NOOP() {
-}
-var EMPTY_ARRAY = Object.freeze([]);
-var EMPTY_OBJECT = Object.freeze({});
-
-// node_modules/@base-ui/react/internals/getStateAttributesProps.mjs
-function getStateAttributesProps(state, customMapping) {
-  const props = {};
-  for (const key in state) {
-    const value = state[key];
-    if (customMapping?.hasOwnProperty(key)) {
-      const customProps = customMapping[key](value);
-      if (customProps != null) {
-        Object.assign(props, customProps);
-      }
-      continue;
-    }
-    if (value === true) {
-      props[`data-${key.toLowerCase()}`] = "";
-    } else if (value) {
-      props[`data-${key.toLowerCase()}`] = value.toString();
-    }
-  }
-  return props;
-}
-
-// node_modules/@base-ui/react/utils/resolveClassName.mjs
-function resolveClassName(className, state) {
-  return typeof className === "function" ? className(state) : className;
-}
-
-// node_modules/@base-ui/react/utils/resolveStyle.mjs
-function resolveStyle(style, state) {
-  return typeof style === "function" ? style(state) : style;
-}
-
-// node_modules/@base-ui/react/internals/useRenderElement.mjs
-var import_react4 = require("react");
-function useRenderElement(element, componentProps, params = {}) {
-  let renderProp = componentProps.render;
-  if (params.enabled !== false) {
-    renderProp = unwrapLazyRenderProp(renderProp);
-  }
-  const outProps = useRenderElementProps(componentProps, params, renderProp);
-  if (params.enabled === false) {
-    return null;
-  }
-  const state = params.state ?? EMPTY_OBJECT;
-  return evaluateRenderProp(element, renderProp, outProps, state);
-}
-function useRenderElementProps(componentProps, params, renderProp) {
-  const {
-    className: classNameProp,
-    style: styleProp
-  } = componentProps;
-  const {
-    state = EMPTY_OBJECT,
-    ref,
-    props,
-    stateAttributesMapping: stateAttributesMapping3,
-    enabled = true
-  } = params;
-  const className = enabled ? resolveClassName(classNameProp, state) : void 0;
-  const style = enabled ? resolveStyle(styleProp, state) : void 0;
-  const stateProps = enabled ? getStateAttributesProps(state, stateAttributesMapping3) : EMPTY_OBJECT;
-  const resolvedProps = enabled && props ? resolveRenderFunctionProps(props) : void 0;
-  const outProps = enabled ? mergeObjects(stateProps, resolvedProps) ?? {} : EMPTY_OBJECT;
-  if (typeof document !== "undefined") {
-    if (!enabled) {
-      void useMergedRefs(null, null);
-    } else if (Array.isArray(ref)) {
-      outProps.ref = useMergedRefsN([outProps.ref, getReactElementRef(renderProp), ...ref]);
-    } else {
-      outProps.ref = useMergedRefs(outProps.ref, getReactElementRef(renderProp), ref);
-    }
-  }
-  if (!enabled) {
-    return EMPTY_OBJECT;
-  }
-  if (className !== void 0) {
-    outProps.className = mergeClassNames(outProps.className, className);
-  }
-  if (style !== void 0) {
-    outProps.style = mergeObjects(outProps.style, style);
-  }
-  return outProps;
-}
-function resolveRenderFunctionProps(props) {
-  if (Array.isArray(props)) {
-    return mergePropsN(props);
-  }
-  return mergeProps(void 0, props);
-}
-var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
-function unwrapLazyRenderProp(render) {
-  if (render?.$$typeof !== REACT_LAZY_TYPE) {
-    return render;
-  }
-  const unwrapped = React9.Children.toArray(render)[0];
-  return /* @__PURE__ */ React9.isValidElement(unwrapped) ? unwrapped : render;
-}
-function evaluateRenderProp(element, render, props, state) {
-  if (render) {
-    if (typeof render === "function") {
-      if (false) {
-        warnIfRenderPropLooksLikeComponent(render);
-      }
-      return render(props, state);
-    }
-    const mergedProps = mergeProps(props, render.props);
-    mergedProps.ref = props.ref;
-    if (false) {
-      if (!/* @__PURE__ */ React9.isValidElement(render)) {
-        throw new Error(["Base UI: The `render` prop was provided an invalid React element as `React.isValidElement(render)` is `false`.", "A valid React element must be provided to the `render` prop because it is cloned with props to replace the default element.", "https://base-ui.com/r/invalid-render-prop"].join("\n"));
-      }
-    }
-    return /* @__PURE__ */ React9.cloneElement(render, mergedProps);
-  }
-  return renderTag(element, props);
-}
-function renderTag(Tag, props) {
-  if (Tag === "button") {
-    return /* @__PURE__ */ (0, import_react4.createElement)("button", {
-      type: "button",
-      ...props,
-      key: props.key
-    });
-  }
-  if (Tag === "img") {
-    return /* @__PURE__ */ (0, import_react4.createElement)("img", {
-      alt: "",
-      ...props,
-      key: props.key
-    });
-  }
-  return /* @__PURE__ */ React9.createElement(Tag, props);
-}
-
-// node_modules/@base-ui/react/button/Button.mjs
-var Button = /* @__PURE__ */ React10.forwardRef(function Button2(componentProps, forwardedRef) {
-  const {
-    render,
-    className,
-    disabled: disabled2 = false,
-    focusableWhenDisabled = false,
-    nativeButton = true,
-    style,
-    ...elementProps
-  } = componentProps;
-  const {
-    getButtonProps,
-    buttonRef
-  } = useButton({
-    disabled: disabled2,
-    focusableWhenDisabled,
-    native: nativeButton
-  });
-  const state = {
-    disabled: disabled2
-  };
-  return useRenderElement("button", componentProps, {
-    state,
-    ref: [forwardedRef, buttonRef],
-    props: [elementProps, getButtonProps]
-  });
-});
-if (false) Button.displayName = "Button";
-
-// node_modules/clsx/dist/clsx.mjs
-function r(e) {
-  var t, f, n = "";
-  if ("string" == typeof e || "number" == typeof e) n += e;
-  else if ("object" == typeof e) if (Array.isArray(e)) {
-    var o = e.length;
-    for (t = 0; t < o; t++) e[t] && (f = r(e[t])) && (n && (n += " "), n += f);
-  } else for (f in e) e[f] && (n && (n += " "), n += f);
-  return n;
-}
-function clsx() {
-  for (var e, t, f = 0, n = "", o = arguments.length; f < o; f++) (e = arguments[f]) && (t = r(e)) && (n && (n += " "), n += t);
-  return n;
-}
-
-// node_modules/class-variance-authority/dist/index.mjs
-var falsyToString = (value) => typeof value === "boolean" ? `${value}` : value === 0 ? "0" : value;
-var cx = clsx;
-var cva = (base, config) => (props) => {
-  var _config_compoundVariants;
-  if ((config === null || config === void 0 ? void 0 : config.variants) == null) return cx(base, props === null || props === void 0 ? void 0 : props.class, props === null || props === void 0 ? void 0 : props.className);
-  const { variants, defaultVariants } = config;
-  const getVariantClassNames = Object.keys(variants).map((variant) => {
-    const variantProp = props === null || props === void 0 ? void 0 : props[variant];
-    const defaultVariantProp = defaultVariants === null || defaultVariants === void 0 ? void 0 : defaultVariants[variant];
-    if (variantProp === null) return null;
-    const variantKey = falsyToString(variantProp) || falsyToString(defaultVariantProp);
-    return variants[variant][variantKey];
-  });
-  const propsWithoutUndefined = props && Object.entries(props).reduce((acc, param) => {
-    let [key, value] = param;
-    if (value === void 0) {
-      return acc;
-    }
-    acc[key] = value;
-    return acc;
-  }, {});
-  const getCompoundVariantClassNames = config === null || config === void 0 ? void 0 : (_config_compoundVariants = config.compoundVariants) === null || _config_compoundVariants === void 0 ? void 0 : _config_compoundVariants.reduce((acc, param) => {
-    let { class: cvClass, className: cvClassName, ...compoundVariantOptions } = param;
-    return Object.entries(compoundVariantOptions).every((param2) => {
-      let [key, value] = param2;
-      return Array.isArray(value) ? value.includes({
-        ...defaultVariants,
-        ...propsWithoutUndefined
-      }[key]) : {
-        ...defaultVariants,
-        ...propsWithoutUndefined
-      }[key] === value;
-    }) ? [
-      ...acc,
-      cvClass,
-      cvClassName
-    ] : acc;
-  }, []);
-  return cx(base, getVariantClassNames, getCompoundVariantClassNames, props === null || props === void 0 ? void 0 : props.class, props === null || props === void 0 ? void 0 : props.className);
-};
 
 // node_modules/cn/dist/tables.js
 var P = 48;
@@ -2512,6 +1669,849 @@ var instance = /* @__PURE__ */ createEngine(tables_generated_default);
 var cn = /* @__PURE__ */ wrapClsx(instance.mergeString, instance);
 var twMerge = instance.merge;
 
+// node_modules/@base-ui/react/button/Button.mjs
+var React10 = __toESM(require("react"), 1);
+
+// node_modules/@base-ui/react/internals/use-button/useButton.mjs
+var React6 = __toESM(require("react"), 1);
+
+// node_modules/@floating-ui/utils/dist/floating-ui.utils.dom.mjs
+function hasWindow() {
+  return typeof window !== "undefined";
+}
+function getWindow(node) {
+  var _node$ownerDocument;
+  return (node == null || (_node$ownerDocument = node.ownerDocument) == null ? void 0 : _node$ownerDocument.defaultView) || window;
+}
+function isElement(value) {
+  if (!hasWindow()) {
+    return false;
+  }
+  return value instanceof Element || value instanceof getWindow(value).Element;
+}
+function isHTMLElement(value) {
+  if (!hasWindow()) {
+    return false;
+  }
+  return value instanceof HTMLElement || value instanceof getWindow(value).HTMLElement;
+}
+function isShadowRoot(value) {
+  if (!hasWindow() || typeof ShadowRoot === "undefined") {
+    return false;
+  }
+  return value instanceof ShadowRoot || value instanceof getWindow(value).ShadowRoot;
+}
+
+// node_modules/@base-ui/utils/safeReact.mjs
+var React = __toESM(require("react"), 1);
+var SafeReact = {
+  ...React
+};
+
+// node_modules/@base-ui/utils/useRefWithInit.mjs
+var React2 = __toESM(require("react"), 1);
+var UNINITIALIZED = {};
+function useRefWithInit(init, initArg) {
+  const ref = React2.useRef(UNINITIALIZED);
+  if (ref.current === UNINITIALIZED) {
+    ref.current = init(initArg);
+  }
+  return ref;
+}
+
+// node_modules/@base-ui/utils/useStableCallback.mjs
+var useInsertionEffect = SafeReact.useInsertionEffect;
+var useSafeInsertionEffect = (
+  // React 17 doesn't have useInsertionEffect.
+  useInsertionEffect && // Preact replaces useInsertionEffect with useLayoutEffect and fires too late.
+  useInsertionEffect !== SafeReact.useLayoutEffect ? useInsertionEffect : (fn) => fn()
+);
+function useStableCallback(callback) {
+  const stable = useRefWithInit(createStableCallback).current;
+  stable.next = callback;
+  useSafeInsertionEffect(stable.effect);
+  return stable.trampoline;
+}
+function createStableCallback() {
+  const stable = {
+    next: void 0,
+    callback: assertNotCalled,
+    trampoline: (...args) => stable.callback?.(...args),
+    effect: () => {
+      stable.callback = stable.next;
+    }
+  };
+  return stable;
+}
+function assertNotCalled() {
+  if (false) {
+    throw (
+      /* minify-error-disabled */
+      new Error("Base UI: Cannot call an event handler while rendering.")
+    );
+  }
+}
+
+// node_modules/@base-ui/utils/useIsoLayoutEffect.mjs
+var React3 = __toESM(require("react"), 1);
+var noop = () => {
+};
+var useIsoLayoutEffect = typeof document !== "undefined" ? React3.useLayoutEffect : noop;
+
+// node_modules/@base-ui/utils/mergeObjects.mjs
+function mergeObjects(a, b) {
+  if (a && !b) {
+    return a;
+  }
+  if (!a && b) {
+    return b;
+  }
+  if (a || b) {
+    return {
+      ...a,
+      ...b
+    };
+  }
+  return void 0;
+}
+
+// node_modules/@base-ui/react/merge-props/mergeProps.mjs
+var EMPTY_PROPS = {};
+function mergeProps(a, b, c, d, e) {
+  if (!c && !d && !e && !a) {
+    return createInitialMergedProps(b);
+  }
+  let merged = createInitialMergedProps(a);
+  if (b) {
+    merged = mergeInto(merged, b);
+  }
+  if (c) {
+    merged = mergeInto(merged, c);
+  }
+  if (d) {
+    merged = mergeInto(merged, d);
+  }
+  if (e) {
+    merged = mergeInto(merged, e);
+  }
+  return merged;
+}
+function mergePropsN(props) {
+  if (props.length === 0) {
+    return EMPTY_PROPS;
+  }
+  if (props.length === 1) {
+    return createInitialMergedProps(props[0]);
+  }
+  let merged = createInitialMergedProps(props[0]);
+  for (let i = 1; i < props.length; i += 1) {
+    merged = mergeInto(merged, props[i]);
+  }
+  return merged;
+}
+function createInitialMergedProps(inputProps) {
+  if (isPropsGetter(inputProps)) {
+    return {
+      ...inputProps(EMPTY_PROPS)
+    };
+  }
+  return copyInitialProps(inputProps);
+}
+function mergeInto(merged, inputProps) {
+  if (isPropsGetter(inputProps)) {
+    return inputProps(merged);
+  }
+  return mutablyMergeInto(merged, inputProps);
+}
+function copyInitialProps(inputProps) {
+  const copiedProps = {
+    ...inputProps
+  };
+  for (const propName in copiedProps) {
+    const propValue = copiedProps[propName];
+    if (isEventHandler(propName, propValue)) {
+      copiedProps[propName] = wrapEventHandler(propValue);
+    }
+  }
+  return copiedProps;
+}
+function mutablyMergeInto(mergedProps, externalProps) {
+  if (!externalProps) {
+    return mergedProps;
+  }
+  for (const propName in externalProps) {
+    const externalPropValue = externalProps[propName];
+    switch (propName) {
+      case "style": {
+        mergedProps[propName] = mergeObjects(mergedProps.style, externalPropValue);
+        break;
+      }
+      case "className": {
+        mergedProps[propName] = mergeClassNames(mergedProps.className, externalPropValue);
+        break;
+      }
+      default: {
+        if (isEventHandler(propName, externalPropValue)) {
+          mergedProps[propName] = mergeEventHandlers(mergedProps[propName], externalPropValue);
+        } else {
+          mergedProps[propName] = externalPropValue;
+        }
+      }
+    }
+  }
+  return mergedProps;
+}
+function isEventHandler(key, value) {
+  const code0 = key.charCodeAt(0);
+  const code1 = key.charCodeAt(1);
+  const code2 = key.charCodeAt(2);
+  return code0 === 111 && code1 === 110 && code2 >= 65 && code2 <= 90 && (typeof value === "function" || typeof value === "undefined");
+}
+function isPropsGetter(inputProps) {
+  return typeof inputProps === "function";
+}
+function mergeEventHandlers(ourHandler, theirHandler) {
+  if (!theirHandler) {
+    return ourHandler;
+  }
+  if (!ourHandler) {
+    return wrapEventHandler(theirHandler);
+  }
+  return (...args) => {
+    const event = args[0];
+    if (isSyntheticEvent(event)) {
+      const baseUIEvent = event;
+      makeEventPreventable(baseUIEvent);
+      const result2 = theirHandler(...args);
+      if (!baseUIEvent.baseUIHandlerPrevented) {
+        ourHandler?.(...args);
+      }
+      return result2;
+    }
+    const result = theirHandler(...args);
+    ourHandler?.(...args);
+    return result;
+  };
+}
+function wrapEventHandler(handler) {
+  if (!handler) {
+    return handler;
+  }
+  return (...args) => {
+    const event = args[0];
+    if (isSyntheticEvent(event)) {
+      makeEventPreventable(event);
+    }
+    return handler(...args);
+  };
+}
+function makeEventPreventable(event) {
+  event.preventBaseUIHandler = () => {
+    event.baseUIHandlerPrevented = true;
+  };
+  return event;
+}
+function mergeClassNames(ourClassName, theirClassName) {
+  if (theirClassName) {
+    if (ourClassName) {
+      return theirClassName + " " + ourClassName;
+    }
+    return theirClassName;
+  }
+  return ourClassName;
+}
+function isSyntheticEvent(event) {
+  return event != null && typeof event === "object" && "nativeEvent" in event;
+}
+
+// node_modules/@base-ui/utils/formatErrorMessage.mjs
+function createFormatErrorMessage(baseUrl, prefix) {
+  return function formatErrorMessage2(code, ...args) {
+    const url = new URL(baseUrl);
+    url.searchParams.set("code", code.toString());
+    args.forEach((arg) => url.searchParams.append("args[]", arg));
+    return `${prefix} error #${code}; visit ${url} for the full message.`;
+  };
+}
+var formatErrorMessage = createFormatErrorMessage("https://base-ui.com/production-error", "Base UI");
+var formatErrorMessage_default = formatErrorMessage;
+
+// node_modules/@base-ui/react/internals/composite/root/CompositeRootContext.mjs
+var React4 = __toESM(require("react"), 1);
+var CompositeRootContext = /* @__PURE__ */ React4.createContext(void 0);
+if (false) CompositeRootContext.displayName = "CompositeRootContext";
+function useCompositeRootContext(optional = false) {
+  const context = React4.useContext(CompositeRootContext);
+  if (context === void 0 && !optional) {
+    throw new Error(false ? "Base UI: CompositeRootContext is missing. Composite parts must be placed within <Composite.Root>." : formatErrorMessage_default(16));
+  }
+  return context;
+}
+
+// node_modules/@base-ui/react/utils/useFocusableWhenDisabled.mjs
+var React5 = __toESM(require("react"), 1);
+function useFocusableWhenDisabled(parameters) {
+  const {
+    focusableWhenDisabled,
+    disabled: disabled2,
+    composite = false,
+    tabIndex: tabIndexProp = 0,
+    isNativeButton
+  } = parameters;
+  const isFocusableComposite = composite && focusableWhenDisabled !== false;
+  const isNonFocusableComposite = composite && focusableWhenDisabled === false;
+  const props = React5.useMemo(() => {
+    const additionalProps = {
+      // allow Tabbing away from focusableWhenDisabled elements
+      onKeyDown(event) {
+        if (disabled2 && focusableWhenDisabled && event.key !== "Tab") {
+          event.preventDefault();
+        }
+      }
+    };
+    if (!composite) {
+      additionalProps.tabIndex = tabIndexProp;
+      if (!isNativeButton && disabled2) {
+        additionalProps.tabIndex = focusableWhenDisabled ? tabIndexProp : -1;
+      }
+    }
+    if (isNativeButton && (focusableWhenDisabled || isFocusableComposite) || !isNativeButton && disabled2) {
+      additionalProps["aria-disabled"] = disabled2;
+    }
+    if (isNativeButton && (!focusableWhenDisabled || isNonFocusableComposite)) {
+      additionalProps.disabled = disabled2;
+    }
+    return additionalProps;
+  }, [composite, disabled2, focusableWhenDisabled, isFocusableComposite, isNonFocusableComposite, isNativeButton, tabIndexProp]);
+  return {
+    props
+  };
+}
+
+// node_modules/@base-ui/utils/owner.mjs
+function ownerDocument(node) {
+  return node?.ownerDocument || document;
+}
+
+// node_modules/@base-ui/react/utils/dispatchClickWithModifiers.mjs
+function dispatchClickWithModifiers(target, sourceEvent, {
+  detail = 0,
+  pointerType = ""
+} = {}) {
+  target.dispatchEvent(new (getWindow(target)).PointerEvent("click", {
+    bubbles: true,
+    cancelable: true,
+    composed: true,
+    detail,
+    pointerType,
+    shiftKey: sourceEvent.shiftKey,
+    ctrlKey: sourceEvent.ctrlKey,
+    altKey: sourceEvent.altKey,
+    metaKey: sourceEvent.metaKey
+  }));
+}
+
+// node_modules/@base-ui/react/internals/use-button/useButton.mjs
+function useButton(parameters = {}) {
+  const {
+    disabled: disabled2 = false,
+    focusableWhenDisabled,
+    tabIndex = 0,
+    native: isNativeButton = true,
+    composite: compositeProp
+  } = parameters;
+  const elementRef = React6.useRef(null);
+  const compositeRootContext = useCompositeRootContext(true);
+  const isCompositeItem = compositeProp ?? compositeRootContext !== void 0;
+  const {
+    props: focusableWhenDisabledProps
+  } = useFocusableWhenDisabled({
+    focusableWhenDisabled,
+    disabled: disabled2,
+    composite: isCompositeItem,
+    tabIndex,
+    isNativeButton
+  });
+  if (false) {
+    React6.useEffect(() => {
+      if (!elementRef.current) {
+        return;
+      }
+      const isButtonTag = isButtonElement(elementRef.current);
+      if (isNativeButton) {
+        if (!isButtonTag) {
+          const ownerStackMessage = SafeReact.captureOwnerStack?.() || "";
+          const message = "A component that acts as a button expected a native <button> because the `nativeButton` prop is true. Rendering a non-<button> removes native button semantics, which can impact forms and accessibility. Use a real <button> in the `render` prop, or set `nativeButton` to `false`.";
+          error(`${message}${ownerStackMessage}`);
+        }
+      } else if (isButtonTag) {
+        const ownerStackMessage = SafeReact.captureOwnerStack?.() || "";
+        const message = "A component that acts as a button expected a non-<button> because the `nativeButton` prop is false. Rendering a <button> keeps native behavior while Base UI applies non-native attributes and handlers, which can add unintended extra attributes (such as `role` or `aria-disabled`). Use a non-<button> in the `render` prop, or set `nativeButton` to `true`.";
+        error(`${message}${ownerStackMessage}`);
+      }
+    }, [isNativeButton]);
+  }
+  const updateDisabled = React6.useCallback(() => {
+    const element = elementRef.current;
+    if (!isButtonElement(element)) {
+      return;
+    }
+    if (isCompositeItem && disabled2 && focusableWhenDisabledProps.disabled === void 0 && element.disabled) {
+      element.disabled = false;
+    }
+  }, [disabled2, focusableWhenDisabledProps.disabled, isCompositeItem]);
+  useIsoLayoutEffect(updateDisabled, [updateDisabled]);
+  const getButtonProps = React6.useCallback((externalProps = {}) => {
+    const {
+      onClick: externalOnClick,
+      onMouseDown: externalOnMouseDown,
+      onKeyUp: externalOnKeyUp,
+      onKeyDown: externalOnKeyDown,
+      onPointerDown: externalOnPointerDown,
+      ...otherExternalProps
+    } = externalProps;
+    return mergeProps({
+      onClick(event) {
+        if (disabled2) {
+          event.preventDefault();
+          return;
+        }
+        externalOnClick?.(event);
+      },
+      onMouseDown(event) {
+        if (!disabled2) {
+          externalOnMouseDown?.(event);
+        }
+      },
+      onKeyDown(event) {
+        if (disabled2) {
+          return;
+        }
+        makeEventPreventable(event);
+        externalOnKeyDown?.(event);
+        if (event.baseUIHandlerPrevented) {
+          return;
+        }
+        const isCurrentTarget = event.target === event.currentTarget;
+        const currentTarget = event.currentTarget;
+        const isButton = isButtonElement(currentTarget);
+        const isLink = !isNativeButton && isValidLinkElement(currentTarget);
+        const shouldClick = isCurrentTarget && (isNativeButton ? isButton : !isLink);
+        const isEnterKey = event.key === "Enter";
+        const isSpaceKey = event.key === " ";
+        const role = currentTarget.getAttribute("role");
+        const isTextNavigationRole = role?.startsWith("menuitem") || role === "option" || role === "gridcell";
+        if (isCurrentTarget && isCompositeItem && isSpaceKey) {
+          if (event.defaultPrevented && isTextNavigationRole) {
+            return;
+          }
+          event.preventDefault();
+          if (!isNativeButton || isButton) {
+            event.preventBaseUIHandler();
+            dispatchClickWithModifiers(currentTarget, event);
+          }
+          return;
+        }
+        if (!shouldClick || isNativeButton || !isSpaceKey && !isEnterKey) {
+          if (isCurrentTarget && isLink && isSpaceKey) {
+            event.preventDefault();
+          }
+          return;
+        }
+        if (event.defaultPrevented) {
+          return;
+        }
+        event.preventDefault();
+        if (isEnterKey) {
+          event.preventBaseUIHandler();
+          dispatchClickWithModifiers(currentTarget, event);
+        }
+      },
+      onKeyUp(event) {
+        if (disabled2) {
+          return;
+        }
+        makeEventPreventable(event);
+        externalOnKeyUp?.(event);
+        if (event.target === event.currentTarget && isNativeButton && isCompositeItem && isButtonElement(event.currentTarget) && event.key === " ") {
+          event.preventDefault();
+          return;
+        }
+        if (event.baseUIHandlerPrevented) {
+          return;
+        }
+        if (event.target === event.currentTarget && !isNativeButton && !isCompositeItem && !event.defaultPrevented && event.key === " ") {
+          event.preventBaseUIHandler();
+          dispatchClickWithModifiers(event.currentTarget, event);
+        }
+      },
+      onPointerDown(event) {
+        if (disabled2) {
+          event.preventDefault();
+          return;
+        }
+        externalOnPointerDown?.(event);
+      }
+    }, isNativeButton ? {
+      type: "button"
+    } : {
+      role: "button"
+    }, focusableWhenDisabledProps, otherExternalProps);
+  }, [disabled2, focusableWhenDisabledProps, isCompositeItem, isNativeButton]);
+  const buttonRef = useStableCallback((element) => {
+    elementRef.current = element;
+    updateDisabled();
+  });
+  return {
+    getButtonProps,
+    buttonRef
+  };
+}
+function isButtonElement(elem) {
+  return isHTMLElement(elem) && elem.tagName === "BUTTON";
+}
+function isValidLinkElement(elem) {
+  return isHTMLElement(elem) && elem.tagName === "A" && Boolean(elem.href);
+}
+
+// node_modules/@base-ui/react/internals/useRenderElement.mjs
+var React9 = __toESM(require("react"), 1);
+
+// node_modules/@base-ui/utils/useMergedRefs.mjs
+function useMergedRefs(a, b, c, d) {
+  const forkRef = useRefWithInit(createForkRef).current;
+  if (didChange(forkRef, a, b, c, d)) {
+    update(forkRef, [a, b, c, d]);
+  }
+  return forkRef.callback;
+}
+function useMergedRefsN(refs) {
+  const forkRef = useRefWithInit(createForkRef).current;
+  if (didChangeN(forkRef, refs)) {
+    update(forkRef, refs);
+  }
+  return forkRef.callback;
+}
+function createForkRef() {
+  return {
+    callback: null,
+    cleanup: null,
+    refs: []
+  };
+}
+function didChange(forkRef, a, b, c, d) {
+  return forkRef.refs[0] !== a || forkRef.refs[1] !== b || forkRef.refs[2] !== c || forkRef.refs[3] !== d;
+}
+function didChangeN(forkRef, newRefs) {
+  return forkRef.refs.length !== newRefs.length || forkRef.refs.some((ref, index) => ref !== newRefs[index]);
+}
+function update(forkRef, refs) {
+  forkRef.refs = refs;
+  if (refs.every((ref) => ref == null)) {
+    forkRef.callback = null;
+    return;
+  }
+  forkRef.callback = (instance2) => {
+    if (forkRef.cleanup) {
+      forkRef.cleanup();
+      forkRef.cleanup = null;
+    }
+    if (instance2 != null) {
+      const cleanupCallbacks = Array(refs.length).fill(null);
+      for (let i = 0; i < refs.length; i += 1) {
+        const ref = refs[i];
+        if (ref == null) {
+          continue;
+        }
+        switch (typeof ref) {
+          case "function": {
+            const refCleanup = ref(instance2);
+            if (typeof refCleanup === "function") {
+              cleanupCallbacks[i] = refCleanup;
+            }
+            break;
+          }
+          case "object": {
+            ref.current = instance2;
+            break;
+          }
+          default:
+        }
+      }
+      forkRef.cleanup = () => {
+        for (let i = 0; i < refs.length; i += 1) {
+          const ref = refs[i];
+          if (ref == null) {
+            continue;
+          }
+          switch (typeof ref) {
+            case "function": {
+              const cleanupCallback = cleanupCallbacks[i];
+              if (typeof cleanupCallback === "function") {
+                cleanupCallback();
+              } else {
+                void ref(null);
+              }
+              break;
+            }
+            case "object": {
+              ref.current = null;
+              break;
+            }
+            default:
+          }
+        }
+      };
+    }
+  };
+}
+
+// node_modules/@base-ui/utils/getReactElementRef.mjs
+var React8 = __toESM(require("react"), 1);
+
+// node_modules/@base-ui/utils/reactVersion.mjs
+var React7 = __toESM(require("react"), 1);
+var majorVersion = parseInt(React7.version, 10);
+function isReactVersionAtLeast(reactVersionToCheck) {
+  return majorVersion >= reactVersionToCheck;
+}
+
+// node_modules/@base-ui/utils/getReactElementRef.mjs
+function getReactElementRef(element) {
+  if (!/* @__PURE__ */ React8.isValidElement(element)) {
+    return null;
+  }
+  const reactElement = element;
+  const propsWithRef = reactElement.props;
+  return (isReactVersionAtLeast(19) ? propsWithRef?.ref : reactElement.ref) ?? null;
+}
+
+// node_modules/@base-ui/utils/empty.mjs
+function NOOP() {
+}
+var EMPTY_ARRAY = Object.freeze([]);
+var EMPTY_OBJECT = Object.freeze({});
+
+// node_modules/@base-ui/react/internals/getStateAttributesProps.mjs
+function getStateAttributesProps(state, customMapping) {
+  const props = {};
+  for (const key in state) {
+    const value = state[key];
+    if (customMapping?.hasOwnProperty(key)) {
+      const customProps = customMapping[key](value);
+      if (customProps != null) {
+        Object.assign(props, customProps);
+      }
+      continue;
+    }
+    if (value === true) {
+      props[`data-${key.toLowerCase()}`] = "";
+    } else if (value) {
+      props[`data-${key.toLowerCase()}`] = value.toString();
+    }
+  }
+  return props;
+}
+
+// node_modules/@base-ui/react/utils/resolveClassName.mjs
+function resolveClassName(className, state) {
+  return typeof className === "function" ? className(state) : className;
+}
+
+// node_modules/@base-ui/react/utils/resolveStyle.mjs
+function resolveStyle(style, state) {
+  return typeof style === "function" ? style(state) : style;
+}
+
+// node_modules/@base-ui/react/internals/useRenderElement.mjs
+var import_react4 = require("react");
+function useRenderElement(element, componentProps, params = {}) {
+  let renderProp = componentProps.render;
+  if (params.enabled !== false) {
+    renderProp = unwrapLazyRenderProp(renderProp);
+  }
+  const outProps = useRenderElementProps(componentProps, params, renderProp);
+  if (params.enabled === false) {
+    return null;
+  }
+  const state = params.state ?? EMPTY_OBJECT;
+  return evaluateRenderProp(element, renderProp, outProps, state);
+}
+function useRenderElementProps(componentProps, params, renderProp) {
+  const {
+    className: classNameProp,
+    style: styleProp
+  } = componentProps;
+  const {
+    state = EMPTY_OBJECT,
+    ref,
+    props,
+    stateAttributesMapping: stateAttributesMapping3,
+    enabled = true
+  } = params;
+  const className = enabled ? resolveClassName(classNameProp, state) : void 0;
+  const style = enabled ? resolveStyle(styleProp, state) : void 0;
+  const stateProps = enabled ? getStateAttributesProps(state, stateAttributesMapping3) : EMPTY_OBJECT;
+  const resolvedProps = enabled && props ? resolveRenderFunctionProps(props) : void 0;
+  const outProps = enabled ? mergeObjects(stateProps, resolvedProps) ?? {} : EMPTY_OBJECT;
+  if (typeof document !== "undefined") {
+    if (!enabled) {
+      void useMergedRefs(null, null);
+    } else if (Array.isArray(ref)) {
+      outProps.ref = useMergedRefsN([outProps.ref, getReactElementRef(renderProp), ...ref]);
+    } else {
+      outProps.ref = useMergedRefs(outProps.ref, getReactElementRef(renderProp), ref);
+    }
+  }
+  if (!enabled) {
+    return EMPTY_OBJECT;
+  }
+  if (className !== void 0) {
+    outProps.className = mergeClassNames(outProps.className, className);
+  }
+  if (style !== void 0) {
+    outProps.style = mergeObjects(outProps.style, style);
+  }
+  return outProps;
+}
+function resolveRenderFunctionProps(props) {
+  if (Array.isArray(props)) {
+    return mergePropsN(props);
+  }
+  return mergeProps(void 0, props);
+}
+var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
+function unwrapLazyRenderProp(render) {
+  if (render?.$$typeof !== REACT_LAZY_TYPE) {
+    return render;
+  }
+  const unwrapped = React9.Children.toArray(render)[0];
+  return /* @__PURE__ */ React9.isValidElement(unwrapped) ? unwrapped : render;
+}
+function evaluateRenderProp(element, render, props, state) {
+  if (render) {
+    if (typeof render === "function") {
+      if (false) {
+        warnIfRenderPropLooksLikeComponent(render);
+      }
+      return render(props, state);
+    }
+    const mergedProps = mergeProps(props, render.props);
+    mergedProps.ref = props.ref;
+    if (false) {
+      if (!/* @__PURE__ */ React9.isValidElement(render)) {
+        throw new Error(["Base UI: The `render` prop was provided an invalid React element as `React.isValidElement(render)` is `false`.", "A valid React element must be provided to the `render` prop because it is cloned with props to replace the default element.", "https://base-ui.com/r/invalid-render-prop"].join("\n"));
+      }
+    }
+    return /* @__PURE__ */ React9.cloneElement(render, mergedProps);
+  }
+  return renderTag(element, props);
+}
+function renderTag(Tag, props) {
+  if (Tag === "button") {
+    return /* @__PURE__ */ (0, import_react4.createElement)("button", {
+      type: "button",
+      ...props,
+      key: props.key
+    });
+  }
+  if (Tag === "img") {
+    return /* @__PURE__ */ (0, import_react4.createElement)("img", {
+      alt: "",
+      ...props,
+      key: props.key
+    });
+  }
+  return /* @__PURE__ */ React9.createElement(Tag, props);
+}
+
+// node_modules/@base-ui/react/button/Button.mjs
+var Button = /* @__PURE__ */ React10.forwardRef(function Button2(componentProps, forwardedRef) {
+  const {
+    render,
+    className,
+    disabled: disabled2 = false,
+    focusableWhenDisabled = false,
+    nativeButton = true,
+    style,
+    ...elementProps
+  } = componentProps;
+  const {
+    getButtonProps,
+    buttonRef
+  } = useButton({
+    disabled: disabled2,
+    focusableWhenDisabled,
+    native: nativeButton
+  });
+  const state = {
+    disabled: disabled2
+  };
+  return useRenderElement("button", componentProps, {
+    state,
+    ref: [forwardedRef, buttonRef],
+    props: [elementProps, getButtonProps]
+  });
+});
+if (false) Button.displayName = "Button";
+
+// node_modules/clsx/dist/clsx.mjs
+function r(e) {
+  var t, f, n = "";
+  if ("string" == typeof e || "number" == typeof e) n += e;
+  else if ("object" == typeof e) if (Array.isArray(e)) {
+    var o = e.length;
+    for (t = 0; t < o; t++) e[t] && (f = r(e[t])) && (n && (n += " "), n += f);
+  } else for (f in e) e[f] && (n && (n += " "), n += f);
+  return n;
+}
+function clsx2() {
+  for (var e, t, f = 0, n = "", o = arguments.length; f < o; f++) (e = arguments[f]) && (t = r(e)) && (n && (n += " "), n += t);
+  return n;
+}
+
+// node_modules/class-variance-authority/dist/index.mjs
+var falsyToString = (value) => typeof value === "boolean" ? `${value}` : value === 0 ? "0" : value;
+var cx = clsx2;
+var cva = (base, config) => (props) => {
+  var _config_compoundVariants;
+  if ((config === null || config === void 0 ? void 0 : config.variants) == null) return cx(base, props === null || props === void 0 ? void 0 : props.class, props === null || props === void 0 ? void 0 : props.className);
+  const { variants, defaultVariants } = config;
+  const getVariantClassNames = Object.keys(variants).map((variant) => {
+    const variantProp = props === null || props === void 0 ? void 0 : props[variant];
+    const defaultVariantProp = defaultVariants === null || defaultVariants === void 0 ? void 0 : defaultVariants[variant];
+    if (variantProp === null) return null;
+    const variantKey = falsyToString(variantProp) || falsyToString(defaultVariantProp);
+    return variants[variant][variantKey];
+  });
+  const propsWithoutUndefined = props && Object.entries(props).reduce((acc, param) => {
+    let [key, value] = param;
+    if (value === void 0) {
+      return acc;
+    }
+    acc[key] = value;
+    return acc;
+  }, {});
+  const getCompoundVariantClassNames = config === null || config === void 0 ? void 0 : (_config_compoundVariants = config.compoundVariants) === null || _config_compoundVariants === void 0 ? void 0 : _config_compoundVariants.reduce((acc, param) => {
+    let { class: cvClass, className: cvClassName, ...compoundVariantOptions } = param;
+    return Object.entries(compoundVariantOptions).every((param2) => {
+      let [key, value] = param2;
+      return Array.isArray(value) ? value.includes({
+        ...defaultVariants,
+        ...propsWithoutUndefined
+      }[key]) : {
+        ...defaultVariants,
+        ...propsWithoutUndefined
+      }[key] === value;
+    }) ? [
+      ...acc,
+      cvClass,
+      cvClassName
+    ] : acc;
+  }, []);
+  return cx(base, getVariantClassNames, getCompoundVariantClassNames, props === null || props === void 0 ? void 0 : props.class, props === null || props === void 0 ? void 0 : props.className);
+};
+
 // src/components/ui/button.tsx
 var import_jsx_runtime = require("react/jsx-runtime");
 var buttonVariants = cva(
@@ -3142,6 +3142,27 @@ function useOverlayVisible() {
     () => visible
   );
 }
+var CORNER_KEY = "opencode-usage:corner";
+var DEFAULT_CORNER = { right: 12, bottom: 12 };
+function readCorner() {
+  try {
+    const raw = window.localStorage.getItem(CORNER_KEY);
+    if (raw !== null) {
+      const value = JSON.parse(raw);
+      if (typeof value.right === "number" && typeof value.bottom === "number" && Number.isFinite(value.right) && Number.isFinite(value.bottom)) {
+        return { right: Math.max(0, value.right), bottom: Math.max(0, value.bottom) };
+      }
+    }
+  } catch {
+  }
+  return DEFAULT_CORNER;
+}
+function saveCorner(corner) {
+  try {
+    window.localStorage.setItem(CORNER_KEY, JSON.stringify(corner));
+  } catch {
+  }
+}
 
 // src/client/api.ts
 var ROUTE = "/api/opencode-usage";
@@ -3307,6 +3328,7 @@ var usageStore = new UsageStore();
 
 // src/client/overlay.tsx
 var import_jsx_runtime6 = require("react/jsx-runtime");
+var DRAG_SLOP = 3;
 function StatusDot({ color }) {
   return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "size-2 shrink-0 rounded-full", style: { background: color }, "aria-hidden": true });
 }
@@ -3321,79 +3343,176 @@ function UsageOverlay({ t, openSettings }) {
   const visible2 = useOverlayVisible();
   const snapshot = (0, import_react6.useSyncExternalStore)(usageStore.subscribe, usageStore.getSnapshot);
   const [open, setOpen] = (0, import_react6.useState)(false);
+  const [corner, setCorner] = (0, import_react6.useState)(readCorner);
+  const [dragging, setDragging] = (0, import_react6.useState)(false);
+  const anchor = (0, import_react6.useRef)(null);
+  const drag2 = (0, import_react6.useRef)(null);
+  const dragged = (0, import_react6.useRef)(false);
+  const clamp2 = (0, import_react6.useCallback)((right, bottom) => {
+    const element = anchor.current;
+    const frame = element?.offsetParent;
+    if (element === null || frame === null || frame === void 0) {
+      return { right: Math.max(0, right), bottom: Math.max(0, bottom) };
+    }
+    return {
+      right: Math.min(Math.max(0, right), Math.max(0, frame.clientWidth - element.offsetWidth)),
+      bottom: Math.min(Math.max(0, bottom), Math.max(0, frame.clientHeight - element.offsetHeight))
+    };
+  }, []);
+  (0, import_react6.useLayoutEffect)(() => {
+    setCorner((current) => {
+      const next = clamp2(current.right, current.bottom);
+      return next.right === current.right && next.bottom === current.bottom ? current : next;
+    });
+  }, [open, visible2, clamp2]);
+  (0, import_react6.useEffect)(() => {
+    const onResize = () => {
+      setCorner((current) => clamp2(current.right, current.bottom));
+    };
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, [clamp2]);
+  const startDrag = (event) => {
+    if (event.button !== 0) return;
+    if (event.target.closest("[data-no-drag]") !== null) return;
+    dragged.current = false;
+    event.currentTarget.setPointerCapture(event.pointerId);
+    drag2.current = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      right: corner.right,
+      bottom: corner.bottom,
+      moved: false
+    };
+    setDragging(true);
+  };
+  const moveDrag = (event) => {
+    const state = drag2.current;
+    if (state === null || state.pointerId !== event.pointerId) return;
+    const dx = event.clientX - state.startX;
+    const dy = event.clientY - state.startY;
+    if (!state.moved && Math.hypot(dx, dy) < DRAG_SLOP) return;
+    state.moved = true;
+    setCorner(clamp2(state.right - dx, state.bottom - dy));
+  };
+  const endDrag = (event) => {
+    const state = drag2.current;
+    if (state === null || state.pointerId !== event.pointerId) return;
+    drag2.current = null;
+    setDragging(false);
+    if (!state.moved) return;
+    dragged.current = true;
+    saveCorner(clamp2(state.right - (event.clientX - state.startX), state.bottom - (event.clientY - state.startY)));
+  };
   if (!visible2) return null;
   const worst = mostConstrained(snapshot.usage);
   const color = worst === void 0 ? "var(--ou-muted-bar)" : colorOf(toneOf(worst.meter));
-  if (!open) {
-    return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "ou-root pointer-events-none absolute inset-0 z-30 flex items-end justify-end p-3", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(
-      "button",
-      {
-        type: "button",
-        onClick: () => snapshot.configured ? setOpen(true) : openSettings(),
-        title: snapshot.configured ? t("overlay.expand") : t("pill.setup"),
-        className: "pointer-events-auto flex items-center gap-2 rounded-full bg-card py-1.5 pr-3 pl-2.5 text-xs text-card-foreground shadow-lg ring-1 ring-border transition-colors hover:bg-accent",
-        children: [
-          /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(StatusDot, { color }),
-          /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "font-medium", children: t("pill.label") }),
-          /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "text-muted-foreground", children: pillStatus(t, snapshot, worst) })
-        ]
-      }
-    ) });
-  }
-  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "ou-root pointer-events-none absolute inset-0 z-30 flex items-end justify-end p-3", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(Card, { size: "sm", className: "pointer-events-auto w-[19.5rem] gap-3 shadow-xl", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex items-center justify-between gap-2 px-(--card-spacing)", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex min-w-0 items-center gap-2", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(StatusDot, { color }),
-        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "truncate text-sm font-medium", children: t("pill.label") })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex items-center gap-0.5", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
-          Button3,
+  const draggable = cn(
+    "touch-none select-none",
+    dragging ? "cursor-grabbing" : "cursor-grab"
+  );
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "ou-root pointer-events-none absolute inset-0 z-30", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+    "div",
+    {
+      ref: anchor,
+      style: { right: corner.right, bottom: corner.bottom },
+      className: "absolute",
+      children: open ? /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(Card, { size: "sm", className: "pointer-events-auto w-[19.5rem] gap-3 shadow-xl", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(
+          "div",
           {
-            size: "icon-sm",
-            variant: "ghost",
-            "aria-label": t("overlay.refresh"),
-            title: t("overlay.refresh"),
-            disabled: !snapshot.configured,
-            onClick: () => {
-              void usageStore.load(true);
-            },
-            children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(RefreshCw, { className: snapshot.busy ? "animate-spin" : void 0 })
+            onPointerDown: startDrag,
+            onPointerMove: moveDrag,
+            onPointerUp: endDrag,
+            onPointerCancel: endDrag,
+            className: cn("flex items-center justify-between gap-2 px-(--card-spacing)", draggable),
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex min-w-0 items-center gap-2", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(StatusDot, { color }),
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "truncate text-sm font-medium", children: t("pill.label") })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex items-center gap-0.5", "data-no-drag": true, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+                  Button3,
+                  {
+                    size: "icon-sm",
+                    variant: "ghost",
+                    "aria-label": t("overlay.refresh"),
+                    title: t("overlay.refresh"),
+                    disabled: !snapshot.configured,
+                    onClick: () => {
+                      void usageStore.load(true);
+                    },
+                    children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(RefreshCw, { className: snapshot.busy ? "animate-spin" : void 0 })
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+                  Button3,
+                  {
+                    size: "icon-sm",
+                    variant: "ghost",
+                    "aria-label": t("overlay.collapse"),
+                    title: t("overlay.collapse"),
+                    onClick: () => {
+                      setOpen(false);
+                    },
+                    children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ChevronDown, {})
+                  }
+                )
+              ] })
+            ]
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
-          Button3,
-          {
-            size: "icon-sm",
-            variant: "ghost",
-            "aria-label": t("overlay.collapse"),
-            title: t("overlay.collapse"),
-            onClick: () => {
-              setOpen(false);
-            },
-            children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ChevronDown, {})
-          }
-        )
-      ] })
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(CardContent, { className: "flex flex-col gap-3.5", children: !snapshot.configured ? /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex flex-col items-start gap-2.5 rounded-lg bg-muted p-3", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "text-xs leading-relaxed text-muted-foreground", children: t("overlay.empty") }),
-      /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(Button3, { size: "sm", onClick: openSettings, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Settings2, { "data-icon": "inline-start" }),
-        t("settings.key")
-      ] })
-    ] }) : snapshot.usage === void 0 ? /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "text-xs leading-relaxed text-muted-foreground", children: snapshot.error === void 0 ? t("overlay.loading") : failureText(t, snapshot.error) }) : WINDOWS.map((window2) => {
-      const meter = snapshot.usage?.[window2.key];
-      return meter === void 0 ? null : /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(MeterRow, { label: t(window2.label), meter, t }, window2.key);
-    }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(CardFooter, { className: "justify-between gap-2 border-border text-[11px] text-muted-foreground", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "tabular-nums", children: formatUpdated(snapshot.fetchedAt) === void 0 ? t("overlay.never") : t("overlay.updated", { time: formatUpdated(snapshot.fetchedAt) }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(Button3, { size: "xs", variant: "ghost", onClick: openSettings, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Settings2, { "data-icon": "inline-start" }),
-        t("overlay.settings")
-      ] })
-    ] })
-  ] }) });
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(CardContent, { className: "flex flex-col gap-3.5", children: !snapshot.configured ? /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex flex-col items-start gap-2.5 rounded-lg bg-muted p-3", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "text-xs leading-relaxed text-muted-foreground", children: t("overlay.empty") }),
+          /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(Button3, { size: "sm", onClick: openSettings, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Settings2, { "data-icon": "inline-start" }),
+            t("settings.key")
+          ] })
+        ] }) : snapshot.usage === void 0 ? /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "text-xs leading-relaxed text-muted-foreground", children: snapshot.error === void 0 ? t("overlay.loading") : failureText(t, snapshot.error) }) : WINDOWS.map((window2) => {
+          const meter = snapshot.usage?.[window2.key];
+          return meter === void 0 ? null : /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(MeterRow, { label: t(window2.label), meter, t }, window2.key);
+        }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(CardFooter, { className: "justify-between gap-2 border-border text-[11px] text-muted-foreground", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "tabular-nums", children: formatUpdated(snapshot.fetchedAt) === void 0 ? t("overlay.never") : t("overlay.updated", { time: formatUpdated(snapshot.fetchedAt) }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(Button3, { size: "xs", variant: "ghost", onClick: openSettings, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Settings2, { "data-icon": "inline-start" }),
+            t("overlay.settings")
+          ] })
+        ] })
+      ] }) : /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(
+        "button",
+        {
+          type: "button",
+          onPointerDown: startDrag,
+          onPointerMove: moveDrag,
+          onPointerUp: endDrag,
+          onPointerCancel: endDrag,
+          onClick: () => {
+            if (dragged.current) {
+              dragged.current = false;
+              return;
+            }
+            if (snapshot.configured) setOpen(true);
+            else openSettings();
+          },
+          title: snapshot.configured ? t("overlay.expand") : t("pill.setup"),
+          className: cn(
+            "pointer-events-auto flex items-center gap-2 rounded-full bg-card py-1.5 pr-3 pl-2.5 text-xs text-card-foreground shadow-lg ring-1 ring-border transition-colors hover:bg-accent",
+            draggable
+          ),
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(StatusDot, { color }),
+            /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "font-medium", children: t("pill.label") }),
+            /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "text-muted-foreground", children: pillStatus(t, snapshot, worst) })
+          ]
+        }
+      )
+    }
+  ) });
 }
 
 // src/client/settings.tsx

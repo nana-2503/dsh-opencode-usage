@@ -39,7 +39,7 @@
   ],
   "scripts": {
     "build": "node build.mjs",
-    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "typecheck": "node build.mjs --css-only && tsc --noEmit -p tsconfig.json",
     "test": "node --test"
   },
   "dsh": {
